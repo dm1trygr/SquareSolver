@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <TXLib.h>
-
-#define EPS 0.0001
+#include <float.h>
 
 double coeff_input(void);
 void solve(double a, double b, double c);
@@ -34,11 +33,11 @@ double coeff_input(void) {
 }
 
 void solve(double a, double b, double c) {
-    if (fabs(a) <= EPS) {
-        if (fabs(b) <= EPS && fabs(c) <= EPS) {
+    if (fabs(a) <= FLT_EPSILON) {
+        if (fabs(b) <= FLT_EPSILON && fabs(c) <= FLT_EPSILON) {
             printf("Решений бесконечно много\n");
         }
-        else if (fabs(b) <= EPS && fabs(c) > EPS) {
+        else if (fabs(b) <= FLT_EPSILON && fabs(c) > FLT_EPSILON) {
             printf("Решений нет\n");
         }
         else {
@@ -51,7 +50,7 @@ void solve(double a, double b, double c) {
         if (discrim < 0) {
             printf("Решений нет\n");
         }
-        else if (fabs(discrim) <= EPS) {
+        else if (fabs(discrim) <= FLT_EPSILON) {
             double x = - b / (2 * a);
             printf("Решение: x = %.3f\n", x);
         }
