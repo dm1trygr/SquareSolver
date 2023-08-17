@@ -33,11 +33,11 @@ double coeff_input(void) {
 }
 
 void solve(double a, double b, double c) {
-    if (fabs(a) <= FLT_EPSILON) {
-        if (fabs(b) <= FLT_EPSILON && fabs(c) <= FLT_EPSILON) {
+    if (fabs(a) <= DBL_EPSILON) {
+        if (fabs(b) <= DBL_EPSILON && fabs(c) <= DBL_EPSILON) {
             printf("Решений бесконечно много\n");
         }
-        else if (fabs(b) <= FLT_EPSILON && fabs(c) > FLT_EPSILON) {
+        else if (fabs(b) <= DBL_EPSILON && fabs(c) > DBL_EPSILON) {
             printf("Решений нет\n");
         }
         else {
@@ -50,7 +50,7 @@ void solve(double a, double b, double c) {
         if (discrim < 0) {
             printf("Решений нет\n");
         }
-        else if (fabs(discrim) <= FLT_EPSILON) {
+        else if (fabs(discrim) <= DBL_EPSILON) {
             double x = - b / (2 * a);
             printf("Решение: x = %.3f\n", x);
         }
