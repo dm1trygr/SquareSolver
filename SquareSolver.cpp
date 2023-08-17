@@ -26,6 +26,7 @@ int main(void) {
 double coeff_input(void) {
     double inputted_coefficient;
     while (scanf("%lf", &inputted_coefficient) != 1) {
+        while (getchar() != '\n') continue;
         printf("¬веденное значение не €вл€етс€ числом!\n");
     }
     while (getchar() != '\n') continue;
