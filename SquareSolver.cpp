@@ -48,12 +48,12 @@ void solve(double a, double b, double c) {
     }
     else {
         double discrim = b * b - 4 * a * c;
-        if (discrim < 0) {
-            printf("Решений нет\n");
-        }
-        else if (fabs(discrim) <= DBL_EPSILON) {
+        if (fabs(discrim) <= DBL_EPSILON) {
             double x = - b / (2 * a);
             printf("Решение: x = %.3f\n", x);
+        }
+        else if (discrim < 0) {
+            printf("Решений нет\n");
         }
         else {
             double x1 = (-b - sqrt(discrim)) / (2 * a),
