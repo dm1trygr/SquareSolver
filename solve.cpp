@@ -4,10 +4,11 @@
 #include <float.h>
 #include "square_solver.h"
 
-int is_zero(const double number) {
-    assert(isfinite(number) && !isnan(number));
+int is_doubles_equal(const double num1, const double num2) {
+    assert(isfinite(num1) && !isnan(num2));
+    assert(isfinite(num1) && !isnan(num2));
 
-    if (fabs(number) <= DBL_EPSILON) {
+    if (fabs(num1 - num2) <= DBL_EPSILON) {
         return 1;
     }
     else {
@@ -22,7 +23,7 @@ int solve(const double a, const double b, const double c, double * const x1ptr, 
     assert(x1ptr != NULL);
     assert(x2ptr != NULL);
 
-    if (is_zero(a)) {
+    if (is_doubles_equal(a, 0)) {
         return linear(b, c, x1ptr);
     }
     else {
@@ -34,10 +35,10 @@ int linear(const double b, const double c, double * const x1ptr) {
     assert(isfinite(b) && !isnan(b));
     assert(isfinite(c) && !isnan(c));
 
-    if (is_zero(b) && is_zero(c)) {
+    if (is_doubles_equal(b, 0) && is_doubles_equal(c, 0)) {
         return INF_ROOTS;
     }
-    else if (is_zero(b) && !is_zero(c)) {
+    else if (is_doubles_equal(b, 0) && !is_doubles_equal(c, 0)) {
         return 0;
     }
     else {
@@ -55,7 +56,7 @@ int square(const double a, const double b, const double c, double * const x1ptr,
 
     double discrim = b * b - 4 * a * c;
 
-    if (is_zero(discrim)) {
+    if (is_doubles_equal(discrim, 0)) {
         *x1ptr = - b / (2 * a);
         return 1;
     }
@@ -94,7 +95,7 @@ void print_solutions(const int roots_amount, const double x1, const double x2) {
 double round_to_zero(const double number) {
     assert(isfinite(number) && !isnan(number));
 
-    if (is_zero(number)) {
+    if (is_doubles_equal(number, 0)) {
         return 0;
     }
     else {

@@ -16,6 +16,7 @@ int main(void) {
 
     print_solutions(roots_amount, x1, x2);
 
+    printf("Press any key to exit from program\n");
     getchar();
 
     return 0;
