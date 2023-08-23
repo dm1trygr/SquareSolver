@@ -34,6 +34,7 @@ int solve(const double a, const double b, const double c, double * const x1ptr, 
 int linear(const double b, const double c, double * const x1ptr) {
     assert(isfinite(b) && !isnan(b));
     assert(isfinite(c) && !isnan(c));
+    assert(x1ptr != NULL);
 
     if (is_doubles_equal(b, 0) && is_doubles_equal(c, 0)) {
         return INF_ROOTS;
