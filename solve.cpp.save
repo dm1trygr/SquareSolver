@@ -33,7 +33,7 @@ int solve(const double a, const double b, const double c, double * const x1ptr, 
 int linear(const double b, const double c, double * const x1ptr) {
     assert(isfinite(b) && !isnan(b));
     assert(isfinite(c) && !isnan(c));
-
+        
     if (is_zero(b) && is_zero(c)) {
         return INF_ROOTS;
     }
@@ -47,12 +47,6 @@ int linear(const double b, const double c, double * const x1ptr) {
 }
 
 int square(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr) {
-    assert(isfinite(a) && !isnan(a));
-    assert(isfinite(b) && !isnan(b));
-    assert(isfinite(c) && !isnan(c));
-    assert(x1ptr != NULL);
-    assert(x2ptr != NULL);
-
     double discrim = b * b - 4 * a * c;
 
     if (is_zero(discrim)) {
@@ -92,8 +86,6 @@ void print_solutions(const int roots_amount, const double x1, const double x2) {
 }
 
 double round_to_zero(const double number) {
-    assert(isfinite(number) && !isnan(number));
-
     if (is_zero(number)) {
         return 0;
     }
