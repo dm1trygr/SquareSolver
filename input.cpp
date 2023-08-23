@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "func_header.h"
+#include "square_solver.h"
 
 void get_3_coeffs(double * const a_ptr, double * const b_ptr, double * const c_ptr) {
     assert(a_ptr != NULL);

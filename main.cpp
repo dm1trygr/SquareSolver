@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
-#include "func_header.h"
+#include "square_solver.h"
 
 int main(void) {
     printf("Welcome to Square equation solver\n"

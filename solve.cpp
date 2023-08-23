@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
-#include "func_header.h"
+#include "square_solver.h"
 
 int is_zero(const double number) {
     if (fabs(number) <= DBL_EPSILON) {
