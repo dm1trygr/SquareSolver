@@ -11,6 +11,8 @@ int runtests(void) {
     success_tests += onetest(1, -2, 1, 1, 0, 1);
     success_tests += onetest(1, 0, 4, 0, 0, 0);
     success_tests += onetest(1, 0, -4, -2, 2, 2);
+    success_tests += onetest(0, 2, -4, 2, 0, 1);
+    success_tests += onetest(1, 5, 4, -4, -1, 2);
 
     return success_tests;
 }
@@ -33,8 +35,8 @@ int onetest(const double a, const double b, const double c, const double x1ref, 
         return 1;
     }
     else {
-        printf("a = %.3f, b = %.3f, c = %.3f: ERROR: Received x1 = %.3f, x2 = %.3f, roots_amt = %d\n"
-               "                                     Excepted x1 = %.3f, x2 = %.3f, roots_amt = %d\n",
+        printf("a = %.3f, b = %.3f, c = %.3f: ERROR: Received x1 = %f, x2 = %f, roots_amt = %d\n"
+               "                                     Excepted x1 = %f, x2 = %f, roots_amt = %d\n",
                a, b, c, x1, x2, roots_amt, x1ref, x2ref, amtref);
         return 0;
     }

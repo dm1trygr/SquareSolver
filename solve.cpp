@@ -73,6 +73,10 @@ int square(const double a, const double b, const double c, double * const x1ptr,
 
 void print_solutions(const int roots_amount, const double x1, const double x2) {
     assert((roots_amount <= 2 && roots_amount >= 0) || roots_amount == INF_ROOTS);
+    assert(isfinite(roots_amount) && !isnan(roots_amount));
+    assert(isfinite(x1) && !isnan(x1));
+    assert(isfinite(x2) && !isnan(x2));
+
 
     switch (roots_amount) {
         case 0:
