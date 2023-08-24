@@ -26,6 +26,14 @@ int run_tests(void) {
 }
 
 int do_one_test(const test_reference * const current_test) {
+    assert(current_test != NULL);
+    assert(current_test->test_name != NULL);
+    assert(isfinite(current_test->a) && ! isnan(current_test->a));
+    assert(isfinite(current_test->b) && ! isnan(current_test->b));
+    assert(isfinite(current_test->c) && ! isnan(current_test->c));
+    assert(isfinite(current_test->x1ref) && ! isnan(current_test->x1ref));
+    assert(isfinite(current_test->x2ref) && ! isnan(current_test->x2ref));
+
     double x1 = 0, x2 = 0;
 
     int amount = solve(current_test->a, current_test->b, current_test->c, &x1, &x2);
