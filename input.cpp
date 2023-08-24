@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
-#include "square_solver.h"
+#include "input.h"
 
-void get_3_coeffs(double * const a_ptr, double * const b_ptr, double * const c_ptr) {
+void get_3_coeffs(double * const a_ptr, double * const b_ptr, double * const c_ptr) { // переписать
     assert(a_ptr != NULL);
     assert(b_ptr != NULL);
     assert(c_ptr != NULL);

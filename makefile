@@ -4,3 +4,4 @@ FILES=main.cpp input.cpp solve.cpp unittests.cpp
 
 all:
 	g++ $(FILES) $(FLAGS)
+#// предусмотреть объектные файлы

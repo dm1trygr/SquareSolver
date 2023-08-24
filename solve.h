@@ -1,38 +1,6 @@
 static const int INF_ROOTS = 3;
 
 //-----------------------------------------------------
-//!Gets three coefficients from input
-//!
-//!@param [out] a_ptr  Pointer to a-coefficient
-//!@param [out] b_ptr  Pointer to b-coefficient
-//!@param [out] c_ptr  Pointer to c-coefficient
-//!
-//!@see one_coeff_input()
-//-----------------------------------------------------
-
-void get_3_coeffs(double * const a_ptr, double * const b_ptr, double * const c_ptr);
-
-//-----------------------------------------------------
-//!Gets one number from input
-//!
-//!@return Double-type value
-//!
-//!@note If you try to enter a non-numeric value, it
-//!      displays a corresponding message and allows
-//!      you to enter another value
-//-----------------------------------------------------
-
-double one_coeff_input(void);
-
-//-----------------------------------------------------
-//!Clears input buffer
-//!
-//!@see clear_input_buffer()
-//-----------------------------------------------------
-
-void clear_input_buffer(void);
-
-//-----------------------------------------------------
 //!Checks if double-type numbers is equal
 //!
 //!@param [in]  number Double-type number 1
@@ -71,7 +39,7 @@ int solve(const double a, const double b, const double c, double * const x1ptr, 
 //!        solutions is infinite
 //-----------------------------------------------------
 
-int linear(const double b, const double c, double * const x1ptr);
+int solve_linear(const double b, const double c, double * const x1ptr);
 
 //-----------------------------------------------------
 //!Solves square equation with a != 0
@@ -85,7 +53,7 @@ int linear(const double b, const double c, double * const x1ptr);
 //!@return Amount of roots
 //-----------------------------------------------------
 
-int square(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr);
+int solve_square(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr);
 
 //-----------------------------------------------------
 //!Prints solutions of equation
@@ -108,31 +76,3 @@ void print_solutions(const int roots_amount, const double x1, const double x2);
 //-----------------------------------------------------
 
 double round_to_zero(const double number);
-
-//-----------------------------------------------------
-//!Does unit tests of solve()
-//!
-//!@return Amount of successful tests
-//!
-//!@see solve(), onetest()
-//-----------------------------------------------------
-
-int runtests(void);
-
-//-----------------------------------------------------
-//!Does 1 unit test of solve()
-//!
-//!@param [in]  a      a-coefficient
-//!@param [in]  b      b-coefficient
-//!@param [in]  c      c-coefficient
-//!@param [in]  x1ref  Reference root 1
-//!@param [in]  x2ref  Reference root 2
-//!@param [in]  amtref Reference amount of roots
-//!
-//!@return 1 if received roots and amount is equal to
-//!        reference, otherwise 0
-//!
-//!@see solve()
-//-----------------------------------------------------
-
-int onetest(const double a, const double b, const double c, const double x1ref, const double x2ref, const int amtref);

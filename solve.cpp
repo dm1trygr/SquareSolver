@@ -2,11 +2,12 @@
 #include <assert.h>
 #include <math.h>
 #include <float.h>
-#include "square_solver.h"
+#include "solve.h"
+
 
 int is_doubles_equal(const double num1, const double num2) {
-    assert(isfinite(num1) && !isnan(num2));
-    assert(isfinite(num1) && !isnan(num2));
+    assert(isfinite(num1) && !isnan(num1));
+    assert(isfinite(num2) && !isnan(num2));  // в функцию
 
     if (fabs(num1 - num2) <= DBL_EPSILON) {
         return 1;
@@ -24,14 +25,14 @@ int solve(const double a, const double b, const double c, double * const x1ptr, 
     assert(x2ptr != NULL);
 
     if (is_doubles_equal(a, 0)) {
-        return linear(b, c, x1ptr);
+        return solve_linear(b, c, x1ptr);
     }
     else {
-        return square(a, b, c, x1ptr, x2ptr);
+        return solve_square(a, b, c, x1ptr, x2ptr);
     }
 }
 
-int linear(const double b, const double c, double * const x1ptr) {
+int solve_linear(const double b, const double c, double * const x1ptr) {
     assert(isfinite(b) && !isnan(b));
     assert(isfinite(c) && !isnan(c));
     assert(x1ptr != NULL);
@@ -48,27 +49,45 @@ int linear(const double b, const double c, double * const x1ptr) {
     }
 }
 
-int square(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr) {
-    assert(isfinite(a) && !isnan(a));
+int solve_square(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr) {
+    assert(isfinite(a) && !isnan(a) && !is_doubles_equal(a, 0));
     assert(isfinite(b) && !isnan(b));
     assert(isfinite(c) && !isnan(c));
     assert(x1ptr != NULL);
     assert(x2ptr != NULL);
 
-    double discrim = b * b - 4 * a * c;
-
-    if (is_doubles_equal(discrim, 0)) {
-        *x1ptr = - b / (2 * a);
+    if (is_doubles_equal(c, 0) && is_doubles_equal(b, 0)) {
+        *x1ptr = 0;
         return 1;
     }
-    else if (discrim < 0) {
-        return 0;
+    else if (is_doubles_equal(c, 0) && is_doubles_equal(b, 0)) {
+        double temp = - b / a;
+        if (temp > 0) {
+            *x1ptr = temp;
+            *x2ptr = 0;
+        }
+        else {
+            *x1ptr = 0;
+            *x2ptr = temp;
+        }
+        return 2;
     }
     else {
-        double d_root = sqrt(discrim);
-        *x1ptr = (-b - d_root) / (2 * a);
-        *x2ptr = (-b + d_root) / (2 * a);
-        return 2;
+        double discrim = b * b - 4 * a * c;
+
+        if (is_doubles_equal(discrim, 0)) {
+            *x1ptr = - b / (2 * a);
+            return 1;
+        }
+        else if (discrim < 0) {
+            return 0;
+        }
+        else {
+            double d_root = sqrt(discrim);
+            *x1ptr = (-b - d_root) / (2 * a);
+            *x2ptr = (-b + d_root) / (2 * a);
+            return 2;
+        }
     }
 }
 
@@ -87,7 +106,7 @@ void print_solutions(const int roots_amount, const double x1, const double x2) {
             printf("There is 1 solution: %.3f\n", round_to_zero(x1));
             break;
         case 2:
-            printf("There is 2 solutions: %.3f and %.3f\n", round_to_zero(x1), round_to_zero(x2));
+            printf("There are 2 solutions: %.3f and %.3f\n", round_to_zero(x1), round_to_zero(x2));
             break;
         case INF_ROOTS:
             printf("The solution is any number\n");

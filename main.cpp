@@ -2,17 +2,25 @@
 #include <math.h>
 #include <float.h>
 #include <string.h>
-#include "square_solver.h"
+#include "input.h"
+#include "solve.h"
+#include "unittests.h"
 
+// exe лучше на гитхабе не хранить
+// gitignore
+// readme
 int main(int argc, char * argv[]) {
     if (argc >= 2 && strcmp(argv[1], "-t") == 0) {
         printf("Square equation solver, Unit tests mode\n\n");
 
-        runtests();
+        run_tests();
 
         return 0;
     }
-    else {
+    /*else if (argc >= 2 && strcmp(argv[1], "-l") == 0) {
+
+    }*/
+    else {  // в цикл + можно добавить режим где решаются толькои лтинейные
         printf("Welcome to Square equation solver\n"
                "This program can solve square equations\n\n");
 
