@@ -6,10 +6,6 @@
 #include "solve.h"
 #include "unittests.h"
 
-// exe лучше на гитхабе не хранить
-// gitignore
-// readme
-
 int main(int argc, char * argv[]) {
     if (argc >= 2 && strcmp(argv[1], "-t") == 0) {
         printf("Square equation solver, Unit tests mode\n\n");
