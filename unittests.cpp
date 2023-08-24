@@ -8,13 +8,13 @@ int run_tests(void) {
     int success_tests = 0;
 
     test_reference test_list[N_TESTS] = {
-        {0, 0, 0, 0, 0, INF_ROOTS, "ZeroTest"},     // выравнять
-        {1, 2, 1, -1, 0, 1, "OneRootTest1"},
-        {1, -2, 1, 1, 0, 1, "OneRootTest2"},
-        {1, 0, 4, 0, 0, 0, "ZeroSolutionsTest"},
-        {1, 0, -4, -2, 2, 2, "SquareVarTest"},
-        {0, 2, -4, 2, 0, 1, "LinearTest"},
-        {1, 5, 4, -4, -1, 2, "RandomTest"}
+        {0,  0,  0,  0,  0, INF_ROOTS, "ZeroTest"},
+        {1,  2,  1, -1,  0,         1, "OneRootTest1"},
+        {1, -2,  1,  1,  0,         1, "OneRootTest2"},
+        {1,  0,  4,  0,  0,         0, "ZeroSolutionsTest"},
+        {1,  0, -4, -2,  2,         2, "SquareVarTest"},
+        {0,  2, -4,  2,  0,         1, "LinearTest"},
+        {1,  5,  4, -4, -1,         2, "RandomTest"}
     };
 
     for (int i = 0; i < N_TESTS; i++) {

@@ -45,7 +45,7 @@ void swap_numbers(double * const num1_ptr, double * const num2_ptr);
 //!@return Amount of roots or INF_ROOTS if amount of
 //!        solutions is infinite
 //!
-//!@see linear(), square()
+//!@see linear()
 //-----------------------------------------------------
 
 int solve(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr);
@@ -62,20 +62,6 @@ int solve(const double a, const double b, const double c, double * const x1ptr, 
 //-----------------------------------------------------
 
 int solve_linear(const double b, const double c, double * const x1ptr);
-
-//-----------------------------------------------------
-//!Solves square equation with a != 0
-//!
-//!@param [in]  a      a-parameter
-//!@param [in]  b      b-parameter
-//!@param [in]  c      c-parameter
-//!@param [out] x1ptr  Pointer to 1st root
-//!@param [out] x2ptr  Pointer to 2nd root
-//!
-//!@return Amount of roots
-//-----------------------------------------------------
-
-int solve_square(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr);
 
 //-----------------------------------------------------
 //!Prints solutions of equation
