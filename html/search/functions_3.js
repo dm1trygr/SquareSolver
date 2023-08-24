@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5fdoubles_5fequal_0',['is_doubles_equal',['../solve_8cpp.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp'],['../solve_8h.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp']]]
+  ['get_5fcoeffs_0',['get_coeffs',['../input_8cpp.html#a641375c887a30ad5ae417539e3c95ce3',1,'get_coeffs(double coeffs[], const unsigned int amount):&#160;input.cpp'],['../input_8h.html#a641375c887a30ad5ae417539e3c95ce3',1,'get_coeffs(double coeffs[], const unsigned int amount):&#160;input.cpp']]]
 ];

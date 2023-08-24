@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['do_5fone_5ftest_0',['do_one_test',['../unittests_8cpp.html#a266621621edb19a5221cdbc265382520',1,'do_one_test(const test_reference *const current_test):&#160;unittests.cpp'],['../unittests_8h.html#a266621621edb19a5221cdbc265382520',1,'do_one_test(const test_reference *const current_test):&#160;unittests.cpp']]]
+  ['clear_5finput_5fbuffer_0',['clear_input_buffer',['../input_8cpp.html#a406defd61bbe2707306f1d68b6f3bb08',1,'clear_input_buffer(void):&#160;input.cpp'],['../input_8h.html#a406defd61bbe2707306f1d68b6f3bb08',1,'clear_input_buffer(void):&#160;input.cpp']]],
+  ['continue_5fprogram_1',['continue_program',['../input_8cpp.html#ad094664c5ec096db96b0f716543adea8',1,'continue_program(void):&#160;input.cpp'],['../input_8h.html#ad094664c5ec096db96b0f716543adea8',1,'continue_program(void):&#160;input.cpp']]]
 ];

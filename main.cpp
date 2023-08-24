@@ -6,8 +6,10 @@
 #include "solve.h"
 #include "unittests.h"
 
-int main(int argc, char * argv[]) {
-    if (argc >= 2 && strcmp(argv[1], "-t") == 0) {
+const int YES = 1;
+
+int main(int argc, char * argv[]) { // проверка на колво флагов в начало + добавить режим чтения из файла в основном режиме
+    if (argc >= 2 && strcmp(argv[1], "-t") == 0) { // слишком огромный мэйн, растащить по функциям
         printf("Square equation solver, Unit tests mode\n\n");
 
         run_tests();
@@ -20,7 +22,7 @@ int main(int argc, char * argv[]) {
         double coeffs[2] = {0, 0};
 
         do {
-            get_coeffs(coeffs, LINEAR_COEFFS_AMOUNT);
+            get_coeffs(coeffs, LINEAR_COEFFS_AMOUNT);  // в функцию
             double roots[1] = {0};
             int roots_amount = solve_linear(coeffs[0], coeffs[1], &roots[0]);
             print_solutions(roots, roots_amount);
@@ -36,7 +38,7 @@ int main(int argc, char * argv[]) {
                "This program can solve square equations\n\n");
 
         double coeffs[3] = {0};
-
+                                               // в функцию
         do {
             get_coeffs(coeffs, SQUARE_COEFFS_AMOUNT);
 
@@ -44,16 +46,17 @@ int main(int argc, char * argv[]) {
             int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
 
             print_solutions(roots, roots_amount);
-        } while (continue_program() == 1);
+        } while (continue_program() == YES); // константа YES = 1
 
         printf("Goodbye!");
 
         return 0;
     }
     else {
-        printf("Usage: %s -s for square solver mode;\n"
+        printf("Usage: %s -s for square solver mode;\n"  // -h для вывода полной инфы о квадратке
                "       %s -l for linear mode;\n"
-               "       %s -t for unit tests mode;\n",
-               argv[0], argv[0], argv[0]);
+               "       %s -t for unit tests mode;\n"
+               "       %s -h to show full information",
+               argv[0], argv[0], argv[0], argv[0]);
     }
 }

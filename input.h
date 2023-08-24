@@ -1,8 +1,8 @@
-const int LINEAR_COEFFS_AMOUNT = 2;
-const int SQUARE_COEFFS_AMOUNT = 3;
+const unsigned int LINEAR_COEFFS_AMOUNT = 2;  // почитать про условную компил€цию (двойной инклюд)
+const unsigned int SQUARE_COEFFS_AMOUNT = 3;
 
 //-----------------------------------------------------
-//!Gets three coefficients from input
+//!Gets coefficients from standard input
 //!
 //!@param [out] coeffs[] Array for coefficients
 //!@param [in]  amount   Amount of coefficients
@@ -10,10 +10,10 @@ const int SQUARE_COEFFS_AMOUNT = 3;
 //!@see one_coeff_input()
 //-----------------------------------------------------
 
-void get_coeffs(double coeffs[], const int amount);
+void get_coeffs(double coeffs[], const unsigned int amount);
 
 //-----------------------------------------------------
-//!Gets one number from input
+//!Gets one number from standard input
 //!
 //!@return Double-type value
 //!

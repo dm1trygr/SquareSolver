@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5fcoeffs_0',['get_coeffs',['../input_8cpp.html#ae693d01cada37fe5d28110a53f02a190',1,'get_coeffs(double coeffs[], const int amount):&#160;input.cpp'],['../input_8h.html#ae693d01cada37fe5d28110a53f02a190',1,'get_coeffs(double coeffs[], const int amount):&#160;input.cpp']]]
+  ['do_5fone_5ftest_0',['do_one_test',['../unittests_8cpp.html#a266621621edb19a5221cdbc265382520',1,'do_one_test(const test_reference *const current_test):&#160;unittests.cpp'],['../unittests_8h.html#a266621621edb19a5221cdbc265382520',1,'do_one_test(const test_reference *const current_test):&#160;unittests.cpp']]]
 ];

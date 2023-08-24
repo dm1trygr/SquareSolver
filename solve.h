@@ -9,7 +9,7 @@ static const int INF_ROOTS = 888;
 //!@return Returns 1 if numbers are equal, otherwise 0
 //-----------------------------------------------------
 
-int is_doubles_equal(const double num1, const double num2);
+int are_doubles_equal(const double num1, const double num2);
 
 //-----------------------------------------------------
 //!If number is close to 0, returns 0, otherwise number
@@ -22,6 +22,16 @@ int is_doubles_equal(const double num1, const double num2);
 //-----------------------------------------------------
 
 double round_to_zero(const double number);
+
+//-----------------------------------------------------
+//!Assign the first variable to the value of the second,
+//!and the second to the value of the first
+//!
+//!@param [out] num1_ptr Pointer to 1st number
+//!@param [out] num2_ptr Pointer to 2nd number
+//-----------------------------------------------------
+
+void swap_numbers(double * const num1_ptr, double * const num2_ptr);
 
 //-----------------------------------------------------
 //!Solves square equation

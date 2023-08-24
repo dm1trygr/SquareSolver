@@ -8,7 +8,7 @@ int run_tests(void) {
     int success_tests = 0;
 
     test_reference test_list[N_TESTS] = {
-        {0, 0, 0, 0, 0, INF_ROOTS, "ZeroTest"},
+        {0, 0, 0, 0, 0, INF_ROOTS, "ZeroTest"},     // выравнять
         {1, 2, 1, -1, 0, 1, "OneRootTest1"},
         {1, -2, 1, 1, 0, 1, "OneRootTest2"},
         {1, 0, 4, 0, 0, 0, "ZeroSolutionsTest"},
@@ -38,8 +38,8 @@ int do_one_test(const test_reference * const current_test) {
 
     int amount = solve(current_test->a, current_test->b, current_test->c, &x1, &x2);
 
-    if (is_doubles_equal(x1, current_test->x1ref) &&
-        is_doubles_equal(x2, current_test->x2ref) &&
+    if (are_doubles_equal(x1, current_test->x1ref) &&
+        are_doubles_equal(x2, current_test->x2ref) &&
         amount == current_test->amount_ref) {
         printf("OK\n");
         return 1;
