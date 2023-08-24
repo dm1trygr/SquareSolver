@@ -1,4 +1,4 @@
-static const int INF_ROOTS = 3;
+static const int INF_ROOTS = 888;
 
 //-----------------------------------------------------
 //!Checks if double-type numbers is equal
@@ -10,6 +10,18 @@ static const int INF_ROOTS = 3;
 //-----------------------------------------------------
 
 int is_doubles_equal(const double num1, const double num2);
+
+//-----------------------------------------------------
+//!If number is close to 0, returns 0, otherwise number
+//!
+//!@param [in]  number Double-type value
+//!
+//!@return 0 if number is close to zero, otherwise number
+//!
+//!@see is_doubles_equal()
+//-----------------------------------------------------
+
+double round_to_zero(const double number);
 
 //-----------------------------------------------------
 //!Solves square equation
@@ -58,21 +70,8 @@ int solve_square(const double a, const double b, const double c, double * const 
 //-----------------------------------------------------
 //!Prints solutions of equation
 //!
-//!@param [in]  roots_amount Amount of roots
-//!@param [in]  x1           First root
-//!@param [in]  x2           Second root
+//!@param [in]  roots[] Array of solutions
+//!@param [in]  amount  Amount of solutions
 //-----------------------------------------------------
 
-void print_solutions(const int roots_amount, const double x1, const double x2);
-
-//-----------------------------------------------------
-//!If number is close to 0, returns 0, otherwise number
-//!
-//!@param [in]  number Double-type value
-//!
-//!@return 0 if number is close to zero, otherwise number
-//!
-//!@see is_doubles_equal()
-//-----------------------------------------------------
-
-double round_to_zero(const double number);
+void print_solutions(const double roots[], const int amount);

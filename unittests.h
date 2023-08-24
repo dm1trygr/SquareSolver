@@ -1,3 +1,13 @@
+const int N_TESTS = 7;
+const int MAX_NAME_LEN = 50;
+
+struct test_reference {
+    const double a, b, c;
+    const double x1ref, x2ref;
+    const int amount_ref;
+    const char test_name[MAX_NAME_LEN];
+};
+
 //-----------------------------------------------------
 //!Does unit tests of solve()
 //!
@@ -11,12 +21,8 @@ int run_tests(void);
 //-----------------------------------------------------
 //!Does 1 unit test of solve()
 //!
-//!@param [in]  a          a-coefficient
-//!@param [in]  b          b-coefficient
-//!@param [in]  c          c-coefficient
-//!@param [in]  x1ref      Reference root 1
-//!@param [in]  x2ref      Reference root 2
-//!@param [in]  amount_ref Reference amount of roots
+//!@param [in]  current_test Structure with coefficients
+//!                          and reference values
 //!
 //!@return 1 if received roots and amount is equal to
 //!        reference, otherwise 0
@@ -24,5 +30,5 @@ int run_tests(void);
 //!@see solve()
 //-----------------------------------------------------
 
-int do_one_test(const double a, const double b, const double c, const double x1ref, const double x2ref, const int amtref);
+int do_one_test(const test_reference * const current_test);
 

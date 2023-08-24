@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_0',['linear',['../solve_8cpp.html#a4d8730d517615a34ea8acfc1bd870f98',1,'linear(const double b, const double c, double *const x1ptr):&#160;solve.cpp'],['../square__solver_8h.html#a4d8730d517615a34ea8acfc1bd870f98',1,'linear(const double b, const double c, double *const x1ptr):&#160;solve.cpp']]]
+  ['do_5fone_5ftest_0',['do_one_test',['../unittests_8cpp.html#a266621621edb19a5221cdbc265382520',1,'do_one_test(const test_reference *const current_test):&#160;unittests.cpp'],['../unittests_8h.html#a266621621edb19a5221cdbc265382520',1,'do_one_test(const test_reference *const current_test):&#160;unittests.cpp']]]
 ];

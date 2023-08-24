@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    int numbers1[2] = {1, 0};
+    int numbers2[2] = {2, 3};
+    printf("%d\n", numbers1[0]);
+    //numbers++;
+    printf("%p\n", numbers1);
+}

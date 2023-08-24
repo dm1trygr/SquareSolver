@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['input_2ecpp_0',['input.cpp',['../input_8cpp.html',1,'']]],
-  ['is_5fdoubles_5fequal_1',['is_doubles_equal',['../solve_8cpp.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp'],['../square__solver_8h.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp']]]
+  ['c_0',['c',['../structtest__reference.html#a04294ee42edc47f50b5f4a9aa692487b',1,'test_reference']]],
+  ['clear_5finput_5fbuffer_1',['clear_input_buffer',['../input_8cpp.html#a406defd61bbe2707306f1d68b6f3bb08',1,'clear_input_buffer(void):&#160;input.cpp'],['../input_8h.html#a406defd61bbe2707306f1d68b6f3bb08',1,'clear_input_buffer(void):&#160;input.cpp']]],
+  ['continue_5fprogram_2',['continue_program',['../input_8cpp.html#ad094664c5ec096db96b0f716543adea8',1,'continue_program(void):&#160;input.cpp'],['../input_8h.html#ad094664c5ec096db96b0f716543adea8',1,'continue_program(void):&#160;input.cpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_0',['linear',['../solve_8cpp.html#a4d8730d517615a34ea8acfc1bd870f98',1,'linear(const double b, const double c, double *const x1ptr):&#160;solve.cpp'],['../square__solver_8h.html#a4d8730d517615a34ea8acfc1bd870f98',1,'linear(const double b, const double c, double *const x1ptr):&#160;solve.cpp']]]
+  ['is_5fdoubles_5fequal_0',['is_doubles_equal',['../solve_8cpp.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp'],['../solve_8h.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp']]]
 ];

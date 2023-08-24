@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['round_5fto_5fzero_0',['round_to_zero',['../solve_8cpp.html#ae1a1237bcc0355e25e7ca50c21253719',1,'round_to_zero(const double number):&#160;solve.cpp'],['../square__solver_8h.html#ae1a1237bcc0355e25e7ca50c21253719',1,'round_to_zero(const double number):&#160;solve.cpp']]],
-  ['runtests_1',['runtests',['../square__solver_8h.html#a289e6b135430de2686e8419fd3f57b6b',1,'runtests(void):&#160;unittests.cpp'],['../unittests_8cpp.html#a289e6b135430de2686e8419fd3f57b6b',1,'runtests(void):&#160;unittests.cpp']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['max_5fname_5flen_2',['MAX_NAME_LEN',['../unittests_8h.html#a777e927bce1488e8c4e7ca81fa150cde',1,'unittests.h']]]
 ];

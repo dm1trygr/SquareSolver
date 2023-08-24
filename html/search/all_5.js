@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['one_5fcoeff_5finput_0',['one_coeff_input',['../input_8cpp.html#a6dde1cf313bb8f73a7ab7a55372e7f06',1,'one_coeff_input(void):&#160;input.cpp'],['../square__solver_8h.html#a6dde1cf313bb8f73a7ab7a55372e7f06',1,'one_coeff_input(void):&#160;input.cpp']]],
-  ['onetest_1',['onetest',['../square__solver_8h.html#ac757d809553f6bb75c249ba8153b3171',1,'onetest(const double a, const double b, const double c, const double x1ref, const double x2ref, const int amtref):&#160;unittests.cpp'],['../unittests_8cpp.html#ac757d809553f6bb75c249ba8153b3171',1,'onetest(const double a, const double b, const double c, const double x1ref, const double x2ref, const int amtref):&#160;unittests.cpp']]]
+  ['input_2ecpp_0',['input.cpp',['../input_8cpp.html',1,'']]],
+  ['input_2eh_1',['input.h',['../input_8h.html',1,'']]],
+  ['is_5fdoubles_5fequal_2',['is_doubles_equal',['../solve_8cpp.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp'],['../solve_8h.html#aec82cf6a1dfc57699f629a729076c439',1,'is_doubles_equal(const double num1, const double num2):&#160;solve.cpp']]]
 ];

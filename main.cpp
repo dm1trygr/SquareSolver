@@ -9,6 +9,7 @@
 // exe лучше на гитхабе не хранить
 // gitignore
 // readme
+
 int main(int argc, char * argv[]) {
     if (argc >= 2 && strcmp(argv[1], "-t") == 0) {
         printf("Square equation solver, Unit tests mode\n\n");
@@ -17,25 +18,46 @@ int main(int argc, char * argv[]) {
 
         return 0;
     }
-    /*else if (argc >= 2 && strcmp(argv[1], "-l") == 0) {
+    else if (argc >= 2 && strcmp(argv[1], "-l") == 0) {
+        printf("Square equation solver, linear equation solver mode\n\n");
 
-    }*/
-    else {  // в цикл + можно добавить режим где решаются толькои лтинейные
+        double coeffs[2] = {0, 0};
+
+        do {
+            get_coeffs(coeffs, LINEAR_COEFFS_AMOUNT);
+            double roots[1] = {0};
+            int roots_amount = solve_linear(coeffs[0], coeffs[1], &roots[0]);
+            print_solutions(roots, roots_amount);
+        } while (continue_program() == 1);
+
+        printf("Goodbye!");
+
+        return 0;
+
+    }
+    else if (argc >= 2 && strcmp(argv[1], "-s") == 0) {
         printf("Welcome to Square equation solver\n"
                "This program can solve square equations\n\n");
 
-        double a = 0, b = 0, c = 0;
+        double coeffs[3] = {0};
 
-        get_3_coeffs(&a, &b, &c);
+        do {
+            get_coeffs(coeffs, SQUARE_COEFFS_AMOUNT);
 
-        double x1 = 0, x2 = 0;
-        int roots_amount = solve(a, b, c, &x1, &x2);
+            double roots[2] = {0, 0};
+            int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
 
-        print_solutions(roots_amount, x1, x2);
+            print_solutions(roots, roots_amount);
+        } while (continue_program() == 1);
 
-        printf("Press any key to exit from program\n");
-        getchar();
+        printf("Goodbye!");
 
         return 0;
+    }
+    else {
+        printf("Usage: %s -s for square solver mode;\n"
+               "       %s -l for linear mode;\n"
+               "       %s -t for unit tests mode;\n",
+               argv[0], argv[0], argv[0]);
     }
 }
