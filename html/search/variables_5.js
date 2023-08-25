@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['n_5ftests_0',['N_TESTS',['../unittests_8h.html#a37de87746ded0e26600531ae8c4f4beb',1,'unittests.h']]]
+  ['max_5fname_5flen_0',['MAX_NAME_LEN',['../unittests_8h.html#a777e927bce1488e8c4e7ca81fa150cde',1,'unittests.h']]]
 ];

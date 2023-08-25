@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['square_5fcoeffs_5famount_0',['SQUARE_COEFFS_AMOUNT',['../input_8h.html#a379ba992dd8fe3ec6dd290a589d96027',1,'input.h']]]
+  ['n_5ftests_0',['N_TESTS',['../unittests_8h.html#a37de87746ded0e26600531ae8c4f4beb',1,'unittests.h']]]
 ];

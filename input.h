@@ -38,8 +38,6 @@ int continue_program(void);
 
 //-----------------------------------------------------
 //!Clears input buffer
-//!
-//!@see clear_input_buffer()
 //-----------------------------------------------------
 
 void clear_input_buffer(void);

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
+  ['get_5fcoeffs_0',['get_coeffs',['../input_8cpp.html#a641375c887a30ad5ae417539e3c95ce3',1,'get_coeffs(double coeffs[], const unsigned int amount):&#160;input.cpp'],['../input_8h.html#a641375c887a30ad5ae417539e3c95ce3',1,'get_coeffs(double coeffs[], const unsigned int amount):&#160;input.cpp']]]
 ];

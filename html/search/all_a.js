@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_5fsolutions_0',['print_solutions',['../solve_8cpp.html#a933040f666895b0992b39592c9bfb0a6',1,'print_solutions(const double roots[], const int amount):&#160;solve.cpp'],['../solve_8h.html#a933040f666895b0992b39592c9bfb0a6',1,'print_solutions(const double roots[], const int amount):&#160;solve.cpp']]]
+  ['one_5fcoeff_5finput_0',['one_coeff_input',['../input_8cpp.html#a6dde1cf313bb8f73a7ab7a55372e7f06',1,'one_coeff_input(void):&#160;input.cpp'],['../input_8h.html#a6dde1cf313bb8f73a7ab7a55372e7f06',1,'one_coeff_input(void):&#160;input.cpp']]]
 ];

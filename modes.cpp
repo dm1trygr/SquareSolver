@@ -3,6 +3,7 @@
 #include "input.h"
 #include "solve.h"
 #include "unittests.h"
+#include "fileio.h"
 
 void square_equation_mode(void) {
     printf("Welcome to Square equation solver\n"
@@ -39,8 +40,41 @@ void linear_equation_mode(void) {
     printf("Goodbye!\n");
 }
 
-void file_mode(void) {
+void file_mode(void) {  // растащить по функциям
+    printf("Square equation solver, file mode\n\n");
 
+    char input_filename[MAX_FILENAME_LEN] = "", output_filename[MAX_FILENAME_LEN] = "";
+
+    printf("Enter input file:\n");
+    scanf("%s", input_filename);
+    FILE * input_fp;
+    while ((input_fp = fopen(input_filename, "r")) == NULL) {
+        printf("File %s does not exists! Please try again:\n", input_filename);
+        scanf("%s", input_filename);
+    }
+    //get_file_pointer(input_fp, "r");
+
+    printf("Enter output file:\n");
+    scanf("%s", output_filename);
+    FILE * output_fp;
+    while ((output_fp = fopen(output_filename, "a")) == NULL) {
+        printf("Can't open file! Please try again:\n");
+        scanf("%s", input_filename);
+    }
+    //get_file_pointer(output_fp, "a")
+
+    double coeffs[3] = {0}, roots[2] = {0};
+    int equation_number = 1;
+
+    fprintf(output_fp, "Solutions:\n");
+
+    while (fscanf(input_fp, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
+        int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+        fprintf(output_fp, "EQUATION %d: ", equation_number++);
+        fprint_solutions(output_fp, roots, roots_amount);
+    }
+
+    fputc('\n', output_fp);
 }
 
 void unit_tests_mode(void) {
@@ -68,8 +102,8 @@ void full_help(const char * const program_name) {
            "%s  Opens file, reads coefficients from this file and writes coefficients\n"
            "    to another file\n"
            "%s  Begins testing of program's main solve functions. Shows status of\n"
-           "    every test (OK/Not OK) and if any test was failed, information about\n"
-           "    this test(s)\n"
+           "    every test (OK/Not OK) and if any test(s) was failed, information\n"
+           "    about this test(s)\n"
            "%s  Shows full information about this program\n"
            "\n",
            program_name, SQUARE_MODE_FLAG, LINEAR_MODE_FLAG,

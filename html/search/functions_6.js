@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_5fsolutions_0',['print_solutions',['../solve_8cpp.html#a933040f666895b0992b39592c9bfb0a6',1,'print_solutions(const double roots[], const int amount):&#160;solve.cpp'],['../solve_8h.html#a933040f666895b0992b39592c9bfb0a6',1,'print_solutions(const double roots[], const int amount):&#160;solve.cpp']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
 ];
