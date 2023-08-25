@@ -91,6 +91,8 @@ Functions</h2></td></tr>
 <tr class="separator:a80797d84ad6227fc9b4e872b2e620f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a933040f666895b0992b39592c9bfb0a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8h.html#a933040f666895b0992b39592c9bfb0a6">print_solutions</a> (const double roots[], const int amount)</td></tr>
 <tr class="separator:a933040f666895b0992b39592c9bfb0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5cf0afa2f8f728487a9a3ecd3c4d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8h.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">fprint_solutions</a> (FILE *file_pointer, const double roots[], const unsigned int amount)</td></tr>
+<tr class="separator:a2f5cf0afa2f8f728487a9a3ecd3c4d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8b23669359a42cdbca02596ab35b00f4" name="a8b23669359a42cdbca02596ab35b00f4"></a>
@@ -127,6 +129,49 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns 1 if numbers are equal, otherwise 0 </dd></dl>
+
+</div>
+</div>
+<a id="a2f5cf0afa2f8f728487a9a3ecd3c4d44" name="a2f5cf0afa2f8f728487a9a3ecd3c4d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5cf0afa2f8f728487a9a3ecd3c4d44">&#9670;&#160;</a></span>fprint_solutions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fprint_solutions </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_pointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>roots</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prints solutions of equation with coefficients from file</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_pointer</td><td>Pointer to the file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">roots[]</td><td>Array of solutions </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">amount</td><td>Amount of solutions </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

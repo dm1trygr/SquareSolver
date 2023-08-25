@@ -25,6 +25,13 @@ void linear_equation_mode(void);
 
 void file_mode(const char * const input_file_name, const char * const output_file_name);
 
+//-----------------------------------------------------
+//!Shows short help for file mode (-f flag)
+//!
+//!@param [in]  program_name Name of program received
+//!                          on standart input
+//-----------------------------------------------------
+
 void short_file_help(const char * const program_name);
 
 //-----------------------------------------------------
