@@ -116,3 +116,22 @@ void print_solutions(const double roots[], const int amount) {
         putchar('\n');
     }
 }
+
+void fprint_solutions(FILE * file_pointer, const double roots[], const unsigned int amount) {
+    assert(file_pointer != NULL);
+    assert(roots != NULL);
+
+    if (amount == 0) {
+        fprintf(file_pointer, "No solutions\n");
+    }
+    else if (amount == INF_ROOTS) {
+        fprintf(file_pointer, "Solution is any number\n");
+    }
+    else {
+        fprintf(file_pointer, "(%d solutions) ", amount);
+        for (int index = 0; index < amount; index++) {
+            fprintf(file_pointer, "%.3f ", roots[index]);
+        }
+        fputc('\n', file_pointer);
+    }
+}

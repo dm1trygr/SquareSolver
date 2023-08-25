@@ -1,11 +1,11 @@
 const int YES = 1;
-const int MAX_FILENAME_LEN = 50;
+//const int MAX_FILENAME_LEN = 50;
 
 const char SQUARE_MODE_FLAG[] = "-s";
 const char LINEAR_MODE_FLAG[] = "-l";
 const char FILE_MODE_FLAG[] = "-f";
-const char UNIT_TESTS_MODE[] = "-t";
-const char FULL_HELP_MODE[] = "-h";
+const char UNIT_TESTS_FLAG[] = "-t";
+const char FULL_HELP_FLAG[] = "-h";
 
 //-----------------------------------------------------
 //!Enters square equation solver mode
@@ -23,7 +23,9 @@ void linear_equation_mode(void);
 //!Enters file input/output mode
 //-----------------------------------------------------
 
-void file_mode(void);
+void file_mode(const char * const input_file_name, const char * const output_file_name);
+
+void short_file_help(const char * const program_name);
 
 //-----------------------------------------------------
 //!Does tests of solve functions of program

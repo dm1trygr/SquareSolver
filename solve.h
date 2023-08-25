@@ -71,3 +71,5 @@ int solve_linear(const double b, const double c, double * const x1ptr);
 //-----------------------------------------------------
 
 void print_solutions(const double roots[], const int amount);
+
+void fprint_solutions(FILE * file_pointer, const double roots[], const unsigned int amount);

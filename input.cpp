@@ -32,8 +32,8 @@ int continue_program(void) {
     int flag = 0;
 
     while (scanf("%d", &flag) != 1
-           && flag != 0
-           && flag != 1) {
+           || (flag != 0
+           && flag != 1)) {
         clear_input_buffer();
         printf("This is not a 0 or 1! Please try again\n");
     }
