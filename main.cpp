@@ -1,14 +1,11 @@
-#include <stdio.h>
-#include <math.h>
-#include <float.h>       // пересмотреть инклюды
 #include <string.h>
 #include "modes.h"
 
 
-int main(int argc, char * argv[]) {  // вместо -flag [option]
+int main(int argc, char * argv[]) {
     if (argc == 2) {
         if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) { // некорректный ввод начинающийс€ с числа
-            square_mode();  // equation удалить изщ названги€€
+            square_mode();
         }
         else if (strcmp(argv[1], LINEAR_MODE_FLAG) == 0) {
             linear_mode();
