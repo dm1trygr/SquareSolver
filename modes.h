@@ -10,13 +10,13 @@ const char FULL_HELP_FLAG[] = "-h";
 //!Enters square equation solver mode
 //-----------------------------------------------------
 
-void square_equation_mode(void);
+void square_mode(void);
 
 //-----------------------------------------------------
 //!Enters linear equation solver mode
 //-----------------------------------------------------
 
-void linear_equation_mode(void);
+void linear_mode(void);
 
 //-----------------------------------------------------
 //!Enters file input/output mode

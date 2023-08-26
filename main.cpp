@@ -8,10 +8,10 @@
 int main(int argc, char * argv[]) {  // вместо -flag [option]
     if (argc == 2) {
         if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) { // некорректный ввод начинающийс€ с числа
-            square_equation_mode();  // equation удалить изщ названги€€
+            square_mode();  // equation удалить изщ названги€€
         }
         else if (strcmp(argv[1], LINEAR_MODE_FLAG) == 0) {
-            linear_equation_mode();
+            linear_mode();
         }
         else if (strcmp(argv[1], FILE_MODE_FLAG) == 0) {
             if (argc == 4) {

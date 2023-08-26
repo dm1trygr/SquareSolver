@@ -6,7 +6,7 @@
 #include "solve.h"
 #include "unittests.h"
 
-void square_equation_mode(void) {
+void square_mode(void) {
     printf("Welcome to Square equation solver\n"
            "This program can solve square equations\n\n");
 
@@ -24,7 +24,7 @@ void square_equation_mode(void) {
     printf("Goodbye!\n");
 }
 
-void linear_equation_mode(void) {
+void linear_mode(void) {
     printf("Square equation solver, linear equation solver mode\n\n");
 
     double coeffs[2] = {0, 0};
