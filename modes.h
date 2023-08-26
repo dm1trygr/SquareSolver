@@ -1,5 +1,4 @@
 const int YES = 1;
-//const int MAX_FILENAME_LEN = 50;
 
 const char SQUARE_MODE_FLAG[] = "-s";
 const char LINEAR_MODE_FLAG[] = "-l";
@@ -23,7 +22,8 @@ void linear_equation_mode(void);
 //!Enters file input/output mode
 //-----------------------------------------------------
 
-void file_mode(const char * const input_file_name, const char * const output_file_name);
+void file_mode(const char * const input_file_name,
+               const char * const output_file_name);
 
 //-----------------------------------------------------
 //!Shows short help for file mode (-f flag)

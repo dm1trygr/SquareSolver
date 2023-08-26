@@ -1,20 +1,15 @@
-#include <stdio.h>
+#include <cstdio>  // это вместо stdio.h
 #include <assert.h>
 #include <math.h>
 #include <float.h>
 #include "solve.h"
 
-int are_doubles_equal(const double num1, const double num2) {
-    assert(isfinite(num1) && !isnan(num1));
+int are_doubles_equal(const double num1, const double num2) {  // в плюсах отдельный инклюд для bool не нужен
+    assert(isfinite(num1)); // аналогично убрать isnan()
     assert(isfinite(num2) && !isnan(num2));
 
-    if (fabs(num1 - num2) <= DBL_EPSILON) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
+    return fabs(num1 - num2) <= DBL_EPSILON;
+}   // сделать частный случай - сравнение с нулем
 
 double round_to_zero(const double number) {
     assert(isfinite(number) && !isnan(number));
@@ -22,9 +17,7 @@ double round_to_zero(const double number) {
     if (are_doubles_equal(number, 0)) {
         return 0;
     }
-    else {
-        return number;
-    }
+    return number;
 }
 
 void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
@@ -33,10 +26,11 @@ void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
     *num2_ptr = temp;
 }
 
-int solve(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr) {
-    assert(isfinite(a) && !isnan(a));
-    assert(isfinite(b) && !isnan(b));
-    assert(isfinite(c) && !isnan(c));
+int solve(const double a, const double b, const double c,
+          double * const x1ptr, double * const x2ptr) {
+    assert(isfinite(a));            // rename to solve_equation
+    assert(isfinite(b));
+    assert(isfinite(c));
     assert(x1ptr != NULL);
     assert(x2ptr != NULL);
 
@@ -79,8 +73,8 @@ int solve(const double a, const double b, const double c, double * const x1ptr, 
 
 
 int solve_linear(const double b, const double c, double * const x1ptr) {
-    assert(isfinite(b) && !isnan(b));
-    assert(isfinite(c) && !isnan(c));
+    assert(isfinite(b));
+    assert(isfinite(c));
     assert(x1ptr != NULL);
 
     if (are_doubles_equal(b, 0) && are_doubles_equal(c, 0)) {
@@ -95,8 +89,8 @@ int solve_linear(const double b, const double c, double * const x1ptr) {
     }
 }
 
-void print_solutions(const double roots[], const int amount) {
-    assert(amount >= 0);
+void print_solutions(const double roots[], const unsigned int amount) {
+    // функции вывода - в отдельный файл
     assert(roots != NULL);
 
     if (amount == 0) {

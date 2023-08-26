@@ -18,8 +18,8 @@ void square_equation_mode(void) {
         double roots[2] = {0, 0};
         int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
 
-        print_solutions(roots, roots_amount);
-    } while (continue_program() == YES);
+        print_solutions(roots, roots_amount); // можно в print_solutions вызвать fprint с stdout
+    } while (continue_program() == YES); // поменять название константы
 
     printf("Goodbye!\n");
 }
@@ -45,19 +45,19 @@ void file_mode(const char * const input_file_name, const char * const output_fil
     assert(input_file_name != NULL);
     assert(output_file_name != NULL);
 
-    FILE * input_file_ptr;
-    FILE * output_file_ptr;
+    FILE * input_file;
+    FILE * output_file;  // инициализировать
 
-    if ((input_file_ptr = fopen(input_file_name, "r")) == NULL) {
+    if ((input_file = fopen(input_file_name, "r")) == NULL) {  // присваивание и проверку - в разных местах
         printf("Error! File %s does not exist!\n", input_file_name);
     }
     else if (strcmp(input_file_name, output_file_name) == 0) {
         printf("Error! You're trying to open same file for reading coefficients and writing roots!\n");
-        fclose(input_file_ptr);
+        fclose(input_file);
     }
-    else if ((output_file_ptr = fopen(output_file_name, "w")) == NULL) {
+    else if ((output_file = fopen(output_file_name, "w")) == NULL) {
         printf("Error in opening %s!\n", output_file_name);
-        fclose(input_file_ptr);
+        fclose(input_file);
     }
     else {
         printf("Square equation solver, file mode\n\n");
@@ -67,19 +67,20 @@ void file_mode(const char * const input_file_name, const char * const output_fil
 
         int equation_number = 1;
 
-        fprintf(output_file_ptr, "Solutions:\n");
-        while (fscanf(input_file_ptr, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
+        fprintf(output_file, "Solutions:\n");
+        while (fscanf(input_file, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
             int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
-            fprintf(output_file_ptr, "EQUATION %d: ", equation_number++);
-            fprint_solutions(output_file_ptr, roots, roots_amount);
+
+            fprintf(output_file, "EQUATION %d: ", equation_number++);
+            fprint_solutions(output_file, roots, roots_amount);
         }
 
-        fputc('\n', output_file_ptr);
+        fputc('\n', output_file);
 
         printf("Solved %d equation(s)! Goodbye!\n", equation_number - 1);
 
-        fclose(input_file_ptr);
-        fclose(output_file_ptr);
+        fclose(input_file);
+        fclose(output_file);
     }
 }
 
@@ -109,11 +110,9 @@ void full_help(const char * const program_name) {
            "USAGE: %s -flag\n"
            "\n"
            "LIST OF FLAGS:\n"
-           "%s  Solves square equations. Accepts 3 coefficients. Works while user\n"
-           "    wants to solve square equations. Also can solve linear equation if\n"
-           "    user will enter a = 0.\n"
-           "%s  Solves linear equations. Accepts 2 coefficients. Works while user\n"
-           "    wants to solve linear equations.\n"
+           "%s  Solves square equations. Accepts 3 coefficients. Also can solve linear\n"
+           "    equation if user will enter a = 0.\n"
+           "%s  Solves linear equations. Accepts 2 coefficients."
            "%s  Opens file, reads coefficients from this file and writes coefficients\n"
            "    to another file\n"
            "    Must be used with 2 arguments after flag: %s [input file] [output file]\n"

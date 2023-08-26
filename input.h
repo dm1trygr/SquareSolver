@@ -1,5 +1,5 @@
 const unsigned int LINEAR_COEFFS_AMOUNT = 2;
-const unsigned int SQUARE_COEFFS_AMOUNT = 3;
+const unsigned int SQUARE_COEFFS_AMOUNT = 3;  //AMOUNT -> NUMBER
 
 //-----------------------------------------------------
 //!Gets coefficients from standard input
@@ -7,7 +7,7 @@ const unsigned int SQUARE_COEFFS_AMOUNT = 3;
 //!@param [out] coeffs[] Array for coefficients
 //!@param [in]  amount   Amount of coefficients
 //!
-//!@see one_coeff_input()
+//!@see input_one_coeff()
 //-----------------------------------------------------
 
 void get_coeffs(double coeffs[], const unsigned int amount);
@@ -24,7 +24,7 @@ void get_coeffs(double coeffs[], const unsigned int amount);
 //!@see clear_input_buffer()
 //-----------------------------------------------------
 
-double one_coeff_input(void);
+double input_one_coeff(void);
 
 //-----------------------------------------------------
 //!Asks a user if he wish stop or continue program

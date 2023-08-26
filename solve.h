@@ -31,7 +31,7 @@ double round_to_zero(const double number);
 //!@param [out] num2_ptr Pointer to 2nd number
 //-----------------------------------------------------
 
-void swap_numbers(double * const num1_ptr, double * const num2_ptr);
+void swap_numbers(double * const num1_ptr, double * const num2_ptr);  // перенести в solve.cpp + пересмотреть другие функции
 
 //-----------------------------------------------------
 //!Solves square equation
@@ -70,7 +70,7 @@ int solve_linear(const double b, const double c, double * const x1ptr);
 //!@param [in]  amount  Amount of solutions
 //-----------------------------------------------------
 
-void print_solutions(const double roots[], const int amount);
+void print_solutions(const double roots[], const unsigned int amount);
 
 //-----------------------------------------------------
 //!Prints solutions of equation with coefficients from file

@@ -4,7 +4,7 @@ const int MAX_NAME_LEN = 50;  //!<Maximum test name length
 //!Structure with data about tests: coefficients of equation,
 //!right roots and their amount
 
-struct test_reference {
+struct TestReference {
     const double a;  //!<a-coefficient
     const double b;  //!<b-coefficient
     const double c;  //!<c-coefficient
@@ -19,7 +19,7 @@ struct test_reference {
 //!
 //!@return Amount of successful tests
 //!
-//!@see solve(), do_one_test()
+//!@see solve(), run_one_test()
 //-----------------------------------------------------
 
 int run_tests(void);
@@ -36,5 +36,5 @@ int run_tests(void);
 //!@see solve()
 //-----------------------------------------------------
 
-int do_one_test(const test_reference * const current_test);
+int run_one_test(const TestReference * const current_test);
 
