@@ -12,7 +12,7 @@ void get_coeffs(double coeffs[], const unsigned int amount) {
     }
 }
 
-double input_one_coeff(void) {  // тоже глаголы в названиях функций
+double input_one_coeff(void) {
     double input_coefficient = 0;
 
     while (scanf("%lg", &input_coefficient) != 1) {

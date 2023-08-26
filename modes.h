@@ -10,20 +10,20 @@ const char FULL_HELP_FLAG[] = "-h";
 //!Enters square equation solver mode
 //-----------------------------------------------------
 
-void square_mode(void);
+void run_square_mode(void);
 
 //-----------------------------------------------------
 //!Enters linear equation solver mode
 //-----------------------------------------------------
 
-void linear_mode(void);
+void run_linear_mode(void);
 
 //-----------------------------------------------------
 //!Enters file input/output mode
 //-----------------------------------------------------
 
-void file_mode(const char * const input_file_name,
-               const char * const output_file_name);
+void run_file_mode(const char * const input_file_name,
+                   const char * const output_file_name);
 
 //-----------------------------------------------------
 //!Shows short help for file mode (-f flag)
@@ -32,13 +32,13 @@ void file_mode(const char * const input_file_name,
 //!                          on standart input
 //-----------------------------------------------------
 
-void short_file_help(const char * const program_name);
+void show_file_help(const char * const program_name);
 
 //-----------------------------------------------------
 //!Does tests of solve functions of program
 //-----------------------------------------------------
 
-void unit_tests_mode(void);
+void run_unit_tests_mode(void);
 
 //-----------------------------------------------------
 //!Shows full information about program
@@ -47,7 +47,7 @@ void unit_tests_mode(void);
 //!                          on standart input
 //-----------------------------------------------------
 
-void full_help(const char * const program_name);
+void show_full_help(const char * const program_name);
 
 //-----------------------------------------------------
 //!Shows short help
@@ -56,4 +56,4 @@ void full_help(const char * const program_name);
 //!                          on standart input
 //-----------------------------------------------------
 
-void short_help(const char * const program_name);
+void show_short_help(const char * const program_name);
