@@ -3,6 +3,7 @@
 #include <string.h>
 #include "modes.h"
 #include "input.h"
+#include "output.h"
 #include "solve.h"
 #include "unittests.h"
 
@@ -18,7 +19,7 @@ void run_square_mode(void) {
         double roots[2] = {0, 0};
         int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
 
-        print_solutions(roots, roots_amount); // можно в print_solutions вызвать fprint с stdout
+        print_solutions(roots, roots_amount);
     } while (continue_program() == YES); // поменять название константы
 
     printf("Goodbye!\n");
