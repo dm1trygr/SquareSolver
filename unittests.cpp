@@ -3,6 +3,7 @@
 #include <math.h>
 #include "solve.h"
 #include "unittests.h"
+#include "roots_amount.h"
 
 int run_tests(void) {
     int success_tests = 0;
@@ -20,7 +21,7 @@ int run_tests(void) {
 
     for (int i = 0; i < (sizeof test_list) / (sizeof (TestReference)); i++) {
         printf("Test %d: ", i + 1);
-        success_tests += run_one_test(&test_list[i]);  //run_one_trst
+        success_tests += run_one_test(&test_list[i]);
     }
 
     return success_tests;
@@ -58,4 +59,8 @@ int run_one_test(const TestReference * const current_test) {
                current_test->x1ref, current_test->x2ref);
         return 0;
     }
+}
+
+bool check_test_output(double x1, double x1ref, double x2, double x2ref, double amount, double amount_ref) {
+
 }

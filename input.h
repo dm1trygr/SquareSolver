@@ -1,3 +1,6 @@
+#ifndef input_header
+#define input_header
+
 const unsigned int LINEAR_COEFFS_AMOUNT = 2;
 const unsigned int SQUARE_COEFFS_AMOUNT = 3;  //AMOUNT -> NUMBER
 
@@ -41,3 +44,5 @@ int continue_program(void);
 //-----------------------------------------------------
 
 void clear_input_buffer(void);
+
+#endif

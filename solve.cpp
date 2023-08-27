@@ -3,6 +3,7 @@
 #include <math.h>
 #include <float.h>
 #include "solve.h"
+#include "roots_amount.h"
 
 int are_doubles_equal(const double num1, const double num2) {  // в плюсах отдельный инклюд для bool не нужен
     assert(isfinite(num1)); // аналогично убрать isnan()

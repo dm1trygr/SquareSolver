@@ -1,3 +1,6 @@
+#ifndef modes_header
+#define modes_header
+
 const int YES = 1;
 
 const char SQUARE_MODE_FLAG[] = "-s";
@@ -57,3 +60,5 @@ void show_full_help(const char * const program_name);
 //-----------------------------------------------------
 
 void show_short_help(const char * const program_name);
+
+#endif

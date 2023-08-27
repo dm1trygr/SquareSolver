@@ -1,4 +1,6 @@
-const int N_TESTS = 7;  //!<Total amount of unit tests in unittest.cpp
+#ifndef unittests_header
+#define unittests_header
+
 const int MAX_NAME_LEN = 50;  //!<Maximum test name length
 
 //!Structure with data about tests: coefficients of equation,
@@ -38,3 +40,6 @@ int run_tests(void);
 
 int run_one_test(const TestReference * const current_test);
 
+bool check_test_output(double x1, double x1ref, double x2, double x2ref, int amount, int amount_ref);
+
+#endif
