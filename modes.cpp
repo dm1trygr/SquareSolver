@@ -17,7 +17,7 @@ void run_square_mode(void) {
         get_coeffs(coeffs, SQUARE_COEFFS_AMOUNT);
 
         double roots[2] = {0, 0};
-        int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+        int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
 
         print_solutions(roots, roots_amount);
     } while (ask_continue_program());
@@ -70,7 +70,7 @@ void run_file_mode(const char * const input_file_name, const char * const output
 
         fprintf(output_file, "Solutions:\n");
         while (fscanf(input_file, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
-            int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+            int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
 
             fprintf(output_file, "EQUATION %d: ", equation_number++);
             fprint_solutions(output_file, roots, roots_amount);

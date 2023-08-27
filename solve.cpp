@@ -36,9 +36,9 @@ void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
     *num2_ptr = temp;
 }
 
-int solve(const double a, const double b, const double c,
+int solve_equation(const double a, const double b, const double c,
           double * const x1ptr, double * const x2ptr) {
-    assert(isfinite(a));            // rename to solve_equation
+    assert(isfinite(a));
     assert(isfinite(b));
     assert(isfinite(c));
     assert(x1ptr != NULL);

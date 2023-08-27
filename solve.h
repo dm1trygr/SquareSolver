@@ -51,7 +51,7 @@ void swap_numbers(double * const num1_ptr, double * const num2_ptr);  // перенес
 //!@see linear()
 //-----------------------------------------------------
 
-int solve(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr);
+int solve_equation(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr);
 
 //-----------------------------------------------------
 //!Solves linear equation

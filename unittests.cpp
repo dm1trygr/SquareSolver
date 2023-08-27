@@ -39,7 +39,7 @@ int run_one_test(const TestReference * const current_test) {
     double x1 = 0;
     double x2 = 0;
 
-    int amount = solve(current_test->a, current_test->b, current_test->c, &x1, &x2);
+    int amount = solve_equation(current_test->a, current_test->b, current_test->c, &x1, &x2);
 
     if (check_test_output(x1, x2, amount, current_test)) {
         printf("OK\n");
