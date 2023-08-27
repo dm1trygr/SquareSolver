@@ -1,8 +1,6 @@
 #ifndef solve_header
 #define solve_header
 
-static const int INF_ROOTS = 888;
-
 //-----------------------------------------------------
 //!Checks if double-type numbers is equal
 //!

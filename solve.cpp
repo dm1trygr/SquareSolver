@@ -94,33 +94,21 @@ void print_solutions(const double roots[], const unsigned int amount) {
     // функции вывода - в отдельный файл
     assert(roots != NULL);
 
-    if (amount == 0) {
-        printf("There is no solutions\n");
-    }
-    else if (amount == INF_ROOTS) {
-        printf("The solution is any number\n");
-    }
-    else {
-        printf("Amount of roots: %d\n"
-               "Roots: ", amount);
-
-        for (int i = 0; i < amount; i++) {
-            assert(isfinite(roots[i]) && !isnan(roots[i]));
-            printf("%.3f ", roots[i]);
-        }
-        putchar('\n');
-    }
+    fprint_solutions(stdout, roots, amount);
 }
 
 void fprint_solutions(FILE * file_pointer, const double roots[], const unsigned int amount) {
     assert(file_pointer != NULL);
     assert(roots != NULL);
 
-    if (amount == 0) {
+    if (amount == NO_ROOTS) {
         fprintf(file_pointer, "No solutions\n");
     }
     else if (amount == INF_ROOTS) {
         fprintf(file_pointer, "Solution is any number\n");
+    }
+    else if (amount == ONE_ROOT) {
+        fprintf(file_pointer, "(1 solution) %.3f\n", roots[0]);
     }
     else {
         fprintf(file_pointer, "(%d solutions) ", amount);
