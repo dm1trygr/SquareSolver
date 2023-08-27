@@ -5,8 +5,8 @@
 #include "solve.h"
 #include "roots_amount.h"
 
-int are_doubles_equal(const double num1, const double num2) {  // в плюсах отдельный инклюд для bool не нужен
-    assert(isfinite(num1)); // аналогично убрать isnan()
+bool are_doubles_equal(const double num1, const double num2) {
+    assert(isfinite(num1));
     assert(isfinite(num2));
 
     return fabs(num1 - num2) <= DBL_EPSILON;
@@ -44,24 +44,24 @@ int solve(const double a, const double b, const double c,
     else {
         if (are_doubles_equal(c, 0) && are_doubles_equal(b, 0)) {  // equations ax^2 = 0
             *x1ptr = 0;
-            return 1;
+            return ONE_ROOT;
         }
         else if (are_doubles_equal(c, 0) && !are_doubles_equal(b, 0)) {  // equations ax^2 + bx = 0
             *x1ptr = - b / a;
             if (*x1ptr > 0) {
                 swap_numbers(x1ptr, x2ptr);
             }
-            return 2;
+            return TWO_ROOTS;
         }
         else {  // standart square equations with non-zero coefficients
             double discrim = b * b - 4 * a * c;
 
             if (are_doubles_equal(discrim, 0)) {  // discriminant is zero, one solution
                 *x1ptr = - b / (2 * a);
-                return 1;
+                return ONE_ROOT;
             }
             else if (discrim < 0) {  // discriminant is less than zero, no solutions
-                return 0;
+                return NO_ROOTS;
             }
             else {  // discriminant is more than zero, 2 solutions
                 double d_root = sqrt(discrim);
@@ -69,7 +69,7 @@ int solve(const double a, const double b, const double c,
                 *x1ptr = (-b - d_root) / (2 * a);
                 *x2ptr = (-b + d_root) / (2 * a);
 
-                return 2;
+                return TWO_ROOTS;
             }
         }
     }

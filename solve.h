@@ -10,7 +10,7 @@
 //!@return Returns 1 if numbers are equal, otherwise 0
 //-----------------------------------------------------
 
-int are_doubles_equal(const double num1, const double num2);
+bool are_doubles_equal(const double num1, const double num2);
 
 //-----------------------------------------------------
 //!If number is close to 0, returns 0, otherwise number
