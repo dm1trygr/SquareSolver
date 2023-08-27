@@ -1,8 +1,6 @@
 #ifndef modes_header
 #define modes_header
 
-const int YES = 1;
-
 const char SQUARE_MODE_FLAG[] = "-s";
 const char LINEAR_MODE_FLAG[] = "-l";
 const char FILE_MODE_FLAG[] = "-f";

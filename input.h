@@ -4,6 +4,9 @@
 const unsigned int LINEAR_COEFFS_AMOUNT = 2;
 const unsigned int SQUARE_COEFFS_AMOUNT = 3;  //AMOUNT -> NUMBER
 
+const unsigned int BREAK_FLAG = 0;
+const unsigned int CONTINUE_FLAG = 0;
+
 //-----------------------------------------------------
 //!Gets coefficients from standard input
 //!
@@ -37,7 +40,7 @@ double input_one_coeff(void);
 //!@see clear_input_buffer()
 //-----------------------------------------------------
 
-int continue_program(void);
+int ask_continue_program(void);
 
 //-----------------------------------------------------
 //!Clears input buffer

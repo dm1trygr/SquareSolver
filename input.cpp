@@ -24,10 +24,11 @@ double input_one_coeff(void) {
     return input_coefficient;
 }
 
-int continue_program(void) {  // поменять название функции
+int ask_continue_program(void) {
     printf("Do you want to continue?\n"
-           "0 - no\n"    // константы вмексто 0 и 1
-           "1 - yes\n");
+           "%d - no\n"
+           "%d - yes\n",
+           BREAK_FLAG, CONTINUE_FLAG);
 
     int flag = 0;
 

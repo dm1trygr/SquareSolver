@@ -20,7 +20,7 @@ void run_square_mode(void) {
         int roots_amount = solve(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
 
         print_solutions(roots, roots_amount);
-    } while (continue_program() == YES); // поменять название константы
+    } while (ask_continue_program());
 
     printf("Goodbye!\n");
 }
@@ -37,7 +37,7 @@ void run_linear_mode(void) {
         int roots_amount = solve_linear(coeffs[0], coeffs[1], &roots[0]);
 
         print_solutions(roots, roots_amount);
-    } while (continue_program() == 1);
+    } while (ask_continue_program());
 
     printf("Goodbye!\n");
 }
