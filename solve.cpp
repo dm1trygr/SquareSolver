@@ -7,13 +7,13 @@
 
 int are_doubles_equal(const double num1, const double num2) {  // в плюсах отдельный инклюд для bool не нужен
     assert(isfinite(num1)); // аналогично убрать isnan()
-    assert(isfinite(num2) && !isnan(num2));
+    assert(isfinite(num2));
 
     return fabs(num1 - num2) <= DBL_EPSILON;
 }   // сделать частный случай - сравнение с нулем
 
 double round_to_zero(const double number) {
-    assert(isfinite(number) && !isnan(number));
+    assert(isfinite(number));
 
     if (are_doubles_equal(number, 0)) {
         return 0;
@@ -22,6 +22,9 @@ double round_to_zero(const double number) {
 }
 
 void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
+    assert(num1_ptr != NULL);
+    assert(num2_ptr != NULL);
+
     double temp = *num1_ptr;
     *num1_ptr = *num2_ptr;
     *num2_ptr = temp;
@@ -93,6 +96,7 @@ int solve_linear(const double b, const double c, double * const x1ptr) {
 void print_solutions(const double roots[], const unsigned int amount) {
     // функции вывода - в отдельный файл
     assert(roots != NULL);
+    assert(isfinite(amount));
 
     fprint_solutions(stdout, roots, amount);
 }
@@ -100,6 +104,7 @@ void print_solutions(const double roots[], const unsigned int amount) {
 void fprint_solutions(FILE * file_pointer, const double roots[], const unsigned int amount) {
     assert(file_pointer != NULL);
     assert(roots != NULL);
+    assert(isfinite(amount));
 
     if (amount == NO_ROOTS) {
         fprintf(file_pointer, "No solutions\n");
