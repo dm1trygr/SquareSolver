@@ -41,9 +41,7 @@ int run_one_test(const TestReference * const current_test) {
 
     int amount = solve(current_test->a, current_test->b, current_test->c, &x1, &x2);
 
-    if (are_doubles_equal(x1, current_test->x1ref) &&
-        are_doubles_equal(x2, current_test->x2ref) &&
-        amount == current_test->amount_ref) {  // в отдельнуб функцию проверку значений
+    if (check_test_output(x1, x2, amount, current_test)) {
         printf("OK\n");
         return 1;
     }
@@ -61,6 +59,8 @@ int run_one_test(const TestReference * const current_test) {
     }
 }
 
-bool check_test_output(double x1, double x1ref, double x2, double x2ref, double amount, double amount_ref) {
-
+bool check_test_output(double x1, double x2, int amount, const TestReference * const current_test) {
+    return (are_doubles_equal(x1, current_test->x1ref) &&
+            are_doubles_equal(x2, current_test->x2ref) &&
+            amount == current_test->amount_ref);
 }
