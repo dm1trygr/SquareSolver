@@ -1,5 +1,10 @@
 # SquareSolver
-This small program can solve square equations!
+
+This small program can solve square and linear equations, test itself and
+work with files!
+
+Program can work in cycle, while user wants to get solutions of square and
+linear equations.
 
 
 ## How to install
