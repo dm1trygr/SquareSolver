@@ -46,42 +46,44 @@ void file_io_mode(const char * const input_file_name, const char * const output_
     assert(input_file_name != NULL);
     assert(output_file_name != NULL);
 
-    FILE * input_file;
-    FILE * output_file;  // инициализировать
+    FILE * input_file = fopen(input_file_name, "r");
 
-    if ((input_file = fopen(input_file_name, "r")) == NULL) {  // присваивание и проверку - в разных местах
+    if (input_file == NULL) {  // присваивание и проверку - в разных местах
         printf("Error! File %s does not exist!\n", input_file_name);
     }
     else if (strcmp(input_file_name, output_file_name) == 0) {
         printf("Error! You're trying to open same file for reading coefficients and writing roots!\n");
         fclose(input_file);
     }
-    else if ((output_file = fopen(output_file_name, "w")) == NULL) {
-        printf("Error in opening %s!\n", output_file_name);
-        fclose(input_file);
-    }
     else {
-        printf("Square equation solver, file mode\n\n");
-
-        double coeffs[3] = {0};
-        double roots[2] = {0};
-
-        int equation_number = 1;
-
-        fprintf(output_file, "Solutions:\n");
-        while (fscanf(input_file, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
-            int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
-
-            fprintf(output_file, "EQUATION %d: ", equation_number++);
-            fprint_solutions(output_file, roots, roots_amount);
+        FILE * output_file = fopen(output_file_name, "w");
+        if (output_file == NULL) {
+            printf("Error in opening %s!\n", output_file_name);
+            fclose(input_file);
         }
+        else {
+            printf("Square equation solver, file mode\n\n");
 
-        fputc('\n', output_file);
+            double coeffs[3] = {0};
+            double roots[2] = {0};
 
-        printf("Solved %d equation(s)! Goodbye!\n", equation_number - 1);
+            int equation_number = 1;
 
-        fclose(input_file);
-        fclose(output_file);
+            fprintf(output_file, "Solutions:\n");
+            while (fscanf(input_file, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
+                int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+
+                fprintf(output_file, "EQUATION %d: ", equation_number++);
+                fprint_solutions(output_file, roots, roots_amount);
+            }
+
+            fputc('\n', output_file);
+
+            printf("Solved %d equation(s)! Goodbye!\n", equation_number - 1);
+
+            fclose(input_file);
+            fclose(output_file);
+        }
     }
 }
 
