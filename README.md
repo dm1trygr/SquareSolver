@@ -54,14 +54,14 @@ is similar on other operating systems.
 
 ![Square](https://github.com/dm1trygr/SquareSolver/assets/103391790/e25db5d5-0db7-40ba-b8b5-d85be79ff4d0)
 
-5. To solve a linear equation, write in terminal
+4. To solve a linear equation, write in terminal
    "[name-of-binary-file] -l". The actions are similar
-   to those in paragraph 2, but you need to enter
+   to those in step 3, but you need to enter
    2 coefficients instead of 3.
 
 ![Linear](https://github.com/dm1trygr/SquareSolver/assets/103391790/3e71f0bf-a283-4010-87ce-1c3a70ebeb1b)
 
-6. To solve an equations equations with coefficients
+5. To solve an equations equations with coefficients
    written to a file and print solutions to file,
    write in terminal "[name-of-binary-file] -f
    [input file] [output file]".
@@ -76,7 +76,7 @@ is similar on other operating systems.
   
 ![File-OUTPUT](https://github.com/dm1trygr/SquareSolver/assets/103391790/17fdcf80-9409-4eec-ab8b-dc1997bdfebd)
 
-7. The program can also test itself! To do it,
+6. The program can also test itself! To do it,
    write in terminal "[name-of-binary-file] -t",
    and program will print results of tests.
 
