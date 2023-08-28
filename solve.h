@@ -4,13 +4,21 @@
 //-----------------------------------------------------
 //!Checks if double-type numbers is equal
 //!
-//!@param [in]  number Double-type number 1
-//!@param [in]  number Double-type number 2
+//!@param [in]  num1   Double-type number 1
+//!@param [in]  num2   Double-type number 2
 //!
 //!@return Returns 1 if numbers are equal, otherwise 0
 //-----------------------------------------------------
 
 bool are_doubles_equal(const double num1, const double num2);
+
+//-----------------------------------------------------
+//!Checks if double-type number is equal to 0
+//!
+//!@param [in]  number Double-type number
+//!
+//!@return Returns 1 if number is equal to 0, otherwise 0
+//-----------------------------------------------------
 
 bool is_equal_to_zero(const double number);
 
@@ -34,7 +42,7 @@ double round_to_zero(const double number);
 //!@param [out] num2_ptr Pointer to 2nd number
 //-----------------------------------------------------
 
-void swap_numbers(double * const num1_ptr, double * const num2_ptr);  // перенести в solve.cpp + пересмотреть другие функции
+void swap_numbers(double * const num1_ptr, double * const num2_ptr);
 
 //-----------------------------------------------------
 //!Solves square equation

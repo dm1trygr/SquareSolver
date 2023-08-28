@@ -5,7 +5,6 @@
 #include "roots_amount.h"
 
 void print_solutions(const double roots[], const unsigned int amount) {
-    // функции вывода - в отдельный файл
     assert(roots != NULL);
     assert(isfinite(amount));
 

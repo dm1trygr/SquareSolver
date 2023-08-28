@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['one_5fcoeff_5finput_0',['one_coeff_input',['../input_8cpp.html#a6dde1cf313bb8f73a7ab7a55372e7f06',1,'one_coeff_input(void):&#160;input.cpp'],['../input_8h.html#a6dde1cf313bb8f73a7ab7a55372e7f06',1,'one_coeff_input(void):&#160;input.cpp']]]
+  ['print_5fsolutions_0',['print_solutions',['../output_8cpp.html#a59fec8905411c57b1b649500470c994b',1,'print_solutions(const double roots[], const unsigned int amount):&#160;output.cpp'],['../output_8h.html#a59fec8905411c57b1b649500470c994b',1,'print_solutions(const double roots[], const unsigned int amount):&#160;output.cpp']]]
 ];

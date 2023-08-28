@@ -79,31 +79,85 @@ $(function() {
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="solve_8h_source.html">solve.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="unittests_8h_source.html">unittests.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="roots__amount_8h_source.html">roots_amount.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af1458e0e599d0a41767092fbd6b40dee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittests_8cpp.html#af1458e0e599d0a41767092fbd6b40dee">run_tests</a> (void)</td></tr>
 <tr class="separator:af1458e0e599d0a41767092fbd6b40dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a266621621edb19a5221cdbc265382520"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittests_8cpp.html#a266621621edb19a5221cdbc265382520">do_one_test</a> (const <a class="el" href="structtest__reference.html">test_reference</a> *const current_test)</td></tr>
-<tr class="separator:a266621621edb19a5221cdbc265382520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76b2c12b3c7008de6a6ef98e38b321d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittests_8cpp.html#aa76b2c12b3c7008de6a6ef98e38b321d">run_one_test</a> (const <a class="el" href="struct_test_reference.html">TestReference</a> *const current_test)</td></tr>
+<tr class="separator:aa76b2c12b3c7008de6a6ef98e38b321d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7b08ee3aba4e180880e4e5ba0c0909"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittests_8cpp.html#abc7b08ee3aba4e180880e4e5ba0c0909">check_test_output</a> (double x1, double x2, int amount, const <a class="el" href="struct_test_reference.html">TestReference</a> *const current_test)</td></tr>
+<tr class="separator:abc7b08ee3aba4e180880e4e5ba0c0909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a266621621edb19a5221cdbc265382520" name="a266621621edb19a5221cdbc265382520"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a266621621edb19a5221cdbc265382520">&#9670;&#160;</a></span>do_one_test()</h2>
+<a id="abc7b08ee3aba4e180880e4e5ba0c0909" name="abc7b08ee3aba4e180880e4e5ba0c0909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7b08ee3aba4e180880e4e5ba0c0909">&#9670;&#160;</a></span>check_test_output()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int do_one_test </td>
+          <td class="memname">bool check_test_output </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structtest__reference.html">test_reference</a> *const&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_test_reference.html">TestReference</a> *const&#160;</td>
+          <td class="paramname"><em>current_test</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compare test output with reference values</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>First root from <a class="el" href="solve_8cpp.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>Second root from <a class="el" href="solve_8cpp.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">amount</td><td>Amount of roots from <a class="el" href="solve_8cpp.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">current_test</td><td>Pointer to structure with reference values</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if output from solve() equal to reference values, otherwise 0 </dd></dl>
+
+</div>
+</div>
+<a id="aa76b2c12b3c7008de6a6ef98e38b321d" name="aa76b2c12b3c7008de6a6ef98e38b321d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76b2c12b3c7008de6a6ef98e38b321d">&#9670;&#160;</a></span>run_one_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int run_one_test </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_test_reference.html">TestReference</a> *const&#160;</td>
           <td class="paramname"><em>current_test</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Does 1 unit test of <a class="el" href="solve_8cpp.html#a16483fb2c70e1e2d06c45d98980d0f27">solve()</a></p>
+<p>Does 1 unit test of solve()</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">current_test</td><td>Structure with coefficients and reference values</td></tr>
@@ -111,7 +165,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 if received roots and amount is equal to reference, otherwise 0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="solve_8cpp.html#a16483fb2c70e1e2d06c45d98980d0f27">solve()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="solve_8cpp.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation()</a>, <a class="el" href="unittests_8h.html#abc7b08ee3aba4e180880e4e5ba0c0909">check_test_output()</a> </dd></dl>
 
 </div>
 </div>
@@ -130,9 +184,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Does unit tests of <a class="el" href="solve_8cpp.html#a16483fb2c70e1e2d06c45d98980d0f27">solve()</a></p>
+<p>Does unit tests of solve()</p>
 <dl class="section return"><dt>Returns</dt><dd>Amount of successful tests</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="solve_8cpp.html#a16483fb2c70e1e2d06c45d98980d0f27">solve()</a>, <a class="el" href="unittests_8h.html#a266621621edb19a5221cdbc265382520">do_one_test()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="solve_8cpp.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation()</a>, <a class="el" href="unittests_8h.html#aa76b2c12b3c7008de6a6ef98e38b321d">run_one_test()</a>, <a class="el" href="unittests_8h.html#abc7b08ee3aba4e180880e4e5ba0c0909">check_test_output()</a> </dd></dl>
 
 </div>
 </div>

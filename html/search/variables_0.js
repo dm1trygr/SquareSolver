@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['a_0',['a',['../structtest__reference.html#a67cdf7a2970b4451217dfbcc15130b17',1,'test_reference']]],
-  ['amount_5fref_1',['amount_ref',['../structtest__reference.html#a2ed390d041703e94dd3f9ab67f2c676b',1,'test_reference']]]
+  ['a_0',['a',['../struct_test_reference.html#ad4315c43c9769928a69e1f9ab177e7ff',1,'TestReference']]],
+  ['amount_5fref_1',['amount_ref',['../struct_test_reference.html#ac47d4da52d9b887d3da780e36e9ae2e3',1,'TestReference']]]
 ];

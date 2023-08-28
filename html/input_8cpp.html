@@ -82,15 +82,36 @@ $(function() {
 Functions</h2></td></tr>
 <tr class="memitem:a641375c887a30ad5ae417539e3c95ce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8cpp.html#a641375c887a30ad5ae417539e3c95ce3">get_coeffs</a> (double coeffs[], const unsigned int amount)</td></tr>
 <tr class="separator:a641375c887a30ad5ae417539e3c95ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dde1cf313bb8f73a7ab7a55372e7f06"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8cpp.html#a6dde1cf313bb8f73a7ab7a55372e7f06">one_coeff_input</a> (void)</td></tr>
-<tr class="separator:a6dde1cf313bb8f73a7ab7a55372e7f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad094664c5ec096db96b0f716543adea8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8cpp.html#ad094664c5ec096db96b0f716543adea8">continue_program</a> (void)</td></tr>
-<tr class="separator:ad094664c5ec096db96b0f716543adea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2a2fee687219841488b949297c60fc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8cpp.html#a6c2a2fee687219841488b949297c60fc">input_one_coeff</a> (void)</td></tr>
+<tr class="separator:a6c2a2fee687219841488b949297c60fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbad7483d3086ae220ae894b7a26f70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8cpp.html#afbbad7483d3086ae220ae894b7a26f70">ask_continue_program</a> (void)</td></tr>
+<tr class="separator:afbbad7483d3086ae220ae894b7a26f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a406defd61bbe2707306f1d68b6f3bb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8cpp.html#a406defd61bbe2707306f1d68b6f3bb08">clear_input_buffer</a> (void)</td></tr>
 <tr class="memdesc:a406defd61bbe2707306f1d68b6f3bb08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears input buffer.  <br /></td></tr>
 <tr class="separator:a406defd61bbe2707306f1d68b6f3bb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="afbbad7483d3086ae220ae894b7a26f70" name="afbbad7483d3086ae220ae894b7a26f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbad7483d3086ae220ae894b7a26f70">&#9670;&#160;</a></span>ask_continue_program()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ask_continue_program </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Asks a user if he wish stop or continue program</p>
+<dl class="section return"><dt>Returns</dt><dd>1 if user wants to continue, otherwise 0</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="input_8h.html#a406defd61bbe2707306f1d68b6f3bb08" title="Clears input buffer.">clear_input_buffer()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a406defd61bbe2707306f1d68b6f3bb08" name="a406defd61bbe2707306f1d68b6f3bb08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a406defd61bbe2707306f1d68b6f3bb08">&#9670;&#160;</a></span>clear_input_buffer()</h2>
 
@@ -108,27 +129,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clears input buffer. </p>
-
-</div>
-</div>
-<a id="ad094664c5ec096db96b0f716543adea8" name="ad094664c5ec096db96b0f716543adea8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad094664c5ec096db96b0f716543adea8">&#9670;&#160;</a></span>continue_program()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int continue_program </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Asks a user if he wish stop or continue program</p>
-<dl class="section return"><dt>Returns</dt><dd>1 if user wants to continue, otherwise 0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="input_8h.html#a406defd61bbe2707306f1d68b6f3bb08" title="Clears input buffer.">clear_input_buffer()</a> </dd></dl>
 
 </div>
 </div>
@@ -165,18 +165,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="input_8h.html#a6dde1cf313bb8f73a7ab7a55372e7f06">one_coeff_input()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="input_8h.html#a6c2a2fee687219841488b949297c60fc">input_one_coeff()</a> </dd></dl>
 
 </div>
 </div>
-<a id="a6dde1cf313bb8f73a7ab7a55372e7f06" name="a6dde1cf313bb8f73a7ab7a55372e7f06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dde1cf313bb8f73a7ab7a55372e7f06">&#9670;&#160;</a></span>one_coeff_input()</h2>
+<a id="a6c2a2fee687219841488b949297c60fc" name="a6c2a2fee687219841488b949297c60fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2a2fee687219841488b949297c60fc">&#9670;&#160;</a></span>input_one_coeff()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double one_coeff_input </td>
+          <td class="memname">double input_one_coeff </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>

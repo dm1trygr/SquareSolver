@@ -21,7 +21,7 @@ struct TestReference {
 //!
 //!@return Amount of successful tests
 //!
-//!@see solve(), run_one_test()
+//!@see solve_equation(), run_one_test(), check_test_output()
 //-----------------------------------------------------
 
 int run_tests(void);
@@ -35,10 +35,26 @@ int run_tests(void);
 //!@return 1 if received roots and amount is equal to
 //!        reference, otherwise 0
 //!
-//!@see solve()
+//!@see solve_equation(), check_test_output()
 //-----------------------------------------------------
 
 int run_one_test(const TestReference * const current_test);
+
+//-----------------------------------------------------
+//!Compare test output with reference values
+//!
+//!@param [in]  x1           First root from
+//!                          solve_equation()
+//!@param [in]  x2           Second root from
+//!                          solve_equation()
+//!@param [in]  amount       Amount of roots from
+//!                          solve_equation()
+//!@param [in]  current_test Pointer to structure with
+//!                          reference values
+//!
+//!@return 1 if output from solve() equal to reference
+//!        values, otherwise 0
+//-----------------------------------------------------
 
 bool check_test_output(double x1, double x2, int amount, const TestReference * const current_test);
 

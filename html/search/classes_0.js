@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test_5freference_0',['test_reference',['../structtest__reference.html',1,'']]]
+  ['testreference_0',['TestReference',['../struct_test_reference.html',1,'']]]
 ];

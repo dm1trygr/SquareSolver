@@ -4,7 +4,7 @@
 
 int main(int argc, char * argv[]) {
     if (argc >= 2) {
-        if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) { // некорректный ввод начинающийся с числа
+        if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) {
             run_square_mode();
         }
         else if (strcmp(argv[1], LINEAR_MODE_FLAG) == 0) {
