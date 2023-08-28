@@ -71,6 +71,11 @@ is similar on other operating systems.
    write in terminal "[name-of-binary-file] -f
    [input file] [output file]".
 
+> The coefficients in the input file must be written
+> in the following form:
+>
+> [A-coefficient] [B-coefficient] [C-coefficient]
+
 ![File-CMD](https://github.com/dm1trygr/SquareSolver/assets/103391790/da4ba9dc-2313-4bba-9ef9-6e78b3e6dc21)
 
   This is input:
