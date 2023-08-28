@@ -28,8 +28,9 @@ is similar on other operating systems.
 
 5. Done!
 
-> Instead of this, you can just download .exe file from
-> Releases sections, but this works only on Windows
+> Instead of following these "complicated" 5 steps, you
+> can simply download .exe file from [Releases section](https://github.com/dm1trygr/SquareSolver/releases),
+> but this works only on Windows
 
 ## How to use
 
