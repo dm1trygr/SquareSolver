@@ -42,7 +42,7 @@ void run_linear_mode(void) {
     printf("Goodbye!\n");
 }
 
-void run_file_mode(const char * const input_file_name, const char * const output_file_name) {
+void file_io_mode(const char * const input_file_name, const char * const output_file_name) {
     assert(input_file_name != NULL);
     assert(output_file_name != NULL);
 

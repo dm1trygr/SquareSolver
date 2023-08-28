@@ -23,7 +23,7 @@ void run_linear_mode(void);
 //!Enters file input/output mode
 //-----------------------------------------------------
 
-void run_file_mode(const char * const input_file_name,
+void file_io_mode(const char * const input_file_name,
                    const char * const output_file_name);
 
 //-----------------------------------------------------
