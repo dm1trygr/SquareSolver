@@ -34,15 +34,20 @@ int ask_continue_program(void) {
 
     int flag = 0;
 
-    while (scanf("%d", &flag) != 1
-           || (flag != 0
-           && flag != 1)) {
-        clear_input_buffer();
-        printf("This is not a 0 or 1! Please try again\n");
+    while (1) {
+        if (scanf("%d", &flag) == 1  && getchar() == '\n') {
+            if (flag == 0 || flag == 1) {
+                return flag;
+            }
+            else {
+                printf("This is not %d or %d! Please try again\n", BREAK_FLAG, CONTINUE_FLAG);
+            }
+        }
+        else {
+            printf("This is not %d or %d! Please try again\n", BREAK_FLAG, CONTINUE_FLAG);
+            clear_input_buffer();
+        }
     }
-    clear_input_buffer();
-
-    return flag;
 }
 
 void clear_input_buffer(void) {

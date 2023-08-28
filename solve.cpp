@@ -1,4 +1,4 @@
-#include <cstdio>  // это вместо stdio.h
+#include <stdio.h>
 #include <assert.h>
 #include <math.h>
 #include <float.h>

@@ -33,4 +33,3 @@ void fprint_solutions(FILE * file_pointer, const double roots[], const unsigned 
         fputc('\n', file_pointer);
     }
 }
-

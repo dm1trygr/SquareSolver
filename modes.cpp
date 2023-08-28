@@ -145,4 +145,3 @@ void show_short_help(const char * const program_name) {
            program_name, UNIT_TESTS_FLAG,
            program_name, FULL_HELP_FLAG);
 }
-
