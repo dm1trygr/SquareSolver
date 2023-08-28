@@ -48,7 +48,7 @@ void file_io_mode(const char * const input_file_name, const char * const output_
 
     FILE * input_file = fopen(input_file_name, "r");
 
-    if (input_file == NULL) {  // присваивание и проверку - в разных местах
+    if (input_file == NULL) {
         printf("Error! File %s does not exist!\n", input_file_name);
     }
     else if (strcmp(input_file_name, output_file_name) == 0) {

@@ -15,13 +15,15 @@ void get_coeffs(double coeffs[], const unsigned int amount) {
 double input_one_coeff(void) {
     double input_coefficient = 0;
 
-    while (scanf("%lg", &input_coefficient) != 1) {
-        clear_input_buffer();
-        printf("This is not a number! Please try again\n");
+    while (1) {
+        if (scanf("%lg", &input_coefficient) == 1 && getchar() == '\n') {
+            return input_coefficient;
+        }
+        else {
+            clear_input_buffer();
+            printf("This is not a number! Please try again\n");
+        }
     }
-    clear_input_buffer();
-
-    return input_coefficient;
 }
 
 int ask_continue_program(void) {
@@ -34,7 +36,7 @@ int ask_continue_program(void) {
 
     while (scanf("%d", &flag) != 1
            || (flag != 0
-           && flag != 1)) {  // разнестит проверки
+           && flag != 1)) {
         clear_input_buffer();
         printf("This is not a 0 or 1! Please try again\n");
     }

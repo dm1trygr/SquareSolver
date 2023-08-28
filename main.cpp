@@ -17,7 +17,7 @@ int main(int argc, char * argv[]) {
             else {
                 show_file_help(argv[0]);
             }
-        }  // file_mode непонятно, лучше поменять
+        }
         else if (strcmp(argv[1], UNIT_TESTS_FLAG) == 0) {
             run_unit_tests_mode();
         }
