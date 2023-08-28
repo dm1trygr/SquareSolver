@@ -1,8 +1,8 @@
-#ifndef input_header
-#define input_header
+#ifndef INPUT_HEADER
+#define INPUT_HEADER
 
-const unsigned int LINEAR_COEFFS_AMOUNT = 2;
-const unsigned int SQUARE_COEFFS_AMOUNT = 3;  //AMOUNT -> NUMBER
+const unsigned int LINEAR_COEFFS_NUMBER = 2;
+const unsigned int SQUARE_COEFFS_NUMBER = 3;
 
 const unsigned int BREAK_FLAG = 0;
 const unsigned int CONTINUE_FLAG = 1;

@@ -1,5 +1,5 @@
-#ifndef roots_amount_header
-#define roots_amount_header
+#ifndef ROOTS_AMOUNT_HEADER
+#define ROOTS_AMOUNT_HEADER
 
 enum RootsAmount {
     NO_ROOTS,

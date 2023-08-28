@@ -1,5 +1,5 @@
-#ifndef solve_header
-#define solve_header
+#ifndef SOLVE_HEADER
+#define SOLVE_HEADER
 
 //-----------------------------------------------------
 //!Checks if double-type numbers is equal

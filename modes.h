@@ -1,5 +1,5 @@
-#ifndef modes_header
-#define modes_header
+#ifndef MODES_HEADER
+#define MODES_HEADER
 
 const char SQUARE_MODE_FLAG[] = "-s";
 const char LINEAR_MODE_FLAG[] = "-l";

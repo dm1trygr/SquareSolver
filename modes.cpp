@@ -14,7 +14,7 @@ void run_square_mode(void) {
     double coeffs[3] = {0};
 
     do {
-        get_coeffs(coeffs, SQUARE_COEFFS_AMOUNT);
+        get_coeffs(coeffs, SQUARE_COEFFS_NUMBER);
 
         double roots[2] = {0, 0};
         int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
@@ -31,7 +31,7 @@ void run_linear_mode(void) {
     double coeffs[2] = {0, 0};
 
     do {
-        get_coeffs(coeffs, LINEAR_COEFFS_AMOUNT);
+        get_coeffs(coeffs, LINEAR_COEFFS_NUMBER);
 
         double roots[1] = {0};
         int roots_amount = solve_linear(coeffs[0], coeffs[1], &roots[0]);

@@ -1,5 +1,5 @@
-#ifndef unittests_header
-#define unittests_header
+#ifndef UNITTESTS_HEADER
+#define UNITTESTS_HEADER
 
 const int MAX_NAME_LEN = 50;  //!<Maximum test name length
 

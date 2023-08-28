@@ -1,5 +1,5 @@
-#ifndef output_header
-#define output_header
+#ifndef OUTPUT_HEADER
+#define OUTPUT_HEADER
 
 //-----------------------------------------------------
 //!Prints solutions of equation
