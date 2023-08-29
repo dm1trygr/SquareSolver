@@ -20,7 +20,7 @@ void choosing_mode(const int argc, const char* argv[]) {
                 file_io_mode(argv[2], argv[3]);
             }
             else if (argc == 3) {
-                file_io_mode(argv[2], "output.txt");
+                file_io_mode(argv[2], "");
             }
             else {
                 show_file_help(argv[0]);
@@ -92,12 +92,16 @@ void file_io_mode(const char* const input_file_name, const char* const output_fi
         return;
     }
 
-    FILE* output_file = fopen(output_file_name, "w");
+    FILE* output_file = stdout;
 
-    if (output_file == NULL) {
-        printf("Error in opening %s!\n", output_file_name);
-        fclose(input_file);
-        return;
+    if (output_file_name[0] != '\0') {
+        output_file = fopen(output_file_name, "w");
+
+        if (output_file == NULL) {
+            printf("Error in opening %s!\n", output_file_name);
+            fclose(input_file);
+            return;
+        }
     }
 
     printf("Square equation solver, file mode\n\n");
@@ -143,6 +147,8 @@ void show_full_help(const char* const program_name) {
            "    to another file\n"
            "    Must be used with at least 1 argument after flag (also 1 is additional):\n"
            "    %s [input file] <output file>\n"
+           "    If name of output file wasn't entered, program will print solutions to\n"
+           "    terminal\n"
            "    Coefficients in input file must be entered according to example below:\n"
            "    [a] [b] [c]\n"
            "%s  Begins testing of program's main solve functions. Shows status of\n"
