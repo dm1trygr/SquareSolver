@@ -3,6 +3,7 @@
 #include <math.h>
 #include <float.h>
 #include "./source/headers/solve.h"
+#include "./source/headers/output.h"  // for solve_from_file()
 #include "./source/headers/roots_amount.h"
 
 bool are_doubles_equal(const double num1, const double num2) {
@@ -28,7 +29,7 @@ double round_to_zero(const double number) {
 }
 
 static void swap_numbers(double* const num1_ptr, double* const num2_ptr) {
-    assert(num1_ptr != NULL);        // область видимости в пределах файла
+    assert(num1_ptr != NULL);
     assert(num2_ptr != NULL);
 
     double temp = *num1_ptr;
@@ -99,5 +100,43 @@ int solve_linear(const double b, const double c, double* const x1ptr) {
     else {
         *x1ptr = - c / b;
         return 1;
+    }
+}
+
+void solve_from_file(FILE* input_file, FILE* output_file) {
+    double coeffs[3] = {0};
+    double roots[2] = {0};
+
+    int equation_number = 1;
+    int success_solved = 0;
+
+    fprintf(output_file, "Solutions:\n");
+
+    while (1) {
+        if (fscanf(input_file, "%lg %lg %lg", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
+            int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+
+            fprintf(output_file, "EQUATION %d: ", equation_number++);
+            fprint_solutions(output_file, roots, roots_amount);
+
+            success_solved++;
+        }
+        else {
+            int ch = '\0';
+            while ((ch = fgetc(input_file)) != '\n' && ch != EOF) {};
+            if (ch != EOF) {
+                fprintf(output_file, "EQUATION %d: Coefficient reading error!\n", equation_number++);
+            }
+            else {
+                fputc('\n', output_file);
+
+                printf("Solved %d out of %d equation(s)! Goodbye!\n",
+                       success_solved, equation_number - 1);
+
+                fclose(input_file);
+                fclose(output_file);
+                return;
+            }
+        }
     }
 }

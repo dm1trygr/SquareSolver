@@ -101,41 +101,7 @@ void file_io_mode(const char* const input_file_name, const char* const output_fi
 
     printf("Square equation solver, file mode\n\n");
 
-    double coeffs[3] = {0};
-    double roots[2] = {0};
-
-    int equation_number = 1;
-    int success_solved = 0;
-
-    fprintf(output_file, "Solutions:\n");
-
-    while (1) {
-        if (fscanf(input_file, "%lg %lg %lg", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
-            int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
-
-            fprintf(output_file, "EQUATION %d: ", equation_number++);
-            fprint_solutions(output_file, roots, roots_amount);
-
-            success_solved++;
-        }
-        else {
-            int ch = '\0';
-            while ((ch = fgetc(input_file)) != '\n' && ch != EOF) {};
-            if (ch != EOF) {
-                fprintf(output_file, "EQUATION %d: Coefficient reading error!\n", equation_number++);
-            }
-            else {
-                fputc('\n', output_file);
-
-                printf("Solved %d out of %d equation(s)! Goodbye!\n",
-                       success_solved, equation_number - 1);
-
-                fclose(input_file);
-                fclose(output_file);
-                return;
-            }
-        }
-    }
+    solve_from_file(input_file, output_file);
 }
 
 void show_file_help(const char* const program_name) {
