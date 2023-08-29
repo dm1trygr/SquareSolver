@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
-#include "./source/headers/modes.h"
-#include "./source/headers/input.h"
-#include "./source/headers/output.h"
-#include "./source/headers/solve.h"
-#include "./source/headers/unittests.h"
+#include "./headers/modes.h"
+#include "./headers/input.h"
+#include "./headers/output.h"
+#include "./headers/solve.h"
+#include "./headers/unittests.h"
 
 void choosing_mode(int argc, char* argv[]) {
     if (argc >= 2) {

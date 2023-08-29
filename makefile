@@ -8,6 +8,7 @@ CFLAGS=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal
 -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
 
 OBJ_PATH=source/objects/
+SRC_PATH=source/
 
 MAIN_PATH=$(OBJ_PATH)main.o
 MODES_PATH=$(OBJ_PATH)modes.o
@@ -20,27 +21,27 @@ OBJ_FILES=$(MAIN_PATH) $(MODES_PATH) $(INPUT_PATH) $(OUTPUT_PATH) $(SOLVE_PATH) 
 
 all: square_solver
 
-square_solver: main.o modes.o input.o output.o solve.o unittests.o
+square_solver: $(OBJ_PATH)main.o $(OBJ_PATH)modes.o $(OBJ_PATH)input.o $(OBJ_PATH)output.o $(OBJ_PATH)solve.o $(OBJ_PATH)unittests.o
 	g++ $(OBJ_FILES) -o square_solver $(CFLAGS)
 
-main.o: main.cpp
+$(OBJ_PATH)main.o: main.cpp
 	g++ -o $(MAIN_PATH) -c main.cpp $(CFLAGS)
 #можно в начале таргетов дописать путь к файлу
 
-modes.o: modes.cpp
-	g++ -o $(MODES_PATH) -c modes.cpp $(CFLAGS)
+$(OBJ_PATH)modes.o: source/modes.cpp
+	g++ -o $(MODES_PATH) -c $(SRC_PATH)modes.cpp $(CFLAGS)
 
-input.o: input.cpp
-	g++ -o $(INPUT_PATH) -c input.cpp $(CFLAGS)
+$(OBJ_PATH)input.o: source/input.cpp
+	g++ -o $(INPUT_PATH) -c $(SRC_PATH)input.cpp $(CFLAGS)
 
-output.o: output.cpp
-	g++ -o $(OUTPUT_PATH) -c output.cpp $(CFLAGS)
+$(OBJ_PATH)output.o: source/output.cpp
+	g++ -o $(OUTPUT_PATH) -c $(SRC_PATH)output.cpp $(CFLAGS)
 
-solve.o: solve.cpp
-	g++ -o $(SOLVE_PATH) -c solve.cpp $(CFLAGS)
+$(OBJ_PATH)solve.o: source/solve.cpp
+	g++ -o $(SOLVE_PATH) -c $(SRC_PATH)solve.cpp $(CFLAGS)
 
-unittests.o: unittests.cpp
-	g++ -o $(TESTS_PATH) -c unittests.cpp $(CFLAGS)
+$(OBJ_PATH)unittests.o: source/unittests.cpp
+	g++ -o $(TESTS_PATH) -c $(SRC_PATH)unittests.cpp $(CFLAGS)
 
 clean:
 	rm -rf *.o square_solver

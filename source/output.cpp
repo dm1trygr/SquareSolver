@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
-#include "./source/headers/output.h"
-#include "./source/headers/solve.h"  // for solve_from_file() function
-#include "./source/headers/roots_amount.h"
+#include "./headers/output.h"
+#include "./headers/solve.h"  // for solve_from_file() function
+#include "./headers/roots_amount.h"
 
 void print_solutions(const double roots[], const unsigned int amount) {
     assert(roots != NULL);

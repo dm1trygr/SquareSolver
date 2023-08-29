@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
-#include "./source/headers/solve.h"
-#include "./source/headers/output.h"
-#include "./source/headers/unittests.h"
-#include "./source/headers/roots_amount.h"
+#include "./headers/solve.h"
+#include "./headers/output.h"
+#include "./headers/unittests.h"
+#include "./headers/roots_amount.h"
 
 int run_tests(void) {
     int success_tests = 0;
