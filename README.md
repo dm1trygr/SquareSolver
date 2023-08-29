@@ -88,9 +88,9 @@ is similar on other operating systems.
 
 You can run program without specifying output file.
 In this case solutions of equations will be printed
-in "output.txt"
+to terminal
 
-![File-CMD-NoOutput](https://github.com/dm1trygr/SquareSolver/assets/103391790/0ed4cbb1-905e-4ed5-801c-c7995ecae280)
+![File-CMD-NotSpecifiedOutput](https://github.com/dm1trygr/SquareSolver/assets/103391790/25d41d74-ec86-49bc-9779-96526a035ca8)
 
 6. The program can also test itself! To do it,
    write in terminal "[name-of-binary-file] -t",
