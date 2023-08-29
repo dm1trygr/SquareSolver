@@ -20,7 +20,7 @@ void choosing_mode(int argc, char* argv[]) {
                 file_io_mode(argv[2], argv[3]);
             }
             else if (argc == 3) {
-                file_io_mode(argv[2], DEFAULT_OUTPUT_FILENAME);
+                file_io_mode(argv[2], "output.txt");
             }
             else {
                 show_file_help(argv[0]);
