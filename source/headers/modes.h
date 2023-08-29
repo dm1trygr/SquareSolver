@@ -42,6 +42,10 @@ void run_linear_mode(void);
 //!
 //!@param [in]  input_file_name  Name of input file
 //!@param [out] output_file_name Name of output file
+//!
+//!@note If output_file_name == "", program will print
+//!      to stdout results of solving equations instead
+//!      of writing to file
 //-----------------------------------------------------
 
 void file_io_mode(const char* const input_file_name,

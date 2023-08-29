@@ -26,7 +26,6 @@ square_solver: $(OBJ_PATH)main.o $(OBJ_PATH)modes.o $(OBJ_PATH)input.o $(OBJ_PAT
 
 $(OBJ_PATH)main.o: main.cpp
 	g++ -o $(MAIN_PATH) -c main.cpp $(CFLAGS)
-#можно в начале таргетов дописать путь к файлу
 
 $(OBJ_PATH)modes.o: source/modes.cpp
 	g++ -o $(MODES_PATH) -c $(SRC_PATH)modes.cpp $(CFLAGS)

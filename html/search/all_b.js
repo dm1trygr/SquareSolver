@@ -7,5 +7,5 @@ var searchData=
   ['run_5flinear_5fmode_4',['run_linear_mode',['../modes_8h.html#ab0726767084a4b525c813d7b94be77fc',1,'modes.h']]],
   ['run_5fsquare_5fmode_5',['run_square_mode',['../modes_8h.html#a411f6380234bafa505a72fd49353c199',1,'modes.h']]],
   ['run_5ftests_6',['run_tests',['../unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee',1,'unittests.h']]],
-  ['run_5funit_5ftests_5fmode_7',['run_unit_tests_mode',['../modes_8h.html#ace694786187177631288541b11546f36',1,'modes.h']]]
+  ['run_5funit_5ftests_5fmode_7',['run_unit_tests_mode',['../modes_8h.html#a75c9005df144131786abd21106ebd55d',1,'modes.h']]]
 ];
