@@ -7,6 +7,21 @@ const char FILE_MODE_FLAG[] = "-f";
 const char UNIT_TESTS_FLAG[] = "-t";
 const char FULL_HELP_FLAG[] = "-h";
 
+//-----------------------------------------------------
+//!Depending on the flag calls the function with the
+//!required program mode
+//!
+//!@param [in]  argc   Amount of arguments + name of
+//!                    program
+//!@param [in]  argv   Array with name of program and
+//!                    arguments
+//!
+//!@see run_square_mode(), run_linear_mode(),
+//!     file_io_mode(), show_file_help(),
+//!     run_unit_tests_mode(), show_full_help(),
+//!     show_short_help()
+//-----------------------------------------------------
+
 void choosing_mode(int argc, char* argv[]);
 
 //-----------------------------------------------------
@@ -24,6 +39,9 @@ void run_linear_mode(void);
 //-----------------------------------------------------
 //!Reads coefficients from file and writes solutions to
 //!other file
+//!
+//!@param [in]  input_file_name  Name of input file
+//!@param [out] output_file_name Name of output file
 //-----------------------------------------------------
 
 void file_io_mode(const char* const input_file_name,
@@ -40,6 +58,11 @@ void show_file_help(const char* const program_name);
 
 //-----------------------------------------------------
 //!Does tests of solve functions of program
+//!
+//!@param [in]  argc   Amount of arguments + name of
+//!                    program
+//!@param [in]  argv   Array with name of program and
+//!                    arguments
 //-----------------------------------------------------
 
 void run_unit_tests_mode(int argc, char* argv[]);

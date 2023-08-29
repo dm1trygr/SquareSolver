@@ -74,12 +74,12 @@ $(function() {
   <div class="headertitle"><div class="title">solve.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;float.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="solve_8h_source.html">solve.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="roots__amount_8h_source.html">roots_amount.h</a>&quot;</code><br />
+<code>#include &quot;./source/headers/solve.h&quot;</code><br />
+<code>#include &quot;./source/headers/roots_amount.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -89,8 +89,6 @@ Functions</h2></td></tr>
 <tr class="separator:a4a65a01bb3a528fe3a2e91082dfb3d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1a1237bcc0355e25e7ca50c21253719"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8cpp.html#ae1a1237bcc0355e25e7ca50c21253719">round_to_zero</a> (const double number)</td></tr>
 <tr class="separator:ae1a1237bcc0355e25e7ca50c21253719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a378ddeeca254995588093a72159848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8cpp.html#a1a378ddeeca254995588093a72159848">swap_numbers</a> (double *const num1_ptr, double *const num2_ptr)</td></tr>
-<tr class="separator:a1a378ddeeca254995588093a72159848"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a550d1911607f86af2b9e80cf2c81ea19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8cpp.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation</a> (const double a, const double b, const double c, double *const x1ptr, double *const x2ptr)</td></tr>
 <tr class="separator:a550d1911607f86af2b9e80cf2c81ea19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80797d84ad6227fc9b4e872b2e620f69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8cpp.html#a80797d84ad6227fc9b4e872b2e620f69">solve_linear</a> (const double b, const double c, double *const x1ptr)</td></tr>
@@ -122,15 +120,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Checks if double-type numbers is equal</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">num1</td><td>Double-type number 1 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">num2</td><td>Double-type number 2</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns 1 if numbers are equal, otherwise 0 </dd></dl>
 
 </div>
 </div>
@@ -149,14 +138,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Checks if double-type number is equal to 0</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>Double-type number</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns 1 if number is equal to 0, otherwise 0 </dd></dl>
 
 </div>
 </div>
@@ -175,15 +156,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If number is close to 0, returns 0, otherwise number</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>Double-type value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if number is close to zero, otherwise number</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>is_doubles_equal() </dd></dl>
 
 </div>
 </div>
@@ -230,19 +202,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Solves square equation</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>a-parameter </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>b-parameter </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>c-parameter </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1ptr</td><td>Pointer to 1st root </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x2ptr</td><td>Pointer to 2nd root</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Amount of roots or INF_ROOTS if amount of solutions is infinite</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>linear() </dd></dl>
 
 </div>
 </div>
@@ -277,52 +236,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Solves linear equation</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>b-parameter </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>c-parameter </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1ptr</td><td>Pointer to root</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Amount of roots or INF_ROOTS if amount of solutions is infinite </dd></dl>
-
-</div>
-</div>
-<a id="a1a378ddeeca254995588093a72159848" name="a1a378ddeeca254995588093a72159848"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a378ddeeca254995588093a72159848">&#9670;&#160;</a></span>swap_numbers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void swap_numbers </td>
-          <td>(</td>
-          <td class="paramtype">double *const&#160;</td>
-          <td class="paramname"><em>num1_ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *const&#160;</td>
-          <td class="paramname"><em>num2_ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Assign the first variable to the value of the second, and the second to the value of the first</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">num1_ptr</td><td>Pointer to 1st number </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">num2_ptr</td><td>Pointer to 2nd number </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

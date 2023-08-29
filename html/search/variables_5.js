@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['max_5fname_5flen_0',['MAX_NAME_LEN',['../unittests_8h.html#a777e927bce1488e8c4e7ca81fa150cde',1,'unittests.h']]]
+  ['square_5fcoeffs_5fnumber_0',['SQUARE_COEFFS_NUMBER',['../input_8h.html#a1e44950005299fc149dfdf9a33a0ba4e',1,'input.h']]],
+  ['square_5fmode_5fflag_1',['SQUARE_MODE_FLAG',['../modes_8h.html#a352c8e0aefcfbeec414e035a54125acb',1,'modes.h']]]
 ];

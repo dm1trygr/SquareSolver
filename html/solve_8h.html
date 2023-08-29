@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Square Equation Solver: solve.h File Reference</title>
+<title>Square Equation Solver: source/headers/solve.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,6 +67,10 @@ $(function() {
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_190b707ee6e9293a7a74df8a90acc5b6.html">headers</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -85,8 +89,6 @@ Functions</h2></td></tr>
 <tr class="separator:a4a65a01bb3a528fe3a2e91082dfb3d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1a1237bcc0355e25e7ca50c21253719"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8h.html#ae1a1237bcc0355e25e7ca50c21253719">round_to_zero</a> (const double number)</td></tr>
 <tr class="separator:ae1a1237bcc0355e25e7ca50c21253719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a378ddeeca254995588093a72159848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8h.html#a1a378ddeeca254995588093a72159848">swap_numbers</a> (double *const num1_ptr, double *const num2_ptr)</td></tr>
-<tr class="separator:a1a378ddeeca254995588093a72159848"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a550d1911607f86af2b9e80cf2c81ea19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8h.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation</a> (const double a, const double b, const double c, double *const x1ptr, double *const x2ptr)</td></tr>
 <tr class="separator:a550d1911607f86af2b9e80cf2c81ea19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80797d84ad6227fc9b4e872b2e620f69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solve_8h.html#a80797d84ad6227fc9b4e872b2e620f69">solve_linear</a> (const double b, const double c, double *const x1ptr)</td></tr>
@@ -283,42 +285,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Amount of roots or INF_ROOTS if amount of solutions is infinite </dd></dl>
-
-</div>
-</div>
-<a id="a1a378ddeeca254995588093a72159848" name="a1a378ddeeca254995588093a72159848"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a378ddeeca254995588093a72159848">&#9670;&#160;</a></span>swap_numbers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void swap_numbers </td>
-          <td>(</td>
-          <td class="paramtype">double *const&#160;</td>
-          <td class="paramname"><em>num1_ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *const&#160;</td>
-          <td class="paramname"><em>num2_ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Assign the first variable to the value of the second, and the second to the value of the first</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">num1_ptr</td><td>Pointer to 1st number </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">num2_ptr</td><td>Pointer to 2nd number </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

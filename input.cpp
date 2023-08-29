@@ -12,7 +12,7 @@ void get_coeffs(double coeffs[], const unsigned int amount) {
     }
 }
 
-double input_one_coeff(void) {  // ввод из файла (stdin вместо указателя на файл)
+double input_one_coeff(void) {
     double input_coefficient = 0;
 
     while (1) {

@@ -72,16 +72,73 @@ $(function() {
   <div class="headertitle"><div class="title">SquareSolver</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a>This small program can solve square equations!</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> This small program can solve square and linear equations, test itself and work with files!</p>
+<p>Program can work in cycle, while user wants to get solutions of square and linear equations.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-How to use</h1>
-<p>You should open this program through terminal using flags.</p>
-<p>If you want to read files and write result to file, you should enter 2 arguments: [input file] [output file] - after -f flag</p>
+How to install</h1>
+<p>This guide is written for Windows, but the algorithm is similar on other operating systems.</p>
+<ol type="1">
+<li>Download this repo from Github. On the main page, press button "Code", then "Download ZIP"</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/6d838aea-6d26-4f32-a398-739e1789db23" alt="Step 1" class="inline"/></p>
+<ol type="1">
+<li>Extract downloaded ZIP archive</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/07367017-75a1-4596-a996-3048170d698f" alt="Step 2" class="inline"/></p>
+<ol type="1">
+<li>Go to folder with source code files and launch Terminal</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/4c27cbe3-1d15-44b5-8047-2d3036cfb191" alt="Step 3" class="inline"/></p>
+<ol type="1">
+<li>Enter comand "make" in terminal to compile source code files</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/0a619153-9ab7-4740-9d98-4e7a92da4c94" alt="Step 4" class="inline"/></p>
+<ol type="1">
+<li>Done!</li>
+</ol>
+<blockquote class="doxtable">
+<p>&zwj;Instead of following these "complicated" 5 steps, you can simply download .exe file from <a href="https://github.com/dm1trygr/SquareSolver/releases">Releases section</a>, but this works only on Windows </p>
+</blockquote>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Flags</h1>
+How to use</h1>
+<ol type="1">
+<li>Go to folder with binary file and launch Terminal</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/8f73bc9e-2b86-4530-b394-7ec55136a658" alt="Launch" class="inline"/></p>
+<ol type="1">
+<li>To show full information about this program, write in terminal "[name-of-binary-file] -h". The program will show all information about itself, how to use it and its flags</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/39fe42e4-8c7d-4caf-b329-d6414afab038" alt="Help" class="inline"/></p>
+<ol type="1">
+<li>To solve a square equation, write in terminal "[name-of-binary-file] -s". The program will ask you for 3 coefficients in turn, and then it will display solutions of the equation given by these coefficients If you want to stop, just enter "0" when program will ask "Do you want to continue?"</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/e25db5d5-0db7-40ba-b8b5-d85be79ff4d0" alt="Square" class="inline"/></p>
+<ol type="1">
+<li>To solve a linear equation, write in terminal "[name-of-binary-file] -l". The actions are similar to those in step 3, but you need to enter 2 coefficients instead of 3.</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/3e71f0bf-a283-4010-87ce-1c3a70ebeb1b" alt="Linear" class="inline"/></p>
+<ol type="1">
+<li>To solve an equations equations with coefficients written to a file and print solutions to file, write in terminal "[name-of-binary-file] -f
+   [input file] [output file]".</li>
+</ol>
+<blockquote class="doxtable">
+<p>&zwj;The coefficients in the input file must be written in the following form:</p>
+<p>[A-coefficient] [B-coefficient] [C-coefficient] </p>
+</blockquote>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/da4ba9dc-2313-4bba-9ef9-6e78b3e6dc21" alt="File-CMD" class="inline"/></p>
+<p>This is input:</p>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/01abee63-d78b-49f7-be18-0132bae1f0ce" alt="File-INPUT" class="inline"/></p>
+<p>And output:</p>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/17fdcf80-9409-4eec-ab8b-dc1997bdfebd" alt="File-OUTPUT" class="inline"/></p>
+<ol type="1">
+<li>The program can also test itself! To do it, write in terminal "[name-of-binary-file] -t", and program will print results of tests.</li>
+</ol>
+<p><img src="https://github.com/dm1trygr/SquareSolver/assets/103391790/5c680823-e784-4dd8-b0fb-9ef8f5177914" alt="Tests" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Short information about flags</h1>
 <p>-s = solves square equation</p>
 <p>-l = solves linear equation</p>
-<p>-f = reads coefficients from file and writes solutions to other file</p>
+<p>-f [input file] [output file] = reads coefficients from file and writes solutions to other file</p>
 <p>-t = runs unit tests</p>
 <p>-h = shows full information about program </p>
 </div></div><!-- contents -->

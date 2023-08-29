@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <math.h>
 #include "./source/headers/output.h"
-#include "./source/headers/solve.h" // for solve_from_file() function
+#include "./source/headers/solve.h"  // for solve_from_file() function
 #include "./source/headers/roots_amount.h"
 
 void print_solutions(const double roots[], const unsigned int amount) {
@@ -37,6 +37,9 @@ void fprint_solutions(FILE* file_pointer, const double roots[], const unsigned i
 }
 
 void solve_from_file(FILE* input_file, FILE* output_file) {
+    assert(input_file != NULL);
+    assert(output_file != NULL);
+
     double coeffs[3] = {0};
     double roots[2] = {0};
 

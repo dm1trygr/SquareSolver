@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['round_5fto_5fzero_0',['round_to_zero',['../solve_8cpp.html#ae1a1237bcc0355e25e7ca50c21253719',1,'round_to_zero(const double number):&#160;solve.cpp'],['../solve_8h.html#ae1a1237bcc0355e25e7ca50c21253719',1,'round_to_zero(const double number):&#160;solve.cpp']]],
-  ['run_5flinear_5fmode_1',['run_linear_mode',['../modes_8cpp.html#ab0726767084a4b525c813d7b94be77fc',1,'run_linear_mode(void):&#160;modes.cpp'],['../modes_8h.html#ab0726767084a4b525c813d7b94be77fc',1,'run_linear_mode(void):&#160;modes.cpp']]],
-  ['run_5fone_5ftest_2',['run_one_test',['../unittests_8cpp.html#aa76b2c12b3c7008de6a6ef98e38b321d',1,'run_one_test(const TestReference *const current_test):&#160;unittests.cpp'],['../unittests_8h.html#aa76b2c12b3c7008de6a6ef98e38b321d',1,'run_one_test(const TestReference *const current_test):&#160;unittests.cpp']]],
-  ['run_5fsquare_5fmode_3',['run_square_mode',['../modes_8cpp.html#a411f6380234bafa505a72fd49353c199',1,'run_square_mode(void):&#160;modes.cpp'],['../modes_8h.html#a411f6380234bafa505a72fd49353c199',1,'run_square_mode(void):&#160;modes.cpp']]],
-  ['run_5ftests_4',['run_tests',['../unittests_8cpp.html#af1458e0e599d0a41767092fbd6b40dee',1,'run_tests(void):&#160;unittests.cpp'],['../unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee',1,'run_tests(void):&#160;unittests.cpp']]],
-  ['run_5funit_5ftests_5fmode_5',['run_unit_tests_mode',['../modes_8cpp.html#a6be0578c5b92d47141efc15aa5bd60a8',1,'run_unit_tests_mode(void):&#160;modes.cpp'],['../modes_8h.html#a6be0578c5b92d47141efc15aa5bd60a8',1,'run_unit_tests_mode(void):&#160;modes.cpp']]]
+  ['show_5ffile_5fhelp_0',['show_file_help',['../modes_8h.html#ae04b3ef1b6c21f57db5be07293909dfc',1,'modes.h']]],
+  ['show_5ffull_5fhelp_1',['show_full_help',['../modes_8h.html#a351c45fde8f071ad46660673301ca51d',1,'modes.h']]],
+  ['show_5fshort_5fhelp_2',['show_short_help',['../modes_8h.html#a6039ee97cfa58c0c071fb4417a551979',1,'modes.h']]],
+  ['solve_5fequation_3',['solve_equation',['../solve_8h.html#a550d1911607f86af2b9e80cf2c81ea19',1,'solve.h']]],
+  ['solve_5ffrom_5ffile_4',['solve_from_file',['../output_8h.html#affbd2bb70bcaf1d66dbc828988cf03fc',1,'output.h']]],
+  ['solve_5flinear_5',['solve_linear',['../solve_8h.html#a80797d84ad6227fc9b4e872b2e620f69',1,'solve.h']]]
 ];

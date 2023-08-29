@@ -31,6 +31,8 @@ int run_tests(void) {
 }
 
 int read_tests_from_file(const char* const input_filename) {
+    assert(input_filename != NULL);
+
     int success_tests = 0;
 
     FILE* input_file = fopen(input_filename, "r");

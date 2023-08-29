@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Square Equation Solver: unittests.h Source File</title>
+<title>Square Equation Solver: source/headers/unittests.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,6 +67,11 @@ $(function() {
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_190b707ee6e9293a7a74df8a90acc5b6.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">unittests.h</div></div>
 </div><!--header-->
@@ -75,47 +79,50 @@ $(function() {
 <a href="unittests_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UNITTESTS_HEADER</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UNITTESTS_HEADER</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="unittests_8h.html#a777e927bce1488e8c4e7ca81fa150cde">    4</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="unittests_8h.html#a777e927bce1488e8c4e7ca81fa150cde">MAX_NAME_LEN</a> = 50;  </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_NAME_LEN = 50;  </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="struct_test_reference.html">    9</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_test_reference.html">TestReference</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_test_reference.html#ad4315c43c9769928a69e1f9ab177e7ff">   10</a></span>    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#ad4315c43c9769928a69e1f9ab177e7ff">a</a>;  </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_test_reference.html#a9ac5e0498c174309d43c62d8719b83b1">   11</a></span>    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#a9ac5e0498c174309d43c62d8719b83b1">b</a>;  </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_test_reference.html#aae53c47852231c7fb7dceef6e5a9ad9f">   12</a></span>    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#aae53c47852231c7fb7dceef6e5a9ad9f">c</a>;  </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_test_reference.html#abc2a9fedd8aa5cca4630aba9c6636ab3">   13</a></span>    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#abc2a9fedd8aa5cca4630aba9c6636ab3">x1ref</a>;  </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_test_reference.html#aac248e7eacc6d74d1955362426c6b152">   14</a></span>    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#aac248e7eacc6d74d1955362426c6b152">x2ref</a>;  </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_test_reference.html#ac47d4da52d9b887d3da780e36e9ae2e3">   15</a></span>    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_test_reference.html#ac47d4da52d9b887d3da780e36e9ae2e3">amount_ref</a>;  </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_test_reference.html#a633c02c5280118245e5893db72e1fd73">   16</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_test_reference.html#a633c02c5280118245e5893db72e1fd73">test_name</a>[<a class="code hl_variable" href="unittests_8h.html#a777e927bce1488e8c4e7ca81fa150cde">MAX_NAME_LEN</a>];  </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_test_reference.html#a33f4168d4d17650c6522d336c4cd8b8b">   10</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#a33f4168d4d17650c6522d336c4cd8b8b">a</a>;  </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_test_reference.html#a398b868e2c7c4201060d747c3669b2e4">   11</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#a398b868e2c7c4201060d747c3669b2e4">b</a>;  </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_test_reference.html#abe008f91c17072e5dc9fbb3e034f28d2">   12</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#abe008f91c17072e5dc9fbb3e034f28d2">c</a>;  </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_test_reference.html#a0a4771bc841e6f6c695d06d23c130c82">   13</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#a0a4771bc841e6f6c695d06d23c130c82">x1ref</a>;  </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_test_reference.html#a3190c772f4afce7a500ae3f4b49220df">   14</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_test_reference.html#a3190c772f4afce7a500ae3f4b49220df">x2ref</a>;  </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_test_reference.html#ad4d4aac81df44cc15a8b87934d57db53">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_test_reference.html#ad4d4aac81df44cc15a8b87934d57db53">amount_ref</a>;  </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_test_reference.html#ac717fd7f44e41bceb109618219690cd2">   16</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_test_reference.html#ac717fd7f44e41bceb109618219690cd2">test_name</a>[MAX_NAME_LEN];  </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//-----------------------------------------------------</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee">run_tests</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee">   27</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee">run_tests</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">int</span> <a class="code hl_function" href="unittests_8h.html#aa76b2c12b3c7008de6a6ef98e38b321d">run_one_test</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_test_reference.html">TestReference</a> * <span class="keyword">const</span> current_test);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">bool</span> <a class="code hl_function" href="unittests_8h.html#abc7b08ee3aba4e180880e4e5ba0c0909">check_test_output</a>(<span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> x2, <span class="keywordtype">int</span> amount, <span class="keyword">const</span> <a class="code hl_struct" href="struct_test_reference.html">TestReference</a> * <span class="keyword">const</span> current_test);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="unittests_8h.html#ae1355bab6046e7b814c7de509e072d57">   40</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="unittests_8h.html#ae1355bab6046e7b814c7de509e072d57">read_tests_from_file</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> input_filename);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">static</span> <span class="keywordtype">int</span> run_one_test(<span class="keyword">const</span> <a class="code hl_struct" href="struct_test_reference.html">TestReference</a>* <span class="keyword">const</span> current_test);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">static</span> <span class="keywordtype">bool</span> check_test_output(<span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> x2, <span class="keywordtype">int</span> amount, <span class="keyword">const</span> <a class="code hl_struct" href="struct_test_reference.html">TestReference</a>* <span class="keyword">const</span> current_test);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="astruct_test_reference_html"><div class="ttname"><a href="struct_test_reference.html">TestReference</a></div><div class="ttdef"><b>Definition</b> unittests.h:9</div></div>
-<div class="ttc" id="astruct_test_reference_html_a633c02c5280118245e5893db72e1fd73"><div class="ttname"><a href="struct_test_reference.html#a633c02c5280118245e5893db72e1fd73">TestReference::test_name</a></div><div class="ttdeci">const char test_name[MAX_NAME_LEN]</div><div class="ttdoc">Name of test.</div><div class="ttdef"><b>Definition</b> unittests.h:16</div></div>
-<div class="ttc" id="astruct_test_reference_html_a9ac5e0498c174309d43c62d8719b83b1"><div class="ttname"><a href="struct_test_reference.html#a9ac5e0498c174309d43c62d8719b83b1">TestReference::b</a></div><div class="ttdeci">const double b</div><div class="ttdoc">b-coefficient</div><div class="ttdef"><b>Definition</b> unittests.h:11</div></div>
-<div class="ttc" id="astruct_test_reference_html_aac248e7eacc6d74d1955362426c6b152"><div class="ttname"><a href="struct_test_reference.html#aac248e7eacc6d74d1955362426c6b152">TestReference::x2ref</a></div><div class="ttdeci">const double x2ref</div><div class="ttdoc">Reference (right) root #2.</div><div class="ttdef"><b>Definition</b> unittests.h:14</div></div>
-<div class="ttc" id="astruct_test_reference_html_aae53c47852231c7fb7dceef6e5a9ad9f"><div class="ttname"><a href="struct_test_reference.html#aae53c47852231c7fb7dceef6e5a9ad9f">TestReference::c</a></div><div class="ttdeci">const double c</div><div class="ttdoc">c-coefficient</div><div class="ttdef"><b>Definition</b> unittests.h:12</div></div>
-<div class="ttc" id="astruct_test_reference_html_abc2a9fedd8aa5cca4630aba9c6636ab3"><div class="ttname"><a href="struct_test_reference.html#abc2a9fedd8aa5cca4630aba9c6636ab3">TestReference::x1ref</a></div><div class="ttdeci">const double x1ref</div><div class="ttdoc">Reference (right) root #1.</div><div class="ttdef"><b>Definition</b> unittests.h:13</div></div>
-<div class="ttc" id="astruct_test_reference_html_ac47d4da52d9b887d3da780e36e9ae2e3"><div class="ttname"><a href="struct_test_reference.html#ac47d4da52d9b887d3da780e36e9ae2e3">TestReference::amount_ref</a></div><div class="ttdeci">const int amount_ref</div><div class="ttdoc">Reference (right) amount of roots.</div><div class="ttdef"><b>Definition</b> unittests.h:15</div></div>
-<div class="ttc" id="astruct_test_reference_html_ad4315c43c9769928a69e1f9ab177e7ff"><div class="ttname"><a href="struct_test_reference.html#ad4315c43c9769928a69e1f9ab177e7ff">TestReference::a</a></div><div class="ttdeci">const double a</div><div class="ttdoc">a-coefficient</div><div class="ttdef"><b>Definition</b> unittests.h:10</div></div>
-<div class="ttc" id="aunittests_8h_html_a777e927bce1488e8c4e7ca81fa150cde"><div class="ttname"><a href="unittests_8h.html#a777e927bce1488e8c4e7ca81fa150cde">MAX_NAME_LEN</a></div><div class="ttdeci">const int MAX_NAME_LEN</div><div class="ttdoc">Maximum test name length.</div><div class="ttdef"><b>Definition</b> unittests.h:4</div></div>
-<div class="ttc" id="aunittests_8h_html_aa76b2c12b3c7008de6a6ef98e38b321d"><div class="ttname"><a href="unittests_8h.html#aa76b2c12b3c7008de6a6ef98e38b321d">run_one_test</a></div><div class="ttdeci">int run_one_test(const TestReference *const current_test)</div><div class="ttdef"><b>Definition</b> unittests.cpp:30</div></div>
-<div class="ttc" id="aunittests_8h_html_abc7b08ee3aba4e180880e4e5ba0c0909"><div class="ttname"><a href="unittests_8h.html#abc7b08ee3aba4e180880e4e5ba0c0909">check_test_output</a></div><div class="ttdeci">bool check_test_output(double x1, double x2, int amount, const TestReference *const current_test)</div><div class="ttdef"><b>Definition</b> unittests.cpp:62</div></div>
-<div class="ttc" id="aunittests_8h_html_af1458e0e599d0a41767092fbd6b40dee"><div class="ttname"><a href="unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee">run_tests</a></div><div class="ttdeci">int run_tests(void)</div><div class="ttdef"><b>Definition</b> unittests.cpp:8</div></div>
+<div class="ttc" id="astruct_test_reference_html_a0a4771bc841e6f6c695d06d23c130c82"><div class="ttname"><a href="struct_test_reference.html#a0a4771bc841e6f6c695d06d23c130c82">TestReference::x1ref</a></div><div class="ttdeci">double x1ref</div><div class="ttdoc">Reference (right) root #1.</div><div class="ttdef"><b>Definition</b> unittests.h:13</div></div>
+<div class="ttc" id="astruct_test_reference_html_a3190c772f4afce7a500ae3f4b49220df"><div class="ttname"><a href="struct_test_reference.html#a3190c772f4afce7a500ae3f4b49220df">TestReference::x2ref</a></div><div class="ttdeci">double x2ref</div><div class="ttdoc">Reference (right) root #2.</div><div class="ttdef"><b>Definition</b> unittests.h:14</div></div>
+<div class="ttc" id="astruct_test_reference_html_a33f4168d4d17650c6522d336c4cd8b8b"><div class="ttname"><a href="struct_test_reference.html#a33f4168d4d17650c6522d336c4cd8b8b">TestReference::a</a></div><div class="ttdeci">double a</div><div class="ttdoc">a-coefficient</div><div class="ttdef"><b>Definition</b> unittests.h:10</div></div>
+<div class="ttc" id="astruct_test_reference_html_a398b868e2c7c4201060d747c3669b2e4"><div class="ttname"><a href="struct_test_reference.html#a398b868e2c7c4201060d747c3669b2e4">TestReference::b</a></div><div class="ttdeci">double b</div><div class="ttdoc">b-coefficient</div><div class="ttdef"><b>Definition</b> unittests.h:11</div></div>
+<div class="ttc" id="astruct_test_reference_html_abe008f91c17072e5dc9fbb3e034f28d2"><div class="ttname"><a href="struct_test_reference.html#abe008f91c17072e5dc9fbb3e034f28d2">TestReference::c</a></div><div class="ttdeci">double c</div><div class="ttdoc">c-coefficient</div><div class="ttdef"><b>Definition</b> unittests.h:12</div></div>
+<div class="ttc" id="astruct_test_reference_html_ac717fd7f44e41bceb109618219690cd2"><div class="ttname"><a href="struct_test_reference.html#ac717fd7f44e41bceb109618219690cd2">TestReference::test_name</a></div><div class="ttdeci">char test_name[MAX_NAME_LEN]</div><div class="ttdoc">Name of test.</div><div class="ttdef"><b>Definition</b> unittests.h:16</div></div>
+<div class="ttc" id="astruct_test_reference_html_ad4d4aac81df44cc15a8b87934d57db53"><div class="ttname"><a href="struct_test_reference.html#ad4d4aac81df44cc15a8b87934d57db53">TestReference::amount_ref</a></div><div class="ttdeci">int amount_ref</div><div class="ttdoc">Reference (right) amount of roots.</div><div class="ttdef"><b>Definition</b> unittests.h:15</div></div>
+<div class="ttc" id="aunittests_8h_html_ae1355bab6046e7b814c7de509e072d57"><div class="ttname"><a href="unittests_8h.html#ae1355bab6046e7b814c7de509e072d57">read_tests_from_file</a></div><div class="ttdeci">int read_tests_from_file(const char *const input_filename)</div></div>
+<div class="ttc" id="aunittests_8h_html_af1458e0e599d0a41767092fbd6b40dee"><div class="ttname"><a href="unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee">run_tests</a></div><div class="ttdeci">int run_tests(void)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

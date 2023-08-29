@@ -26,6 +26,17 @@ struct TestReference {
 
 int run_tests(void);
 
+//-----------------------------------------------------
+//!Gets data about tests from file and does this tests
+//!of solve()
+//!
+//!@param [in]  input_filename Pointer to input file
+//!
+//!@return Amount of successful tests
+//!
+//!@see run_one_test()
+//-----------------------------------------------------
+
 int read_tests_from_file(const char* const input_filename);
 
 //-----------------------------------------------------

@@ -6,6 +6,8 @@
 //!
 //!@param [in]  roots[] Array of solutions
 //!@param [in]  amount  Amount of solutions
+//!
+//!@see fprint_solutions()
 //-----------------------------------------------------
 
 void print_solutions(const double roots[], const unsigned int amount);
@@ -19,6 +21,20 @@ void print_solutions(const double roots[], const unsigned int amount);
 //-----------------------------------------------------
 
 void fprint_solutions(FILE* file_pointer, const double roots[], const unsigned int amount);
+
+//-----------------------------------------------------
+//!Reads coefficients from file and prints solution to
+//!other file
+//!
+//!@param [in]  input_file  Pointer to input file
+//!@param [out] output_file Pointer to output file
+//!
+//!@note If function will read string with invalid value,
+//!      it will
+//!      skip a string with this value
+//!
+//!@see fprint_solutions(), solve_equation()
+//-----------------------------------------------------
 
 void solve_from_file(FILE* input_file, FILE* output_file);
 

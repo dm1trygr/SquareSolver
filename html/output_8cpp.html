@@ -77,8 +77,9 @@ $(function() {
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="output_8h_source.html">output.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="roots__amount_8h_source.html">roots_amount.h</a>&quot;</code><br />
+<code>#include &quot;./source/headers/output.h&quot;</code><br />
+<code>#include &quot;./source/headers/solve.h&quot;</code><br />
+<code>#include &quot;./source/headers/roots_amount.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -86,6 +87,8 @@ Functions</h2></td></tr>
 <tr class="separator:a59fec8905411c57b1b649500470c994b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5cf0afa2f8f728487a9a3ecd3c4d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">fprint_solutions</a> (FILE *file_pointer, const double roots[], const unsigned int amount)</td></tr>
 <tr class="separator:a2f5cf0afa2f8f728487a9a3ecd3c4d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbd2bb70bcaf1d66dbc828988cf03fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8cpp.html#affbd2bb70bcaf1d66dbc828988cf03fc">solve_from_file</a> (FILE *input_file, FILE *output_file)</td></tr>
+<tr class="separator:affbd2bb70bcaf1d66dbc828988cf03fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f5cf0afa2f8f728487a9a3ecd3c4d44" name="a2f5cf0afa2f8f728487a9a3ecd3c4d44"></a>
@@ -119,15 +122,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Prints solutions of equation with coefficients from file</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file_pointer</td><td>Pointer to the file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">roots[]</td><td>Array of solutions </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">amount</td><td>Amount of solutions </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -156,14 +150,34 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Prints solutions of equation</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">roots[]</td><td>Array of solutions </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">amount</td><td>Amount of solutions </td></tr>
-  </table>
-  </dd>
-</dl>
+
+</div>
+</div>
+<a id="affbd2bb70bcaf1d66dbc828988cf03fc" name="affbd2bb70bcaf1d66dbc828988cf03fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbd2bb70bcaf1d66dbc828988cf03fc">&#9670;&#160;</a></span>solve_from_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void solve_from_file </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>input_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>output_file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
