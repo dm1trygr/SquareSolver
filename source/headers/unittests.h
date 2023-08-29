@@ -1,7 +1,7 @@
 #ifndef UNITTESTS_HEADER
 #define UNITTESTS_HEADER
 
-const int MAX_NAME_LEN = 50;  //!<Maximum test name length
+static const int MAX_NAME_LEN = 50;  //!<Maximum test name length
 
 //!Structure with data about tests: coefficients of equation,
 //!right roots and their amount
@@ -38,7 +38,7 @@ int run_tests(void);
 //!@see solve_equation(), check_test_output()
 //-----------------------------------------------------
 
-int run_one_test(const TestReference * const current_test);
+static int run_one_test(const TestReference* const current_test);
 
 //-----------------------------------------------------
 //!Compare test output with reference values
@@ -56,6 +56,6 @@ int run_one_test(const TestReference * const current_test);
 //!        values, otherwise 0
 //-----------------------------------------------------
 
-bool check_test_output(double x1, double x2, int amount, const TestReference * const current_test);
+static bool check_test_output(double x1, double x2, int amount, const TestReference* const current_test);
 
 #endif

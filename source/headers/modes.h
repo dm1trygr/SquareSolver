@@ -7,7 +7,7 @@ const char FILE_MODE_FLAG[] = "-f";
 const char UNIT_TESTS_FLAG[] = "-t";
 const char FULL_HELP_FLAG[] = "-h";
 
-void choosing_mode(int argc, char * argv[]);
+void choosing_mode(int argc, char* argv[]);
 
 //-----------------------------------------------------
 //!Enters square equation solver mode
@@ -26,8 +26,8 @@ void run_linear_mode(void);
 //!other file
 //-----------------------------------------------------
 
-void file_io_mode(const char * const input_file_name,
-                   const char * const output_file_name);
+void file_io_mode(const char* const input_file_name,
+                  const char* const output_file_name);
 
 //-----------------------------------------------------
 //!Shows short help for file mode (-f flag)
@@ -36,7 +36,7 @@ void file_io_mode(const char * const input_file_name,
 //!                          on standard input
 //-----------------------------------------------------
 
-void show_file_help(const char * const program_name);
+void show_file_help(const char* const program_name);
 
 //-----------------------------------------------------
 //!Does tests of solve functions of program
@@ -51,7 +51,7 @@ void run_unit_tests_mode(void);
 //!                          on standard input
 //-----------------------------------------------------
 
-void show_full_help(const char * const program_name);
+void show_full_help(const char* const program_name);
 
 //-----------------------------------------------------
 //!Shows short help
@@ -60,6 +60,6 @@ void show_full_help(const char * const program_name);
 //!                          on standard input
 //-----------------------------------------------------
 
-void show_short_help(const char * const program_name);
+void show_short_help(const char* const program_name);
 
 #endif

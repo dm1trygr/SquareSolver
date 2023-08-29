@@ -18,6 +18,6 @@ void print_solutions(const double roots[], const unsigned int amount);
 //!@param [in]  amount       Amount of solutions
 //-----------------------------------------------------
 
-void fprint_solutions(FILE * file_pointer, const double roots[], const unsigned int amount);
+void fprint_solutions(FILE* file_pointer, const double roots[], const unsigned int amount);
 
 #endif

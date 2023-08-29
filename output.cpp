@@ -11,7 +11,7 @@ void print_solutions(const double roots[], const unsigned int amount) {
     fprint_solutions(stdout, roots, amount);
 }
 
-void fprint_solutions(FILE * file_pointer, const double roots[], const unsigned int amount) {
+void fprint_solutions(FILE* file_pointer, const double roots[], const unsigned int amount) {
     assert(file_pointer != NULL);
     assert(roots != NULL);
     assert(isfinite(amount));

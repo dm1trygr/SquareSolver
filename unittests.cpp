@@ -29,7 +29,7 @@ int run_tests(void) {
     return success_tests;
 }
 
-int run_one_test(const TestReference * const current_test) {
+static int run_one_test(const TestReference* const current_test) {
     assert(current_test != NULL);
     assert(current_test->test_name != NULL);
     assert(isfinite(current_test->a));
@@ -61,7 +61,7 @@ int run_one_test(const TestReference * const current_test) {
     }
 }
 
-bool check_test_output(double x1, double x2, int amount, const TestReference * const current_test) {
+static bool check_test_output(double x1, double x2, int amount, const TestReference* const current_test) {
     return (are_doubles_equal(x1, current_test->x1ref) &&
             are_doubles_equal(x2, current_test->x2ref) &&
             amount == current_test->amount_ref);

@@ -42,7 +42,7 @@ double round_to_zero(const double number);
 //!@param [out] num2_ptr Pointer to 2nd number
 //-----------------------------------------------------
 
-void swap_numbers(double * const num1_ptr, double * const num2_ptr);
+void swap_numbers(double* const num1_ptr, double* const num2_ptr);
 
 //-----------------------------------------------------
 //!Solves square equation
@@ -59,7 +59,7 @@ void swap_numbers(double * const num1_ptr, double * const num2_ptr);
 //!@see linear()
 //-----------------------------------------------------
 
-int solve_equation(const double a, const double b, const double c, double * const x1ptr, double * const x2ptr);
+int solve_equation(const double a, const double b, const double c, double* const x1ptr, double* const x2ptr);
 
 //-----------------------------------------------------
 //!Solves linear equation
@@ -72,6 +72,6 @@ int solve_equation(const double a, const double b, const double c, double * cons
 //!        solutions is infinite
 //-----------------------------------------------------
 
-int solve_linear(const double b, const double c, double * const x1ptr);
+int solve_linear(const double b, const double c, double* const x1ptr);
 
 #endif

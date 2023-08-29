@@ -19,6 +19,9 @@ void choosing_mode(int argc, char* argv[]) {
             if (argc >= 4) {
                 file_io_mode(argv[2], argv[3]);
             }
+            else if (argc == 3) {
+                file_io_mode(argv[2], "output.txt");
+            }
             else {  // функция/макрос для if
                 show_file_help(argv[0]);
             }
@@ -74,7 +77,7 @@ void run_linear_mode(void) {
 }
 
 void file_io_mode(const char* const input_file_name, const char* const output_file_name) {
-    assert(input_file_name != NULL);   // прижать звездочку к назщванию типа
+    assert(input_file_name != NULL);
 
     if (strcmp(input_file_name, output_file_name) == 0) {
         printf("Error! You're trying to open same file for reading coefficients and writing roots!\n");
@@ -88,14 +91,7 @@ void file_io_mode(const char* const input_file_name, const char* const output_fi
         return;
     }
 
-    FILE* output_file = NULL;
-
-    if (output_file_name != NULL) {
-        output_file = fopen(output_file_name, "w");
-    }
-    else {
-        output_file = fopen("output.txt", "w");
-    }
+    FILE* output_file = fopen(output_file_name, "w");
 
     if (output_file == NULL) {
         printf("Error in opening %s!\n", output_file_name);

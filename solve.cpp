@@ -27,7 +27,7 @@ double round_to_zero(const double number) {
     return number;
 }
 
-void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
+void swap_numbers(double* const num1_ptr, double* const num2_ptr) {
     assert(num1_ptr != NULL);        // область видимости в пределах файла
     assert(num2_ptr != NULL);
 
@@ -37,7 +37,7 @@ void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
 }
 
 int solve_equation(const double a, const double b, const double c,
-                   double * const x1ptr, double * const x2ptr) {
+                   double* const x1ptr, double* const x2ptr) {
     assert(isfinite(a));
     assert(isfinite(b));
     assert(isfinite(c));
@@ -85,7 +85,7 @@ int solve_equation(const double a, const double b, const double c,
 }
 
 
-int solve_linear(const double b, const double c, double * const x1ptr) {
+int solve_linear(const double b, const double c, double* const x1ptr) {
     assert(isfinite(b));
     assert(isfinite(c));
     assert(x1ptr != NULL);
