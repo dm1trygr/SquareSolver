@@ -86,21 +86,26 @@ is similar on other operating systems.
   
 ![File-OUTPUT](https://github.com/dm1trygr/SquareSolver/assets/103391790/17fdcf80-9409-4eec-ab8b-dc1997bdfebd)
 
+You can run program without specifying output file.
+In this case solutions of equations will be printed
+in "output.txt"
+
+![File-CMD-NoOutput](https://github.com/dm1trygr/SquareSolver/assets/103391790/0ed4cbb1-905e-4ed5-801c-c7995ecae280)
+
 6. The program can also test itself! To do it,
    write in terminal "[name-of-binary-file] -t",
    and program will print results of tests.
 
 ![Tests](https://github.com/dm1trygr/SquareSolver/assets/103391790/5c680823-e784-4dd8-b0fb-9ef8f5177914)
-   
-## Short information about flags
 
--s = solves square equation
+You can also do tests from file. To do this, add 
+an argument with the name of the input file
 
--l = solves linear equation
+![Tests-FILE](https://github.com/dm1trygr/SquareSolver/assets/103391790/89dd7871-0429-4ab5-a35c-808f374c4be8)
 
--f [input file] [output file] = reads coefficients from
-file and writes solutions to other file
-
--t = runs unit tests
-
--h = shows full information about program
+> Data in the input file must be written
+> in the following form:
+>
+> [A-coefficient] [B-coefficient] [C-coefficient]
+> [x1-root reference] [x2-root reference] [Roots amount reference]
+> [Name of test]
