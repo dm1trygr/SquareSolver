@@ -20,7 +20,7 @@ void choosing_mode(int argc, char* argv[]) {
                 file_io_mode(argv[2], argv[3]);
             }
             else if (argc == 3) {
-                file_io_mode(argv[2], "output.txt");
+                file_io_mode(argv[2], DEFAULT_OUTPUT_FILENAME);
             }
             else {
                 show_file_help(argv[0]);
@@ -148,11 +148,13 @@ void show_full_help(const char* const program_name) {
            "%s  Begins testing of program's main solve functions. Shows status of\n"
            "    every test (OK/Not OK) and if any test(s) was failed, information\n"
            "    about this test(s)\n"
+           "    You can also enter an input file with test according to example below:\n"
+           "    %s <input file>\n"
            "%s  Shows full information about this program\n"
            "\n",
            program_name, SQUARE_MODE_FLAG, LINEAR_MODE_FLAG,
            FILE_MODE_FLAG, FILE_MODE_FLAG, UNIT_TESTS_FLAG,
-           FULL_HELP_FLAG);
+           UNIT_TESTS_FLAG, FULL_HELP_FLAG);
 }
 
 void show_short_help(const char* const program_name) {
@@ -160,8 +162,8 @@ void show_short_help(const char* const program_name) {
 
     printf("Usage: %s %s for square solver mode;\n"
            "       %s %s for linear mode;\n"
-           "       %s %s [input file] [output file] for file input/output mode;\n"
-           "       %s %s for unit tests mode;\n"
+           "       %s %s [input file] <output file> for file input/output mode;\n"
+           "       %s %s <input file> for unit tests mode;\n"
            "       %s %s to show full information\n",
            program_name, SQUARE_MODE_FLAG,
            program_name, LINEAR_MODE_FLAG,
