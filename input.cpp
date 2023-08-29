@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "input.h"
+#include "./source/headers/input.h"
 
 void get_coeffs(double coeffs[], const unsigned int amount) {
     assert(coeffs != NULL);

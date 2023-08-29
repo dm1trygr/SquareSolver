@@ -2,8 +2,8 @@
 #include <assert.h>
 #include <math.h>
 #include <float.h>
-#include "solve.h"
-#include "roots_amount.h"
+#include "./source/headers/solve.h"
+#include "./source/headers/roots_amount.h"
 
 bool are_doubles_equal(const double num1, const double num2) {
     assert(isfinite(num1));

@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
-#include "modes.h"
-#include "input.h"
-#include "output.h"
-#include "solve.h"
-#include "unittests.h"
+#include "./source/headers/modes.h"
+#include "./source/headers/input.h"
+#include "./source/headers/output.h"
+#include "./source/headers/solve.h"
+#include "./source/headers/unittests.h"
 
 void run_square_mode(void) {
     printf("Welcome to Square equation solver\n"

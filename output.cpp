@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
-#include "output.h"
-#include "roots_amount.h"
+#include "./source/headers/output.h"
+#include "./source/headers/roots_amount.h"
 
 void print_solutions(const double roots[], const unsigned int amount) {
     assert(roots != NULL);

@@ -1,5 +1,5 @@
 #include <string.h>
-#include "modes.h"
+#include "./source/headers/modes.h"
 
 
 int main(int argc, char * argv[]) {
