@@ -42,7 +42,7 @@ void show_file_help(const char* const program_name);
 //!Does tests of solve functions of program
 //-----------------------------------------------------
 
-void run_unit_tests_mode(void);
+void run_unit_tests_mode(int argc, char* argv[]);
 
 //-----------------------------------------------------
 //!Shows full information about program

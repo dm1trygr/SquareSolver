@@ -42,7 +42,7 @@ double round_to_zero(const double number);
 //!@param [out] num2_ptr Pointer to 2nd number
 //-----------------------------------------------------
 
-void swap_numbers(double* const num1_ptr, double* const num2_ptr);
+static void swap_numbers(double* const num1_ptr, double* const num2_ptr);
 
 //-----------------------------------------------------
 //!Solves square equation

@@ -27,7 +27,7 @@ void choosing_mode(int argc, char* argv[]) {
             }
         }
         else if (strcmp(argv[1], UNIT_TESTS_FLAG) == 0) {
-            run_unit_tests_mode();
+            run_unit_tests_mode(argc, argv);
         }
         else if (strcmp(argv[1], FULL_HELP_FLAG) == 0) {
             show_full_help(argv[0]);
@@ -105,21 +105,37 @@ void file_io_mode(const char* const input_file_name, const char* const output_fi
     double roots[2] = {0};
 
     int equation_number = 1;
+    int success_solved = 0;
 
-    fprintf(output_file, "Solutions:\n");  // в файле было бы хорошо тоже отслеживать ошибки
-    while (fscanf(input_file, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
-        int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+    fprintf(output_file, "Solutions:\n");
 
-        fprintf(output_file, "EQUATION %d: ", equation_number++);
-        fprint_solutions(output_file, roots, roots_amount);
+    while (1) {
+        if (fscanf(input_file, "%lg %lg %lg", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
+            int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+
+            fprintf(output_file, "EQUATION %d: ", equation_number++);
+            fprint_solutions(output_file, roots, roots_amount);
+
+            success_solved++;
+        }
+        else {
+            int ch = '\0';
+            while ((ch = fgetc(input_file)) != '\n' && ch != EOF) {};
+            if (ch != EOF) {
+                fprintf(output_file, "EQUATION %d: Coefficient reading error!\n", equation_number++);
+            }
+            else {
+                fputc('\n', output_file);
+
+                printf("Solved %d out of %d equation(s)! Goodbye!\n",
+                       success_solved, equation_number - 1);
+
+                fclose(input_file);
+                fclose(output_file);
+                return;
+            }
+        }
     }
-
-    fputc('\n', output_file);
-
-    printf("Solved %d equation(s)! Goodbye!\n", equation_number - 1);
-
-    fclose(input_file);
-    fclose(output_file);
 }
 
 void show_file_help(const char* const program_name) {
@@ -129,10 +145,15 @@ void show_file_help(const char* const program_name) {
            program_name, FILE_MODE_FLAG);
 }
 
-void run_unit_tests_mode(void) {
+void run_unit_tests_mode(int argc, char* argv[]) {
     printf("Square equation solver, Unit tests mode\n\n");
 
-    run_tests();
+    if (argc >= 3) {
+        read_tests_from_file(argv[2]);
+    }
+    else {
+        run_tests();
+    }
 }
 
 void show_full_help(const char* const program_name) {
@@ -153,7 +174,8 @@ void show_full_help(const char* const program_name) {
            "%s  Solves linear equations. Accepts 2 coefficients\n"
            "%s  Opens file, reads coefficients from this file and writes coefficients\n"
            "    to another file\n"
-           "    Must be used with 2 arguments after flag: %s [input file] [output file]\n"
+           "    Must be used with at least 1 argument after flag (also 1 is additional):\n"
+           "    %s [input file] <output file>\n"
            "    Coefficients in input file must be entered according to example below:\n"
            "    [a] [b] [c]\n"
            "%s  Begins testing of program's main solve functions. Shows status of\n"

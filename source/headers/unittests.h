@@ -7,13 +7,13 @@ static const int MAX_NAME_LEN = 50;  //!<Maximum test name length
 //!right roots and their amount
 
 struct TestReference {
-    const double a;  //!<a-coefficient
-    const double b;  //!<b-coefficient
-    const double c;  //!<c-coefficient
-    const double x1ref;  //!<Reference (right) root #1
-    const double x2ref;  //!<Reference (right) root #2
-    const int amount_ref;  //!<Reference (right) amount of roots
-    const char test_name[MAX_NAME_LEN];  //!<Name of test
+    double a;  //!<a-coefficient
+    double b;  //!<b-coefficient
+    double c;  //!<c-coefficient
+    double x1ref;  //!<Reference (right) root #1
+    double x2ref;  //!<Reference (right) root #2
+    int amount_ref;  //!<Reference (right) amount of roots
+    char test_name[MAX_NAME_LEN];  //!<Name of test
 };
 
 //-----------------------------------------------------
@@ -25,6 +25,8 @@ struct TestReference {
 //-----------------------------------------------------
 
 int run_tests(void);
+
+int read_tests_from_file(const char* const input_filename);
 
 //-----------------------------------------------------
 //!Does 1 unit test of solve()

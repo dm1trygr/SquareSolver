@@ -1,0 +1,5 @@
+0 0 0 0 0 888 ZeroTest
+1 2 1 -1 0 1 OneRootTest1
+1 -2 1 1 0 1 OneRootTest2
+1 0 -4 -2 2 2 SquareVarTest
+1 0 4 0 0 0 ZeroSolutionsTest

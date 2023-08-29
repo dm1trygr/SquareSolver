@@ -27,7 +27,7 @@ double round_to_zero(const double number) {
     return number;
 }
 
-void swap_numbers(double* const num1_ptr, double* const num2_ptr) {
+static void swap_numbers(double* const num1_ptr, double* const num2_ptr) {
     assert(num1_ptr != NULL);        // область видимости в пределах файла
     assert(num2_ptr != NULL);
 
