@@ -8,7 +8,7 @@
 int run_tests(void) {
     int success_tests = 0;
 
-    TestReference test_list[] = {
+    TestReference test_list[] = {   // ввод тестов из файла
 //       a   b   c  x1  x2     amount  name
         {0,  0,  0,  0,  0, INF_ROOTS, "ZeroTest"},
         {1,  2,  1, -1,  0,         1, "OneRootTest1"},
@@ -18,8 +18,10 @@ int run_tests(void) {
         {0,  2, -4,  2,  0,         1, "LinearTest"},
         {1,  5,  4, -4, -1,         2, "RandomTest"}
     };
+    // в функцию
+    unsigned int tests_amount = (sizeof test_list) / (sizeof (TestReference));
 
-    for (int i = 0; i < (sizeof test_list) / (sizeof (TestReference)); i++) {
+    for (unsigned int i = 0; i < tests_amount; i++) {
         printf("Test %d: ", i + 1);
         success_tests += run_one_test(&test_list[i]);
     }
@@ -49,7 +51,7 @@ int run_one_test(const TestReference * const current_test) {
         printf("ERROR in %s!\n"
                "\tCoefficients: a = %f, b = %f, c = %f\n"
                "\tReceived: amount = %d, x1 = %f, x2 = %f\n"
-               "\tExcepted: amount = %d, x1 = %f, x2 = %f\n",
+               "\tExcepted: amount = %d, x1 = %f, x2 = %f\n",   // через нормальную функцию вывода
                current_test->test_name,
                current_test->a, current_test->b, current_test->c,
                amount, x1, x2,

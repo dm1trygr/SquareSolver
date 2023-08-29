@@ -28,7 +28,7 @@ double round_to_zero(const double number) {
 }
 
 void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
-    assert(num1_ptr != NULL);
+    assert(num1_ptr != NULL);        // область видимости в пределах файла
     assert(num2_ptr != NULL);
 
     double temp = *num1_ptr;
@@ -37,7 +37,7 @@ void swap_numbers(double * const num1_ptr, double * const num2_ptr) {
 }
 
 int solve_equation(const double a, const double b, const double c,
-          double * const x1ptr, double * const x2ptr) {
+                   double * const x1ptr, double * const x2ptr) {
     assert(isfinite(a));
     assert(isfinite(b));
     assert(isfinite(c));
@@ -54,9 +54,12 @@ int solve_equation(const double a, const double b, const double c,
         }
         else if (is_equal_to_zero(c) && !is_equal_to_zero(b)) {  // equations ax^2 + bx = 0
             *x1ptr = - b / a;
+            *x2ptr = 0;
+
             if (*x1ptr > 0) {
                 swap_numbers(x1ptr, x2ptr);
             }
+
             return TWO_ROOTS;
         }
         else {  // standart square equations with non-zero coefficients

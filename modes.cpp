@@ -7,6 +7,37 @@
 #include "./source/headers/solve.h"
 #include "./source/headers/unittests.h"
 
+void choosing_mode(int argc, char* argv[]) {
+    if (argc >= 2) {
+        if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) {
+            run_square_mode();
+        }
+        else if (strcmp(argv[1], LINEAR_MODE_FLAG) == 0) {
+            run_linear_mode();
+        }
+        else if (strcmp(argv[1], FILE_MODE_FLAG) == 0) {
+            if (argc >= 4) {
+                file_io_mode(argv[2], argv[3]);
+            }
+            else {  // функция/макрос для if
+                show_file_help(argv[0]);
+            }
+        }
+        else if (strcmp(argv[1], UNIT_TESTS_FLAG) == 0) {
+            run_unit_tests_mode();
+        }
+        else if (strcmp(argv[1], FULL_HELP_FLAG) == 0) {
+            show_full_help(argv[0]);
+        }
+        else {
+            show_short_help(argv[0]);
+        }
+    }
+    else {
+        show_short_help(argv[0]);
+    }
+}
+
 void run_square_mode(void) {
     printf("Welcome to Square equation solver\n"
            "This program can solve square equations\n\n");
@@ -42,52 +73,60 @@ void run_linear_mode(void) {
     printf("Goodbye!\n");
 }
 
-void file_io_mode(const char * const input_file_name, const char * const output_file_name) {
-    assert(input_file_name != NULL);
-    assert(output_file_name != NULL);
+void file_io_mode(const char* const input_file_name, const char* const output_file_name) {
+    assert(input_file_name != NULL);   // прижать звездочку к назщванию типа
 
-    FILE * input_file = fopen(input_file_name, "r");
+    if (strcmp(input_file_name, output_file_name) == 0) {
+        printf("Error! You're trying to open same file for reading coefficients and writing roots!\n");
+        return;
+    }
+
+    FILE* input_file = fopen(input_file_name, "r");
 
     if (input_file == NULL) {
         printf("Error! File %s does not exist!\n", input_file_name);
+        return;
     }
-    else if (strcmp(input_file_name, output_file_name) == 0) {
-        printf("Error! You're trying to open same file for reading coefficients and writing roots!\n");
-        fclose(input_file);
+
+    FILE* output_file = NULL;
+
+    if (output_file_name != NULL) {
+        output_file = fopen(output_file_name, "w");
     }
     else {
-        FILE * output_file = fopen(output_file_name, "w");
-        if (output_file == NULL) {
-            printf("Error in opening %s!\n", output_file_name);
-            fclose(input_file);
-        }
-        else {
-            printf("Square equation solver, file mode\n\n");
-
-            double coeffs[3] = {0};
-            double roots[2] = {0};
-
-            int equation_number = 1;
-
-            fprintf(output_file, "Solutions:\n");
-            while (fscanf(input_file, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
-                int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
-
-                fprintf(output_file, "EQUATION %d: ", equation_number++);
-                fprint_solutions(output_file, roots, roots_amount);
-            }
-
-            fputc('\n', output_file);
-
-            printf("Solved %d equation(s)! Goodbye!\n", equation_number - 1);
-
-            fclose(input_file);
-            fclose(output_file);
-        }
+        output_file = fopen("output.txt", "w");
     }
+
+    if (output_file == NULL) {
+        printf("Error in opening %s!\n", output_file_name);
+        fclose(input_file);
+        return;
+    }
+
+    printf("Square equation solver, file mode\n\n");
+
+    double coeffs[3] = {0};
+    double roots[2] = {0};
+
+    int equation_number = 1;
+
+    fprintf(output_file, "Solutions:\n");  // в файле было бы хорошо тоже отслеживать ошибки
+    while (fscanf(input_file, "%lf %lf %lf", &coeffs[0], &coeffs[1], &coeffs[2]) == 3) {
+        int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+
+        fprintf(output_file, "EQUATION %d: ", equation_number++);
+        fprint_solutions(output_file, roots, roots_amount);
+    }
+
+    fputc('\n', output_file);
+
+    printf("Solved %d equation(s)! Goodbye!\n", equation_number - 1);
+
+    fclose(input_file);
+    fclose(output_file);
 }
 
-void show_file_help(const char * const program_name) {
+void show_file_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("Usage: %s %s [input file] [output file]\n",
@@ -100,7 +139,7 @@ void run_unit_tests_mode(void) {
     run_tests();
 }
 
-void show_full_help(const char * const program_name) {
+void show_full_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("\n"
@@ -131,7 +170,7 @@ void show_full_help(const char * const program_name) {
            FULL_HELP_FLAG);
 }
 
-void show_short_help(const char * const program_name) {
+void show_short_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("Usage: %s %s for square solver mode;\n"

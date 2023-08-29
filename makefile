@@ -21,10 +21,11 @@ OBJ_FILES=$(MAIN_PATH) $(MODES_PATH) $(INPUT_PATH) $(OUTPUT_PATH) $(SOLVE_PATH) 
 all: square_solver
 
 square_solver: main.o modes.o input.o output.o solve.o unittests.o
-	g++ $(OBJ_FILES) -o square_solver
+	g++ $(OBJ_FILES) -o square_solver $(CFLAGS)
 
 main.o: main.cpp
 	g++ -o $(MAIN_PATH) -c main.cpp $(CFLAGS)
+#можно в начале таргетов дописать путь к файлу
 
 modes.o: modes.cpp
 	g++ -o $(MODES_PATH) -c modes.cpp $(CFLAGS)

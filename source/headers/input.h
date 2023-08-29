@@ -35,7 +35,8 @@ double input_one_coeff(void);
 //-----------------------------------------------------
 //!Asks a user if he wish stop or continue program
 //!
-//!@return 1 if user wants to continue, otherwise 0
+//!@return CONTINUE_FLAG if user wants to continue,
+//!        otherwise BREAK_FLAG
 //!
 //!@see clear_input_buffer()
 //-----------------------------------------------------

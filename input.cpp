@@ -5,14 +5,14 @@
 void get_coeffs(double coeffs[], const unsigned int amount) {
     assert(coeffs != NULL);
 
-    for (int index = 0; index < amount; index++) {
+    for (unsigned int index = 0; index < amount; index++) {
         printf("Enter coefficient %c:\n", 'a' + index);
 
         coeffs[index] = input_one_coeff();
     }
 }
 
-double input_one_coeff(void) {
+double input_one_coeff(void) {  // ввод из файла (stdin вместо указателя на файл)
     double input_coefficient = 0;
 
     while (1) {
@@ -36,7 +36,7 @@ int ask_continue_program(void) {
 
     while (1) {
         if (scanf("%d", &flag) == 1  && getchar() == '\n') {
-            if (flag == 0 || flag == 1) {
+            if (flag == BREAK_FLAG || flag == CONTINUE_FLAG) {
                 return flag;
             }
             else {
@@ -44,7 +44,7 @@ int ask_continue_program(void) {
             }
         }
         else {
-            printf("This is not %d or %d! Please try again\n", BREAK_FLAG, CONTINUE_FLAG);
+            printf("This is not a number! Please try again\n");
             clear_input_buffer();
         }
     }
