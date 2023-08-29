@@ -20,4 +20,6 @@ void print_solutions(const double roots[], const unsigned int amount);
 
 void fprint_solutions(FILE* file_pointer, const double roots[], const unsigned int amount);
 
+void solve_from_file(FILE* input_file, FILE* output_file);
+
 #endif

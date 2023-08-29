@@ -74,6 +74,4 @@ int solve_equation(const double a, const double b, const double c, double* const
 
 int solve_linear(const double b, const double c, double* const x1ptr);
 
-void solve_from_file(FILE* input_file, FILE* output_file);
-
 #endif
