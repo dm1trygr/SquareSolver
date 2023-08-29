@@ -7,7 +7,7 @@
 #include "./headers/solve.h"
 #include "./headers/unittests.h"
 
-void choosing_mode(int argc, char* argv[]) {
+void choosing_mode(const int argc, const char* argv[]) {
     if (argc >= 2) {
         if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) {
             run_square_mode();
@@ -112,7 +112,7 @@ void show_file_help(const char* const program_name) {
            program_name, FILE_MODE_FLAG);
 }
 
-void run_unit_tests_mode(int argc, char* argv[]) {
+void run_unit_tests_mode(const int argc, const char* argv[]) {
     printf("Square equation solver, Unit tests mode\n\n");
 
     if (argc >= 3) {

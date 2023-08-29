@@ -22,7 +22,7 @@ const char FULL_HELP_FLAG[] = "-h";
 //!     show_short_help()
 //-----------------------------------------------------
 
-void choosing_mode(int argc, char* argv[]);
+void choosing_mode(const int argc, const char* argv[]);
 
 //-----------------------------------------------------
 //!Enters square equation solver mode
@@ -65,7 +65,7 @@ void show_file_help(const char* const program_name);
 //!                    arguments
 //-----------------------------------------------------
 
-void run_unit_tests_mode(int argc, char* argv[]);
+void run_unit_tests_mode(const int argc, const char* argv[]);
 
 //-----------------------------------------------------
 //!Shows full information about program
