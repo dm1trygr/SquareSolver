@@ -20,7 +20,7 @@ bool are_doubles_equal(const double num1, const double num2);
 //!@return Returns 1 if number is equal to 0, otherwise 0
 //-----------------------------------------------------
 
-bool is_equal_to_zero(const double number);
+static bool is_equal_to_zero(const double number);
 
 //-----------------------------------------------------
 //!If number is close to 0, returns 0, otherwise number
@@ -32,7 +32,7 @@ bool is_equal_to_zero(const double number);
 //!@see is_doubles_equal()
 //-----------------------------------------------------
 
-double round_to_zero(const double number);
+static double round_to_zero(const double number);
 
 //-----------------------------------------------------
 //!Assign the first variable to the value of the second,

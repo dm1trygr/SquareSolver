@@ -22,19 +22,19 @@ const char FULL_HELP_FLAG[] = "-h";
 //!     show_short_help()
 //-----------------------------------------------------
 
-void choosing_mode(const int argc, const char* argv[]);
+void choosing_mode(const unsigned int argc, const char* argv[]);
 
 //-----------------------------------------------------
 //!Enters square equation solver mode
 //-----------------------------------------------------
 
-void run_square_mode(void);
+static void run_square_mode(void);
 
 //-----------------------------------------------------
 //!Enters linear equation solver mode
 //-----------------------------------------------------
 
-void run_linear_mode(void);
+static void run_linear_mode(void);
 
 //-----------------------------------------------------
 //!Reads coefficients from file and writes solutions to
@@ -48,7 +48,7 @@ void run_linear_mode(void);
 //!      of writing to file
 //-----------------------------------------------------
 
-void file_io_mode(const char* const input_file_name,
+static void file_io_mode(const char* const input_file_name,
                   const char* const output_file_name);
 
 //-----------------------------------------------------
@@ -58,7 +58,7 @@ void file_io_mode(const char* const input_file_name,
 //!                          on standard input
 //-----------------------------------------------------
 
-void show_file_help(const char* const program_name);
+static void show_file_help(const char* const program_name);
 
 //-----------------------------------------------------
 //!Does tests of solve functions of program
@@ -69,7 +69,7 @@ void show_file_help(const char* const program_name);
 //!                    arguments
 //-----------------------------------------------------
 
-void run_unit_tests_mode(const int argc, const char* argv[]);
+static void run_unit_tests_mode(const unsigned int argc, const char* argv[]);
 
 //-----------------------------------------------------
 //!Shows full information about program
@@ -78,7 +78,7 @@ void run_unit_tests_mode(const int argc, const char* argv[]);
 //!                          on standard input
 //-----------------------------------------------------
 
-void show_full_help(const char* const program_name);
+static void show_full_help(const char* const program_name);
 
 //-----------------------------------------------------
 //!Shows short help
@@ -87,6 +87,6 @@ void show_full_help(const char* const program_name);
 //!                          on standard input
 //-----------------------------------------------------
 
-void show_short_help(const char* const program_name);
+static void show_short_help(const char* const program_name);
 
 #endif

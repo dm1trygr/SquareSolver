@@ -12,13 +12,13 @@ bool are_doubles_equal(const double num1, const double num2) {
     return fabs(num1 - num2) <= DBL_EPSILON;
 }
 
-bool is_equal_to_zero(const double number) {
+static bool is_equal_to_zero(const double number) {
     assert(isfinite(number));
 
     return are_doubles_equal(number, 0);
 }
 
-double round_to_zero(const double number) {
+static double round_to_zero(const double number) {
     assert(isfinite(number));
 
     if (is_equal_to_zero(number)) {

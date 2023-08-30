@@ -2,7 +2,7 @@
 #include "./source/headers/modes.h"
 
 
-int main(const int argc, const char * argv[]) {
+int main(const unsigned int argc, const char * argv[]) {
     choosing_mode(argc, argv);
 
     return 0;

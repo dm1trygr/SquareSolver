@@ -7,7 +7,9 @@
 #include "./headers/solve.h"
 #include "./headers/unittests.h"
 
-void choosing_mode(const int argc, const char* argv[]) {
+void choosing_mode(const unsigned int argc, const char* argv[]) {
+    assert(argv != NULL);
+
     if (argc >= 2) {
         if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) {
             run_square_mode();
@@ -41,7 +43,7 @@ void choosing_mode(const int argc, const char* argv[]) {
     }
 }
 
-void run_square_mode(void) {
+static void run_square_mode(void) {
     printf("Welcome to Square equation solver\n"
            "This program can solve square equations\n\n");
 
@@ -59,7 +61,7 @@ void run_square_mode(void) {
     printf("Goodbye!\n");
 }
 
-void run_linear_mode(void) {
+static void run_linear_mode(void) {
     printf("Square equation solver, linear equation solver mode\n\n");
 
     double coeffs[2] = {0, 0};
@@ -76,7 +78,7 @@ void run_linear_mode(void) {
     printf("Goodbye!\n");
 }
 
-void file_io_mode(const char* const input_file_name, const char* const output_file_name) {
+static void file_io_mode(const char* const input_file_name, const char* const output_file_name) {
     assert(input_file_name != NULL);
     assert(output_file_name != NULL);
 
@@ -109,14 +111,16 @@ void file_io_mode(const char* const input_file_name, const char* const output_fi
     solve_from_file(input_file, output_file);
 }
 
-void show_file_help(const char* const program_name) {
+static void show_file_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("Usage: %s %s [input file] [output file]\n",
            program_name, FILE_MODE_FLAG);
 }
 
-void run_unit_tests_mode(const int argc, const char* argv[]) {
+static void run_unit_tests_mode(const unsigned int argc, const char* argv[]) {
+    assert(argv != NULL);
+
     printf("Square equation solver, Unit tests mode\n\n");
 
     if (argc >= 3) {
@@ -127,7 +131,7 @@ void run_unit_tests_mode(const int argc, const char* argv[]) {
     }
 }
 
-void show_full_help(const char* const program_name) {
+static void show_full_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("\n"
@@ -163,7 +167,7 @@ void show_full_help(const char* const program_name) {
            UNIT_TESTS_FLAG, FULL_HELP_FLAG);
 }
 
-void show_short_help(const char* const program_name) {
+static void show_short_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("Usage: %s %s for square solver mode;\n"

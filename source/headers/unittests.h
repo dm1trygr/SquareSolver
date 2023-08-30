@@ -69,6 +69,7 @@ static int run_one_test(const TestReference* const current_test);
 //!        values, otherwise 0
 //-----------------------------------------------------
 
-static bool check_test_output(double x1, double x2, int amount, const TestReference* const current_test);
+static bool check_test_output(const double x1, const double x2, const int amount,
+                              const TestReference* const current_test);
 
 #endif

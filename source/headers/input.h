@@ -30,7 +30,7 @@ void get_coeffs(double coeffs[], const unsigned int amount);
 //!@see clear_input_buffer()
 //-----------------------------------------------------
 
-double input_one_coeff(void);
+static double input_one_coeff(void);
 
 //-----------------------------------------------------
 //!Asks a user if he wish stop or continue program
@@ -47,6 +47,6 @@ int ask_continue_program(void);
 //!Clears input buffer
 //-----------------------------------------------------
 
-void clear_input_buffer(void);
+static void clear_input_buffer(void);
 
 #endif

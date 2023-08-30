@@ -12,7 +12,7 @@ void get_coeffs(double coeffs[], const unsigned int amount) {
     }
 }
 
-double input_one_coeff(void) {
+static double input_one_coeff(void) {
     double input_coefficient = 0;
 
     while (1) {
@@ -50,6 +50,6 @@ int ask_continue_program(void) {
     }
 }
 
-void clear_input_buffer(void) {
+static void clear_input_buffer(void) {
     while (getchar() != '\n') {}
 }
