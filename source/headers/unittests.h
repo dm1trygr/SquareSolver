@@ -39,6 +39,8 @@ int run_tests(void);
 
 int read_tests_from_file(const char* const input_filename);
 
+bool get_root_amount_ref(const char * const raw_amount, int* const amount);
+
 //-----------------------------------------------------
 //!Does 1 unit test of solve()
 //!

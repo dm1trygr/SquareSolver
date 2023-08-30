@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
+#include <string.h>
 #include "./headers/solve.h"
 #include "./headers/output.h"
 #include "./headers/unittests.h"
@@ -39,17 +40,42 @@ int read_tests_from_file(const char* const input_filename) {
 
     TestReference current_test = {0};
 
+    char raw_roots_amount[MAX_NAME_LEN] = "";
+
     int test_number = 1;
 
-    while (fscanf(input_file, "%lg %lg %lg %lg %lg %d %s",
+    while (fscanf(input_file, "%lg %lg %lg %lg %lg %s %s",
            &current_test.a, &current_test.b, &current_test.c,
            &current_test.x1ref, &current_test.x2ref,
-           &current_test.amount_ref, &current_test.test_name) == 7) {
+           raw_roots_amount, &current_test.test_name) == 7 &&
+           get_root_amount_ref(raw_roots_amount, &current_test.amount_ref)) {
         printf("Test %d: ", test_number++);
         success_tests += run_one_test(&current_test);
     }
 
     return success_tests;
+}
+
+bool get_root_amount_ref(const char * const raw_amount, int* const amount) {
+    if (strcmp(raw_amount, "NO_ROOTS") == 0 || strcmp(raw_amount, "0") == 0) {
+        *amount = NO_ROOTS;
+        return 1;
+    }
+    else if (strcmp(raw_amount, "ONE_ROOT") == 0 || strcmp(raw_amount, "1") == 0) {
+        *amount = ONE_ROOT;
+        return 1;
+    }
+    else if (strcmp(raw_amount, "TWO_ROOTS") == 0 || strcmp(raw_amount, "2") == 0) {
+        *amount = TWO_ROOTS;
+        return 1;
+    }
+    else if (strcmp(raw_amount, "INF_ROOTS") == 0) {
+        *amount = INF_ROOTS;
+        return 1;
+    }
+    else {
+        return 0;
+    }
 }
 
 static int run_one_test(const TestReference* const current_test) {
