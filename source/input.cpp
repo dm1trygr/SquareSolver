@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <assert.h>
+#include <ctype.h>
 #include "./headers/input.h"
+#include "./headers/solve.h"
 
-void get_coeffs(double coeffs[], const unsigned int amount) {
-    assert(coeffs != NULL);
+void get_coeffs(Coeffs* const coefficients) {
+    assert(coefficients != NULL);
 
-    for (unsigned int index = 0; index < amount; index++) {
+    for (unsigned int index = 0; index < coefficients->amount; index++) {
         printf("Enter coefficient %c:\n", 'a' + index);
 
-        coeffs[index] = input_one_coeff();
+        coefficients->value[index] = input_one_coeff();
     }
 }
 
@@ -16,7 +18,7 @@ static double input_one_coeff(void) {
     double input_coefficient = 0;
 
     while (1) {
-        if (scanf("%lg", &input_coefficient) == 1 && getchar() == '\n') {
+        if (scanf("%lg", &input_coefficient) == 1 && check_input_buffer()) {
             return input_coefficient;
         }
         else {
@@ -52,4 +54,12 @@ int ask_continue_program(void) {
 
 static void clear_input_buffer(void) {
     while (getchar() != '\n') {}
+}
+
+static bool check_input_buffer(void) {
+    char ch = '\0';
+    while ((ch = getchar()) != '\n') {
+        if (!isblank(ch)) {return 0;};
+    }
+    return 1;
 }

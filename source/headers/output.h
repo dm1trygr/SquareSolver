@@ -1,6 +1,8 @@
 #ifndef OUTPUT_HEADER
 #define OUTPUT_HEADER
 
+#include "solve.h"
+
 //-----------------------------------------------------
 //!Prints solutions of equation
 //!
@@ -10,7 +12,7 @@
 //!@see fprint_solutions()
 //-----------------------------------------------------
 
-void print_solutions(const double roots[], const unsigned int amount);
+void print_solutions(const Roots * roots);
 
 //-----------------------------------------------------
 //!Prints solutions of equation with coefficients from file
@@ -20,7 +22,7 @@ void print_solutions(const double roots[], const unsigned int amount);
 //!@param [in]  amount       Amount of solutions
 //-----------------------------------------------------
 
-void fprint_solutions(FILE* const file_pointer, const double roots[], const unsigned int amount);
+void fprint_solutions(FILE* const file_pointer, const Roots * roots);
 
 //-----------------------------------------------------
 //!Reads coefficients from file and prints solution to

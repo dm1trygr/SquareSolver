@@ -3,6 +3,16 @@
 
 #include "roots_amount.h"
 
+struct Coeffs {
+    double value[3];
+    unsigned int amount;
+};
+
+struct Roots {
+    double value[2];
+    unsigned int amount;
+};
+
 //-----------------------------------------------------
 //!Checks if double-type numbers is equal
 //!
@@ -61,7 +71,8 @@ static void swap_numbers(double* const num1_ptr, double* const num2_ptr);
 //!@see linear()
 //-----------------------------------------------------
 
-RootsAmount solve_equation(const double a, const double b, const double c, double* const x1ptr, double* const x2ptr);
+RootsAmount solve_equation(const double a, const double b, const double c,
+                           double* const x1ptr, double* const x2ptr);
 
 //-----------------------------------------------------
 //!Solves linear equation

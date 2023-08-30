@@ -3,8 +3,8 @@
 
 enum RootsAmount {
     NO_ROOTS = 0,
-    ONE_ROOT,
-    TWO_ROOTS,
+    ONE_ROOT = 1,
+    TWO_ROOTS = 2,
     INF_ROOTS = 888
 };
 

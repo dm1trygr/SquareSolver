@@ -71,15 +71,16 @@ static int run_one_test(const TestReference* const current_test) {
         return 1;
     }
     else {
-        double received_roots[] = {x1, x2};
-        double excepted_roots[] = {current_test->x1ref, current_test->x2ref};
+        Roots received_roots = {{x1, x2}, amount};
+        Roots excepted_roots = {{current_test->x1ref, current_test->x2ref}, current_test->amount_ref};
+
         printf("ERROR in %s!\n"
                "\tCoefficients: a = %f, b = %f, c = %f\n"
                "\tReceived: ", current_test->test_name,
                current_test->a, current_test->b, current_test->c);
-        print_solutions(received_roots, amount);
+        print_solutions(&received_roots);
         printf("\tExcepted: ");
-        print_solutions(excepted_roots, current_test->amount_ref);
+        print_solutions(&excepted_roots);
         return 0;
     }
 }

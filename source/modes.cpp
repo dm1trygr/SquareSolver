@@ -43,42 +43,35 @@ SolverModes choosing_mode(const unsigned int argc, const char* argv[]) {
     }
 }
 
-/*
-struct Coeffs
-{
-    double coeffs[3];
-    int coeffs_amount;
-};
-
-struct Roots
-{
-...
-};
-*/
-
 void run_square_mode(void) {
-    double coeffs[3] = {0};
+    Coeffs coefficients = {{0, 0, 0}, SQUARE_COEFFS_NUMBER};
 
     do {
-        get_coeffs(coeffs, SQUARE_COEFFS_NUMBER);
+        get_coeffs(&coefficients);
 
-        double roots[2] = {0, 0};
-        int roots_amount = solve_equation(coeffs[0], coeffs[1], coeffs[2], &roots[0], &roots[1]);
+        Roots roots = {{0, 0}, 0};
+        roots.amount = solve_equation(coefficients.value[0],
+                                      coefficients.value[1],
+                                      coefficients.value[2],
+                                      &roots.value[0],
+                                      &roots.value[1]);
 
-        print_solutions(roots, roots_amount);
+        print_solutions(&roots);
     } while (ask_continue_program());
 }
 
 void run_linear_mode(void) {
-    double coeffs[2] = {0, 0};
+    Coeffs coefficients = {{0, 0, 0}, LINEAR_COEFFS_NUMBER};
 
     do {
-        get_coeffs(coeffs, LINEAR_COEFFS_NUMBER);
+        get_coeffs(&coefficients);
 
-        double roots[1] = {0};
-        int roots_amount = solve_linear(coeffs[0], coeffs[1], &roots[0]);
+        Roots roots = {{0, 0}, 0};
+        roots.amount = solve_linear(coefficients.value[0],
+                                    coefficients.value[1],
+                                    &roots.value[0]);
 
-        print_solutions(roots, roots_amount);
+        print_solutions(&roots);
     } while (ask_continue_program());
 }
 

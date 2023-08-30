@@ -1,6 +1,8 @@
 #ifndef MODES_HEADER
 #define MODES_HEADER
 
+#include "solve.h"
+
 const char SQUARE_MODE_FLAG[] = "-s";
 const char LINEAR_MODE_FLAG[] = "-l";
 const char FILE_MODE_FLAG[] = "-f";

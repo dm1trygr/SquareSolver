@@ -1,6 +1,8 @@
 #ifndef INPUT_HEADER
 #define INPUT_HEADER
 
+#include "solve.h"
+
 const unsigned int LINEAR_COEFFS_NUMBER = 2;
 const unsigned int SQUARE_COEFFS_NUMBER = 3;
 
@@ -16,7 +18,7 @@ const unsigned int CONTINUE_FLAG = 1;
 //!@see input_one_coeff()
 //-----------------------------------------------------
 
-void get_coeffs(double coeffs[], const unsigned int amount);
+void get_coeffs(Coeffs * const coefficients);
 
 //-----------------------------------------------------
 //!Gets one number from standard input
@@ -48,5 +50,7 @@ int ask_continue_program(void);
 //-----------------------------------------------------
 
 static void clear_input_buffer(void);
+
+static bool check_input_buffer(void);
 
 #endif
