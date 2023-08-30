@@ -7,43 +7,63 @@
 #include "./headers/solve.h"
 #include "./headers/unittests.h"
 
-void choosing_mode(const unsigned int argc, const char* argv[]) {
+SolverModes choosing_mode(const unsigned int argc, const char* argv[]) {
     assert(argv != NULL);
 
     if (argc >= 2) {
         if (strcmp(argv[1], SQUARE_MODE_FLAG) == 0) {
-            run_square_mode();
+            return SQUARE;
         }
         else if (strcmp(argv[1], LINEAR_MODE_FLAG) == 0) {
-            run_linear_mode();
+            return LINEAR;
         }
         else if (strcmp(argv[1], FILE_MODE_FLAG) == 0) {
             if (argc >= 4) {
-                file_io_mode(argv[2], argv[3]);
+                return FILE_IO;
+                //file_io_mode(argv[2], argv[3]);
             }
             else if (argc == 3) {
-                file_io_mode(argv[2], "");
+                return FILE_I;
+                //file_io_mode(argv[2], "");
             }
             else {
-                show_file_help(argv[0]);
+                return FILE_HELP;
+                //show_file_help(argv[0]);
             }
         }
         else if (strcmp(argv[1], UNIT_TESTS_FLAG) == 0) {
-            run_unit_tests_mode(argc, argv);
+            return UNIT_TESTS;
+            //run_unit_tests_mode(argc, argv);
         }
         else if (strcmp(argv[1], FULL_HELP_FLAG) == 0) {
-            show_full_help(argv[0]);
+            return FULL_HELP;
+            //show_full_help(argv[0]);
         }
         else {
-            show_short_help(argv[0]);
+            return SHORT_HELP;
+            //show_short_help(argv[0]);
         }
     }
     else {
-        show_short_help(argv[0]);
+        return SHORT_HELP;
+        //show_short_help(argv[0]);
     }
 }
 
-static void run_square_mode(void) {
+/*
+struct Coeffs
+{
+    double coeffs[3];
+    int coeffs_amount;
+};
+
+struct Roots
+{
+...
+};
+*/
+
+void run_square_mode(void) {
     printf("Welcome to Square equation solver\n"
            "This program can solve square equations\n\n");
 
@@ -61,7 +81,7 @@ static void run_square_mode(void) {
     printf("Goodbye!\n");
 }
 
-static void run_linear_mode(void) {
+void run_linear_mode(void) {
     printf("Square equation solver, linear equation solver mode\n\n");
 
     double coeffs[2] = {0, 0};
@@ -78,7 +98,7 @@ static void run_linear_mode(void) {
     printf("Goodbye!\n");
 }
 
-static void file_io_mode(const char* const input_file_name, const char* const output_file_name) {
+void file_io_mode(const char* const input_file_name, const char* const output_file_name) {
     assert(input_file_name != NULL);
     assert(output_file_name != NULL);
 
@@ -109,16 +129,19 @@ static void file_io_mode(const char* const input_file_name, const char* const ou
     printf("Square equation solver, file mode\n\n");
 
     solve_from_file(input_file, output_file);
+
+    fclose(input_file);
+    fclose(output_file);
 }
 
-static void show_file_help(const char* const program_name) {
+void show_file_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("Usage: %s %s [input file] [output file]\n",
            program_name, FILE_MODE_FLAG);
 }
 
-static void run_unit_tests_mode(const unsigned int argc, const char* argv[]) {
+void run_unit_tests_mode(const unsigned int argc, const char* argv[]) {
     assert(argv != NULL);
 
     printf("Square equation solver, Unit tests mode\n\n");
@@ -131,7 +154,7 @@ static void run_unit_tests_mode(const unsigned int argc, const char* argv[]) {
     }
 }
 
-static void show_full_help(const char* const program_name) {
+void show_full_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("\n"
@@ -167,7 +190,7 @@ static void show_full_help(const char* const program_name) {
            UNIT_TESTS_FLAG, FULL_HELP_FLAG);
 }
 
-static void show_short_help(const char* const program_name) {
+void show_short_help(const char* const program_name) {
     assert(program_name != NULL);
 
     printf("Usage: %s %s for square solver mode;\n"

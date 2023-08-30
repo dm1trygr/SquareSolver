@@ -7,6 +7,17 @@ const char FILE_MODE_FLAG[] = "-f";
 const char UNIT_TESTS_FLAG[] = "-t";
 const char FULL_HELP_FLAG[] = "-h";
 
+enum SolverModes {
+    SQUARE,
+    LINEAR,
+    FILE_IO,
+    FILE_I,
+    FILE_HELP,
+    UNIT_TESTS,
+    FULL_HELP,
+    SHORT_HELP
+};
+
 //-----------------------------------------------------
 //!Depending on the flag calls the function with the
 //!required program mode
@@ -22,19 +33,19 @@ const char FULL_HELP_FLAG[] = "-h";
 //!     show_short_help()
 //-----------------------------------------------------
 
-void choosing_mode(const unsigned int argc, const char* argv[]);
+SolverModes choosing_mode(const unsigned int argc, const char* argv[]);
 
 //-----------------------------------------------------
 //!Enters square equation solver mode
 //-----------------------------------------------------
 
-static void run_square_mode(void);
+void run_square_mode(void);
 
 //-----------------------------------------------------
 //!Enters linear equation solver mode
 //-----------------------------------------------------
 
-static void run_linear_mode(void);
+void run_linear_mode(void);
 
 //-----------------------------------------------------
 //!Reads coefficients from file and writes solutions to
@@ -48,7 +59,7 @@ static void run_linear_mode(void);
 //!      of writing to file
 //-----------------------------------------------------
 
-static void file_io_mode(const char* const input_file_name,
+void file_io_mode(const char* const input_file_name,
                   const char* const output_file_name);
 
 //-----------------------------------------------------
@@ -58,7 +69,7 @@ static void file_io_mode(const char* const input_file_name,
 //!                          on standard input
 //-----------------------------------------------------
 
-static void show_file_help(const char* const program_name);
+void show_file_help(const char* const program_name);
 
 //-----------------------------------------------------
 //!Does tests of solve functions of program
@@ -69,7 +80,7 @@ static void show_file_help(const char* const program_name);
 //!                    arguments
 //-----------------------------------------------------
 
-static void run_unit_tests_mode(const unsigned int argc, const char* argv[]);
+void run_unit_tests_mode(const unsigned int argc, const char* argv[]);
 
 //-----------------------------------------------------
 //!Shows full information about program
@@ -78,7 +89,7 @@ static void run_unit_tests_mode(const unsigned int argc, const char* argv[]);
 //!                          on standard input
 //-----------------------------------------------------
 
-static void show_full_help(const char* const program_name);
+void show_full_help(const char* const program_name);
 
 //-----------------------------------------------------
 //!Shows short help
@@ -87,6 +98,6 @@ static void show_full_help(const char* const program_name);
 //!                          on standard input
 //-----------------------------------------------------
 
-static void show_short_help(const char* const program_name);
+void show_short_help(const char* const program_name);
 
 #endif
