@@ -1,6 +1,8 @@
 #ifndef SOLVE_HEADER
 #define SOLVE_HEADER
 
+#include "roots_amount.h"
+
 //-----------------------------------------------------
 //!Checks if double-type numbers is equal
 //!
@@ -59,7 +61,7 @@ static void swap_numbers(double* const num1_ptr, double* const num2_ptr);
 //!@see linear()
 //-----------------------------------------------------
 
-int solve_equation(const double a, const double b, const double c, double* const x1ptr, double* const x2ptr);
+RootsAmount solve_equation(const double a, const double b, const double c, double* const x1ptr, double* const x2ptr);
 
 //-----------------------------------------------------
 //!Solves linear equation
@@ -72,6 +74,6 @@ int solve_equation(const double a, const double b, const double c, double* const
 //!        solutions is infinite
 //-----------------------------------------------------
 
-int solve_linear(const double b, const double c, double* const x1ptr);
+RootsAmount solve_linear(const double b, const double c, double* const x1ptr);
 
 #endif

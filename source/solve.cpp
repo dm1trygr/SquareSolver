@@ -36,7 +36,7 @@ static void swap_numbers(double* const num1_ptr, double* const num2_ptr) {
     *num2_ptr = temp;
 }
 
-int solve_equation(const double a, const double b, const double c,
+RootsAmount solve_equation(const double a, const double b, const double c,
                    double* const x1ptr, double* const x2ptr) {
     assert(isfinite(a));
     assert(isfinite(b));
@@ -85,7 +85,7 @@ int solve_equation(const double a, const double b, const double c,
 }
 
 
-int solve_linear(const double b, const double c, double* const x1ptr) {
+RootsAmount solve_linear(const double b, const double c, double* const x1ptr) {
     assert(isfinite(b));
     assert(isfinite(c));
     assert(x1ptr != NULL);
@@ -94,10 +94,10 @@ int solve_linear(const double b, const double c, double* const x1ptr) {
         return INF_ROOTS;
     }
     else if (is_equal_to_zero(b) && !is_equal_to_zero(c)) {
-        return 0;
+        return NO_ROOTS;
     }
     else {
         *x1ptr = - c / b;
-        return 1;
+        return ONE_ROOT;
     }
 }

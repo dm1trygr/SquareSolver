@@ -66,11 +66,9 @@ void solve_from_file(FILE* const input_file, FILE* const output_file) {
             else {
                 fputc('\n', output_file);
 
-                printf("Solved %d out of %d equation(s)! Goodbye!\n",
+                printf("Solved %d out of %d equation(s)! ",
                        success_solved, equation_number - 1);
 
-                fclose(input_file);
-                fclose(output_file);
                 return;
             }
         }

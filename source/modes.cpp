@@ -20,33 +20,26 @@ SolverModes choosing_mode(const unsigned int argc, const char* argv[]) {
         else if (strcmp(argv[1], FILE_MODE_FLAG) == 0) {
             if (argc >= 4) {
                 return FILE_IO;
-                //file_io_mode(argv[2], argv[3]);
             }
             else if (argc == 3) {
                 return FILE_I;
-                //file_io_mode(argv[2], "");
             }
             else {
                 return FILE_HELP;
-                //show_file_help(argv[0]);
             }
         }
         else if (strcmp(argv[1], UNIT_TESTS_FLAG) == 0) {
             return UNIT_TESTS;
-            //run_unit_tests_mode(argc, argv);
         }
         else if (strcmp(argv[1], FULL_HELP_FLAG) == 0) {
             return FULL_HELP;
-            //show_full_help(argv[0]);
         }
         else {
             return SHORT_HELP;
-            //show_short_help(argv[0]);
         }
     }
     else {
         return SHORT_HELP;
-        //show_short_help(argv[0]);
     }
 }
 
@@ -64,9 +57,6 @@ struct Roots
 */
 
 void run_square_mode(void) {
-    printf("Welcome to Square equation solver\n"
-           "This program can solve square equations\n\n");
-
     double coeffs[3] = {0};
 
     do {
@@ -77,13 +67,9 @@ void run_square_mode(void) {
 
         print_solutions(roots, roots_amount);
     } while (ask_continue_program());
-
-    printf("Goodbye!\n");
 }
 
 void run_linear_mode(void) {
-    printf("Square equation solver, linear equation solver mode\n\n");
-
     double coeffs[2] = {0, 0};
 
     do {
@@ -94,8 +80,6 @@ void run_linear_mode(void) {
 
         print_solutions(roots, roots_amount);
     } while (ask_continue_program());
-
-    printf("Goodbye!\n");
 }
 
 void file_io_mode(const char* const input_file_name, const char* const output_file_name) {
@@ -126,12 +110,11 @@ void file_io_mode(const char* const input_file_name, const char* const output_fi
         }
     }
 
-    printf("Square equation solver, file mode\n\n");
-
     solve_from_file(input_file, output_file);
 
     fclose(input_file);
-    fclose(output_file);
+
+    output_file != stdout ? fclose(output_file) : 0;
 }
 
 void show_file_help(const char* const program_name) {
@@ -143,8 +126,6 @@ void show_file_help(const char* const program_name) {
 
 void run_unit_tests_mode(const unsigned int argc, const char* argv[]) {
     assert(argv != NULL);
-
-    printf("Square equation solver, Unit tests mode\n\n");
 
     if (argc >= 3) {
         read_tests_from_file(argv[2]);
