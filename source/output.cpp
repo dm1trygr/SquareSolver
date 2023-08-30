@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <math.h>
 #include "./headers/output.h"
-#include "./headers/solve.h"  // for solve_from_file() function
+#include "./headers/solve.h"
 #include "./headers/roots_amount.h"
 
 void print_solutions(const double roots[], const unsigned int amount) {
