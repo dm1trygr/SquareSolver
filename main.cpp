@@ -3,7 +3,7 @@
 #include "./source/headers/modes.h"
 
 
-int main(unsigned const int argc, const char * argv[]) {
+int main(unsigned const int argc, const char* argv[]) {
     unsigned int mode_number = choosing_mode(argc, argv);
 
     if (mode_number != FULL_HELP &&

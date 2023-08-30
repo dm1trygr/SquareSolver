@@ -37,7 +37,7 @@ static void swap_numbers(double* const num1_ptr, double* const num2_ptr) {
 }
 
 RootsAmount solve_equation(const double a, const double b, const double c,
-                   double* const x1ptr, double* const x2ptr) {
+                           double* const x1ptr, double* const x2ptr) {
     assert(isfinite(a));
     assert(isfinite(b));
     assert(isfinite(c));

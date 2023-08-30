@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['read_5ftests_5ffrom_5ffile_0',['read_tests_from_file',['../unittests_8h.html#ae1355bab6046e7b814c7de509e072d57',1,'unittests.h']]],
-  ['round_5fto_5fzero_1',['round_to_zero',['../solve_8h.html#ae1a1237bcc0355e25e7ca50c21253719',1,'solve.h']]],
-  ['run_5flinear_5fmode_2',['run_linear_mode',['../modes_8h.html#ab0726767084a4b525c813d7b94be77fc',1,'modes.h']]],
-  ['run_5fsquare_5fmode_3',['run_square_mode',['../modes_8h.html#a411f6380234bafa505a72fd49353c199',1,'modes.h']]],
-  ['run_5ftests_4',['run_tests',['../unittests_8h.html#af1458e0e599d0a41767092fbd6b40dee',1,'unittests.h']]],
-  ['run_5funit_5ftests_5fmode_5',['run_unit_tests_mode',['../modes_8h.html#a75c9005df144131786abd21106ebd55d',1,'modes.h']]]
+  ['show_5ffile_5fhelp_0',['show_file_help',['../modes_8h.html#ae04b3ef1b6c21f57db5be07293909dfc',1,'modes.h']]],
+  ['show_5ffull_5fhelp_1',['show_full_help',['../modes_8h.html#a351c45fde8f071ad46660673301ca51d',1,'modes.h']]],
+  ['show_5fshort_5fhelp_2',['show_short_help',['../modes_8h.html#a6039ee97cfa58c0c071fb4417a551979',1,'modes.h']]],
+  ['solve_5fequation_3',['solve_equation',['../solve_8h.html#acbafbeb8aac4ed8ef63cab1f446938c8',1,'solve.h']]],
+  ['solve_5ffrom_5ffile_4',['solve_from_file',['../output_8h.html#a7321bfa63139e99e505e51d467b61309',1,'output.h']]],
+  ['solve_5flinear_5',['solve_linear',['../solve_8h.html#a97b36128ea5ac74df4391896d9392988',1,'solve.h']]]
 ];

@@ -56,7 +56,7 @@ int read_tests_from_file(const char* const input_filename) {
     return success_tests;
 }
 
-bool get_root_amount_ref(const char * const raw_amount, int* const amount) {
+static bool get_root_amount_ref(const char* const raw_amount, int* const amount) {
     if (strcmp(raw_amount, "NO_ROOTS") == 0 || strcmp(raw_amount, "0") == 0) {
         *amount = NO_ROOTS;
         return 1;

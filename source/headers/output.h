@@ -6,20 +6,19 @@
 //-----------------------------------------------------
 //!Prints solutions of equation
 //!
-//!@param [in]  roots[] Array of solutions
-//!@param [in]  amount  Amount of solutions
+//!@param [in]  roots Array of solutions
 //!
 //!@see fprint_solutions()
 //-----------------------------------------------------
 
-void print_solutions(const Roots * roots);
+void print_solutions(const Roots* const roots);
 
 //-----------------------------------------------------
 //!Prints solutions of equation with coefficients from file
 //!
 //!@param [in]  file_pointer Pointer to the file
-//!@param [in]  roots[]      Array of solutions
-//!@param [in]  amount       Amount of solutions
+//!@param [in]  roots        Structure with solutions
+//!                          and their amount
 //-----------------------------------------------------
 
 void fprint_solutions(FILE* const file_pointer, const Roots * roots);

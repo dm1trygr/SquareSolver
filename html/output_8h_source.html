@@ -79,25 +79,29 @@ $(function() {
 <a href="output_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef OUTPUT_HEADER</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define OUTPUT_HEADER</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="output_8h.html#a59fec8905411c57b1b649500470c994b">   13</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="output_8h.html#a59fec8905411c57b1b649500470c994b">print_solutions</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> roots[], <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> amount);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="output_8h.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="output_8h.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">fprint_solutions</a>(FILE* file_pointer, <span class="keyword">const</span> <span class="keywordtype">double</span> roots[], <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> amount);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="output_8h.html#affbd2bb70bcaf1d66dbc828988cf03fc">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="output_8h.html#affbd2bb70bcaf1d66dbc828988cf03fc">solve_from_file</a>(FILE* input_file, FILE* output_file);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aoutput_8h_html_a2f5cf0afa2f8f728487a9a3ecd3c4d44"><div class="ttname"><a href="output_8h.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">fprint_solutions</a></div><div class="ttdeci">void fprint_solutions(FILE *file_pointer, const double roots[], const unsigned int amount)</div></div>
-<div class="ttc" id="aoutput_8h_html_a59fec8905411c57b1b649500470c994b"><div class="ttname"><a href="output_8h.html#a59fec8905411c57b1b649500470c994b">print_solutions</a></div><div class="ttdeci">void print_solutions(const double roots[], const unsigned int amount)</div></div>
-<div class="ttc" id="aoutput_8h_html_affbd2bb70bcaf1d66dbc828988cf03fc"><div class="ttname"><a href="output_8h.html#affbd2bb70bcaf1d66dbc828988cf03fc">solve_from_file</a></div><div class="ttdeci">void solve_from_file(FILE *input_file, FILE *output_file)</div></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="solve_8h.html">solve.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="output_8h.html#a13214d9be57f851d71541715bb76a9c7">   14</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="output_8h.html#a13214d9be57f851d71541715bb76a9c7">print_solutions</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_roots.html">Roots</a>* <span class="keyword">const</span> roots);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="output_8h.html#aa9e68269de4ee84127e8becd40403c01">   24</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="output_8h.html#aa9e68269de4ee84127e8becd40403c01">fprint_solutions</a>(FILE* <span class="keyword">const</span> file_pointer, <span class="keyword">const</span> <a class="code hl_struct" href="struct_roots.html">Roots</a> * roots);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"></span><span class="comment">//-----------------------------------------------------</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="output_8h.html#a7321bfa63139e99e505e51d467b61309">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="output_8h.html#a7321bfa63139e99e505e51d467b61309">solve_from_file</a>(FILE* <span class="keyword">const</span> input_file, FILE* <span class="keyword">const</span> output_file);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aoutput_8h_html_a13214d9be57f851d71541715bb76a9c7"><div class="ttname"><a href="output_8h.html#a13214d9be57f851d71541715bb76a9c7">print_solutions</a></div><div class="ttdeci">void print_solutions(const Roots *const roots)</div></div>
+<div class="ttc" id="aoutput_8h_html_a7321bfa63139e99e505e51d467b61309"><div class="ttname"><a href="output_8h.html#a7321bfa63139e99e505e51d467b61309">solve_from_file</a></div><div class="ttdeci">void solve_from_file(FILE *const input_file, FILE *const output_file)</div></div>
+<div class="ttc" id="aoutput_8h_html_aa9e68269de4ee84127e8becd40403c01"><div class="ttname"><a href="output_8h.html#aa9e68269de4ee84127e8becd40403c01">fprint_solutions</a></div><div class="ttdeci">void fprint_solutions(FILE *const file_pointer, const Roots *roots)</div></div>
+<div class="ttc" id="asolve_8h_html"><div class="ttname"><a href="solve_8h.html">solve.h</a></div></div>
+<div class="ttc" id="astruct_roots_html"><div class="ttname"><a href="struct_roots.html">Roots</a></div><div class="ttdoc">Structure which stores roots of equation and their amount.</div><div class="ttdef"><b>Definition</b> solve.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

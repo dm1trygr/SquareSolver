@@ -5,13 +5,13 @@
 #include "./headers/solve.h"
 #include "./headers/roots_amount.h"
 
-void print_solutions(const Roots* roots) {
+void print_solutions(const Roots* const roots) {
     assert(roots != NULL);
 
     fprint_solutions(stdout, roots);
 }
 
-void fprint_solutions(FILE* const file_pointer, const Roots * roots) {
+void fprint_solutions(FILE* const file_pointer, const Roots * const roots) {
     assert(file_pointer != NULL);
     assert(roots != NULL);
 

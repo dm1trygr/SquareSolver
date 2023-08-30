@@ -3,22 +3,26 @@
 
 #include "solve.h"
 
+//!Amount of coefficients in linear equation
 const unsigned int LINEAR_COEFFS_NUMBER = 2;
+//!Amount of coefficients in square equation
 const unsigned int SQUARE_COEFFS_NUMBER = 3;
 
+//!Flag for ask_continue_program() at the return of which the program should be terminated
 const unsigned int BREAK_FLAG = 0;
+//!Flag for ask_continue_program() at the return of which the program should continue working
 const unsigned int CONTINUE_FLAG = 1;
 
 //-----------------------------------------------------
 //!Gets coefficients from standard input
 //!
-//!@param [out] coeffs[] Array for coefficients
-//!@param [in]  amount   Amount of coefficients
+//!@param [out] coeffs[] Structure with coefficients and
+//!                      their amount
 //!
-//!@see input_one_coeff()
+//!@see input_one_coeff(), check_input_buffer()
 //-----------------------------------------------------
 
-void get_coeffs(Coeffs * const coefficients);
+void get_coeffs(Coeffs* const coefficients);
 
 //-----------------------------------------------------
 //!Gets one number from standard input
@@ -50,6 +54,14 @@ int ask_continue_program(void);
 //-----------------------------------------------------
 
 static void clear_input_buffer(void);
+
+//-----------------------------------------------------
+//!Checks if there are non-space symbols after number.
+//!Also clears input buffer from non-space symbols
+//!
+//!@return 1 if input string is clear (don't contain
+//!non-space characters after number), otherwise 0
+//-----------------------------------------------------
 
 static bool check_input_buffer(void);
 

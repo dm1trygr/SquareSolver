@@ -3,21 +3,30 @@
 
 #include "solve.h"
 
+//!Flag at input of which the program starts solving square equations
 const char SQUARE_MODE_FLAG[] = "-s";
+//!Flag at input of which the program starts solving linear equations
 const char LINEAR_MODE_FLAG[] = "-l";
+//!Flag at input of which the program starts reading coefficients of
+//!square equations from file and solving equations defined by them
 const char FILE_MODE_FLAG[] = "-f";
+//!Flag at input of which the program runs unit tests
 const char UNIT_TESTS_FLAG[] = "-t";
+//!Flag at input of which the program shows full information about itself
 const char FULL_HELP_FLAG[] = "-h";
 
+//!Enum with constants returned by choosing_mode() function corresponding
+//!to the program mode
+
 enum SolverModes {
-    SQUARE,
-    LINEAR,
-    FILE_IO,
-    FILE_I,
-    FILE_HELP,
-    UNIT_TESTS,
-    FULL_HELP,
-    SHORT_HELP
+    SQUARE,  //!<Square equation mode
+    LINEAR,  //!<Linear equation mode
+    FILE_IO,  //!<File input/output mode with output file
+    FILE_I,  //!<File input/output mode without output file
+    FILE_HELP,  //!<Help about usage of file mode flag
+    UNIT_TESTS,  //!<Unit tests mode
+    FULL_HELP,  //!<Full information about program
+    SHORT_HELP  //!<Short information about usage of flags
 };
 
 //-----------------------------------------------------

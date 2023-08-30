@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['testreference_0',['TestReference',['../struct_test_reference.html',1,'']]]
+  ['coeffs_0',['Coeffs',['../struct_coeffs.html',1,'']]]
 ];

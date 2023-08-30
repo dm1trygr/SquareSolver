@@ -34,12 +34,26 @@ int run_tests(void);
 //!
 //!@return Amount of successful tests
 //!
-//!@see run_one_test()
+//!@see solve_equation(), get_root_amount_ref(),
+//!     run_one_test(), check_test_output()
 //-----------------------------------------------------
 
 int read_tests_from_file(const char* const input_filename);
 
-bool get_root_amount_ref(const char * const raw_amount, int* const amount);
+//-----------------------------------------------------
+//!Gets a string with name of enum RootsAmount and
+//!assigns to amount variable reference amount of roots
+//!
+//!@param [in]  raw_amount String with name of enum
+//!                        constant which means reference
+//!                        amount of roots
+//!@param [out] amount     Reference amount of roots
+//!
+//!@return 1 if string conversion attempt was successful,
+//!        otherwise 0
+//-----------------------------------------------------
+
+static bool get_root_amount_ref(const char* const raw_amount, int* const amount);
 
 //-----------------------------------------------------
 //!Does 1 unit test of solve()

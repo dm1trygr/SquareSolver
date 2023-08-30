@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['one_5froot_0',['ONE_ROOT',['../roots__amount_8h.html#acece6ada5ef5bc82f9d75a03131af36aa6700c0f6efd23571cb22aefd2510b1cf',1,'roots_amount.h']]]
+  ['linear_0',['LINEAR',['../modes_8h.html#ad695498164829f02b16939fb93020da2adc101ebf31c49c2d4b80b7c6f59f22cb',1,'modes.h']]]
 ];

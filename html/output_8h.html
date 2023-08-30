@@ -78,21 +78,22 @@ $(function() {
   <div class="headertitle"><div class="title">output.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="solve_8h_source.html">solve.h</a>&quot;</code><br />
+</div>
 <p><a href="output_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a59fec8905411c57b1b649500470c994b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8h.html#a59fec8905411c57b1b649500470c994b">print_solutions</a> (const double roots[], const unsigned int amount)</td></tr>
-<tr class="separator:a59fec8905411c57b1b649500470c994b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f5cf0afa2f8f728487a9a3ecd3c4d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8h.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">fprint_solutions</a> (FILE *file_pointer, const double roots[], const unsigned int amount)</td></tr>
-<tr class="separator:a2f5cf0afa2f8f728487a9a3ecd3c4d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affbd2bb70bcaf1d66dbc828988cf03fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8h.html#affbd2bb70bcaf1d66dbc828988cf03fc">solve_from_file</a> (FILE *input_file, FILE *output_file)</td></tr>
-<tr class="separator:affbd2bb70bcaf1d66dbc828988cf03fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13214d9be57f851d71541715bb76a9c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8h.html#a13214d9be57f851d71541715bb76a9c7">print_solutions</a> (const <a class="el" href="struct_roots.html">Roots</a> *const roots)</td></tr>
+<tr class="separator:a13214d9be57f851d71541715bb76a9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e68269de4ee84127e8becd40403c01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8h.html#aa9e68269de4ee84127e8becd40403c01">fprint_solutions</a> (FILE *const file_pointer, const <a class="el" href="struct_roots.html">Roots</a> *roots)</td></tr>
+<tr class="separator:aa9e68269de4ee84127e8becd40403c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7321bfa63139e99e505e51d467b61309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8h.html#a7321bfa63139e99e505e51d467b61309">solve_from_file</a> (FILE *const input_file, FILE *const output_file)</td></tr>
+<tr class="separator:a7321bfa63139e99e505e51d467b61309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2f5cf0afa2f8f728487a9a3ecd3c4d44" name="a2f5cf0afa2f8f728487a9a3ecd3c4d44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f5cf0afa2f8f728487a9a3ecd3c4d44">&#9670;&#160;</a></span>fprint_solutions()</h2>
+<a id="aa9e68269de4ee84127e8becd40403c01" name="aa9e68269de4ee84127e8becd40403c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e68269de4ee84127e8becd40403c01">&#9670;&#160;</a></span>fprint_solutions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -100,20 +101,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void fprint_solutions </td>
           <td>(</td>
-          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramtype">FILE *const&#160;</td>
           <td class="paramname"><em>file_pointer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>roots</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>amount</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_roots.html">Roots</a> *&#160;</td>
+          <td class="paramname"><em>roots</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -126,16 +121,15 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file_pointer</td><td>Pointer to the file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">roots[]</td><td>Array of solutions </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">amount</td><td>Amount of solutions </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">roots</td><td>Structure with solutions and their amount </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a59fec8905411c57b1b649500470c994b" name="a59fec8905411c57b1b649500470c994b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59fec8905411c57b1b649500470c994b">&#9670;&#160;</a></span>print_solutions()</h2>
+<a id="a13214d9be57f851d71541715bb76a9c7" name="a13214d9be57f851d71541715bb76a9c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13214d9be57f851d71541715bb76a9c7">&#9670;&#160;</a></span>print_solutions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,36 +137,25 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void print_solutions </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>roots</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="struct_roots.html">Roots</a> *const&#160;</td>
+          <td class="paramname"><em>roots</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Prints solutions of equation</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">roots[]</td><td>Array of solutions </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">amount</td><td>Amount of solutions</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">roots</td><td>Array of solutions</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="output_8h.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">fprint_solutions()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="output_8h.html#aa9e68269de4ee84127e8becd40403c01">fprint_solutions()</a> </dd></dl>
 
 </div>
 </div>
-<a id="affbd2bb70bcaf1d66dbc828988cf03fc" name="affbd2bb70bcaf1d66dbc828988cf03fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affbd2bb70bcaf1d66dbc828988cf03fc">&#9670;&#160;</a></span>solve_from_file()</h2>
+<a id="a7321bfa63139e99e505e51d467b61309" name="a7321bfa63139e99e505e51d467b61309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7321bfa63139e99e505e51d467b61309">&#9670;&#160;</a></span>solve_from_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,13 +163,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void solve_from_file </td>
           <td>(</td>
-          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramtype">FILE *const&#160;</td>
           <td class="paramname"><em>input_file</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramtype">FILE *const&#160;</td>
           <td class="paramname"><em>output_file</em>&#160;</td>
         </tr>
         <tr>
@@ -205,7 +188,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If function will read string with invalid value, it will skip a string with this value</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="output_8h.html#a2f5cf0afa2f8f728487a9a3ecd3c4d44">fprint_solutions()</a>, <a class="el" href="solve_8h.html#a550d1911607f86af2b9e80cf2c81ea19">solve_equation()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="output_8h.html#aa9e68269de4ee84127e8becd40403c01">fprint_solutions()</a>, <a class="el" href="solve_8h.html#acbafbeb8aac4ed8ef63cab1f446938c8">solve_equation()</a> </dd></dl>
 
 </div>
 </div>

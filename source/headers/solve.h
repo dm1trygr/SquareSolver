@@ -3,14 +3,20 @@
 
 #include "roots_amount.h"
 
+//!Structure which stores coefficients of square equation
+//!and their amount (it is amount of value[] array elements
+//!starting from value[0] which are used in equation)
+
 struct Coeffs {
-    double value[3];
-    unsigned int amount;
+    double value[3];  //!<Array with coefficients
+    unsigned int amount;  //!<Amount of used coefficients
 };
 
+//!Structure which stores roots of equation and their amount
+
 struct Roots {
-    double value[2];
-    unsigned int amount;
+    double value[2];  //!<Array with roots
+    unsigned int amount;  //!<Amount of roots of equation
 };
 
 //-----------------------------------------------------

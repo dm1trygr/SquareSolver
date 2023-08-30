@@ -113,7 +113,7 @@ void file_io_mode(const char* const input_file_name, const char* const output_fi
 void show_file_help(const char* const program_name) {
     assert(program_name != NULL);
 
-    printf("Usage: %s %s [input file] [output file]\n",
+    printf("Usage: %s %s [input file] <output file>\n",
            program_name, FILE_MODE_FLAG);
 }
 
